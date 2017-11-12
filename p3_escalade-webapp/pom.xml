@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.oc_j2ee.projet3</groupId>
+		<artifactId>p3_escalade</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>p3_escalade-webapp</artifactId>
+	<packaging>war</packaging>
+	<name>p3_escalade-webapp Maven Webapp</name>
+
+	<properties>
+		<application.name>Cliffhanger</application.name>
+		<maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
+		<buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.oc_j2ee.projet3</groupId>
+			<artifactId>p3_escalade-business</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.oc_j2ee.projet3</groupId>
+			<artifactId>p3_escalade-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>p3_escalade-webapp</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.2.0</version>
+					<configuration>
+						<webResources>
+							<resource>
+								<directory>src/main/webapp</directory>
+								<filtering>true</filtering>
+								<includes>
+									<include>jsp/_include/header.jsp</include>
+									<include>jsp/_include/footer.jsp</include>
+									<include>jsp/about.jsp</include>
+								</includes>
+							</resource>
+						</webResources>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
