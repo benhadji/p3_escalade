@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.oc_j2ee.projet3</groupId>
     <artifactId>p3_escalade</artifactId>
-    <version>${revision}</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
   
   <artifactId>p3_escalade-model</artifactId>

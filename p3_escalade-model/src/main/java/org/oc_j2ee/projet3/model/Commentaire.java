@@ -1,7 +1,8 @@
 package org.oc_j2ee.projet3.model;
 
 public class Commentaire extends Article {
-	
+
+
 	private String content;					// Contenu du commentaire
 	private Utilisateur utilisateur;
 	private Article article;

@@ -1,1 +1,4 @@
-org\oc_j2ee\projet3\consumer\ArticleDao.class
+org\oc_j2ee\projet3\consumer\article\DAO\impl\ArticleDAOimpl.class
+org\oc_j2ee\projet3\consumer\factory\impl\DaoFactoryImpl.class
+org\oc_j2ee\projet3\consumer\article\DAO\ArticleDAO.class
+org\oc_j2ee\projet3\consumer\factory\DaoFactory.class

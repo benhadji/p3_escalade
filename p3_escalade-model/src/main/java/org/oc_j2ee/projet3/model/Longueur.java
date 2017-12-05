@@ -1,9 +1,19 @@
 package org.oc_j2ee.projet3.model;
 
-public class Longueur extends Voie {
-	
+public class Longueur extends Voie{
+
+
+	private Integer id;
 	private String nom;
 	private String cotation;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	
 	public String getNom() {
 		return nom;

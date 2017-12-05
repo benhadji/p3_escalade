@@ -5,17 +5,16 @@
 
 	<groupId>org.oc_j2ee.projet3</groupId>
 	<artifactId>p3_escalade</artifactId>
-	<version>${revision}</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>p3_escalade</name>
+	<name>${projectName}</name>
 	<url>https://github.com/benhadji/p3_escalade</url>
 
 	<properties>
-		<revision>1.0-SNAPSHOT</revision>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<projectName>p3_escalade</projectName>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.3.11.RELEASE</spring.version>
 	</properties>
 
@@ -28,13 +27,38 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>p3_escalade-webapp</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>p3_escalade-business</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>p3_escalade-consumer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>p3_escalade-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+
 		<!-- Drivers JDBC PostgreSQL -->
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>9.6.5</version>
-                <scope>runtime</scope>
-            </dependency>
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>42.1.4</version>
+				<scope>runtime</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.struts</groupId>
 				<artifactId>struts2-core</artifactId>
@@ -57,6 +81,19 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
+			</dependency>
+
+			<!-- JSR-250 -->
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<!-- JSR-330 -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>1</version>
 			</dependency>
 
 			<dependency>

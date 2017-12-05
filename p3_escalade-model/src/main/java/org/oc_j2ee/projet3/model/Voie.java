@@ -1,10 +1,21 @@
 package org.oc_j2ee.projet3.model;
 
 public class Voie extends Secteur {
-	
+
+
+	private Integer id;
 	private String nom;
 	private boolean etat;
-	
+
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getNom() {
 		return nom;
 	}

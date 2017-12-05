@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="p3_escalade-webapp:war">
+    <output-path>$PROJECT_DIR$/p3_escalade-webapp/target</output-path>
+    <root id="archive" name="p3_escalade-webapp.war">
+      <element id="artifact" artifact-name="p3_escalade-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

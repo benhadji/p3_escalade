@@ -1,1 +1,4 @@
-C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-consumer\src\main\java\org\oc_j2ee\projet3\consumer\ArticleDao.java
+C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-consumer\src\main\java\org\oc_j2ee\projet3\consumer\factory\impl\DaoFactoryImpl.java
+C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-consumer\src\main\java\org\oc_j2ee\projet3\consumer\article\DAO\impl\ArticleDAOimpl.java
+C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-consumer\src\main\java\org\oc_j2ee\projet3\consumer\article\DAO\ArticleDAO.java
+C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-consumer\src\main\java\org\oc_j2ee\projet3\consumer\factory\DaoFactory.java

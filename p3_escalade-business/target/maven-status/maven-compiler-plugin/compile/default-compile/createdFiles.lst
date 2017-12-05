@@ -1,0 +1,15 @@
+org\oc_j2ee\projet3\business\impl\manager\TopoManagerImpl.class
+org\oc_j2ee\projet3\business\contrat\manager\ManagerFactory.class
+org\oc_j2ee\projet3\business\contrat\manager\UtilisateurManager.class
+org\oc_j2ee\projet3\business\contrat\manager\TopoManager.class
+org\oc_j2ee\projet3\business\impl\manager\SiteManagerImpl.class
+org\oc_j2ee\projet3\business\impl\manager\ArticleManagerImpl.class
+org\oc_j2ee\projet3\business\impl\manager\UtilisateurManagerImpl.class
+org\oc_j2ee\projet3\business\contrat\manager\BorrowManager.class
+org\oc_j2ee\projet3\business\contrat\manager\SiteManager.class
+org\oc_j2ee\projet3\business\impl\manager\BorrowManagerImpl.class
+org\oc_j2ee\projet3\business\impl\manager\AbstractManagerImpl.class
+org\oc_j2ee\projet3\business\impl\manager\CommentaireManagerImpl.class
+org\oc_j2ee\projet3\business\contrat\manager\CommentaireManager.class
+org\oc_j2ee\projet3\business\impl\manager\ManagerFactoryImpl.class
+org\oc_j2ee\projet3\business\contrat\manager\ArticleManager.class

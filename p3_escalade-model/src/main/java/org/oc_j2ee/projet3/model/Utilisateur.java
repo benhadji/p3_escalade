@@ -1,18 +1,28 @@
 package org.oc_j2ee.projet3.model;
 
 public class Utilisateur {
-	
+
+
+	private Integer id;
 	private String nom;
 	private String prenom;
 	private String pseudo;
 	private String mail;
 	private String role;
+
+	public Integer getId() {
+		return id;
+	}
+
+	protected void setId(Integer id) {
+		this.id = id;
+	}
 	
 	public String getNom() {
 		return nom;
 	}
 	
-	public void setNom(String nom) {
+	protected void setNom(String nom) {
 		this.nom = nom;
 	}
 	
@@ -20,7 +30,7 @@ public class Utilisateur {
 		return prenom;
 	}
 	
-	public void setPrenom(String prenom) {
+	protected void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
 	
@@ -28,7 +38,7 @@ public class Utilisateur {
 		return pseudo;
 	}
 	
-	public void setPseudo(String pseudo) {
+	protected void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
 	
@@ -36,7 +46,7 @@ public class Utilisateur {
 		return mail;
 	}
 	
-	public void setMail(String mail) {
+	protected void setMail(String mail) {
 		this.mail = mail;
 	}
 	
@@ -44,7 +54,7 @@ public class Utilisateur {
 		return role;
 	}
 	
-	public void setRole(String role) {
+	protected void setRole(String role) {
 		this.role = role;
 	}
 
