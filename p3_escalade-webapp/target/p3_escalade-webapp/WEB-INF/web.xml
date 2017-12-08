@@ -22,9 +22,18 @@
     </resource-ref>
 
     <listener>
-        <listener-class>org.oc_j2ee.projet3.listener.DependencyInjectionListener</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/bootstrapContext.xml</param-value>
+	</context-param>
+	
+	<resource-ref>
+		<res-ref-name>jdbc/db_projet3</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
 
 
 </web-app>

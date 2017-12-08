@@ -3,18 +3,32 @@ package org.oc_j2ee.projet3.model;
 public class Voie extends Secteur {
 
 
-	private Integer id;
+	private Integer voie_id;
+	private Integer secteur_id;
 	private String nom;
 	private boolean etat;
 
-
-	public Integer getId() {
-		return id;
+	public Integer getVoie_id() {
+		return voie_id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setVoie_id(Integer voie_id) {
+		this.voie_id = voie_id;
 	}
+
+
+
+	public Integer getSecteur_id() {
+		return secteur_id;
+	}
+
+	public void setSecteur_id(Integer secteur_id) {
+		this.secteur_id = secteur_id;
+	}
+
+
+
+
 
 	public String getNom() {
 		return nom;

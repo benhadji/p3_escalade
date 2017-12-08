@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean abstract="true" id="abstractDao">
+        <property ref="dataSourceProjet3" name="dataSource"/>
+    </bean>
+
+    <!-- ===== Déclaration des DAO ===== -->
+    <bean id="articleDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.ArticleDaoImpl"/>
+    <bean id="borrowDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.BorrowDaoImpl"/>
+    <bean id="commentaireDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.CommentaireDaoImpl"/>
+    <bean id="longueurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.LongueurDaoImpl"/>
+    <bean id="secteurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SecteurDaoImpl"/>
+    <bean id="siteDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SiteDaoImpl"/>
+    <bean id="topoDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.TopoDaoImpl"/>
+    <bean id="utilisateurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.UtilisateurDaoImpl"/>
+    <bean id="voieDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.VoieDaoImpl"/>
+
+    <!-- ===== DaoFactory ===== -->
+    <bean id="daoFactory" class="org.oc_j2ee.projet3.consumer.impl.DaoFactoryImpl">
+        <property name="articleDao" ref="articleDao"/>
+        <property name="borrowDao" ref="borrowDao"/>
+        <property name="commentaireDao" ref="commentaireDao"/>
+        <property name="longueurDao" ref="longueurDao"/>
+        <property name="secteurDao" ref="secteurDao"/>
+        <property name="siteDao" ref="siteDao"/>
+        <property name="topoDao" ref="topoDao"/>
+        <property name="utilisateurDao" ref="utilisateurDao"/>
+        <property name="voieDao" ref="voieDao"/>
+    </bean>
+
+    <!-- ===== Déclaration RowMappers ===== -->
+    <bean abstract="true" id="abstractRM">
+        <property ref="daoFactory" name="daoFactory"/>
+    </bean>
+
+    <bean id="articleRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.ArticleRM"/>
+    <bean id="commentRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.CommentaireRM"/>
+    <bean id="longueurRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.LongueurRM"/>
+    <bean id="secteurRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.SecteurRM"/>
+    <bean id="siteRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.SiteRM"/>
+    <bean id="topoRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.TopoRM"/>
+    <bean id="voieRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.VoieRM"/>
+    <bean id="utilisateurRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.UtilisateurRM"/>
+    <bean id="borrowRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.BorrowRM"/>
+
+</beans>

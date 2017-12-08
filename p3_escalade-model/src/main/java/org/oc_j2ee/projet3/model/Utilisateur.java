@@ -6,7 +6,6 @@ public class Utilisateur {
 	private Integer id;
 	private String nom;
 	private String prenom;
-	private String pseudo;
 	private String mail;
 	private String role;
 
@@ -14,47 +13,39 @@ public class Utilisateur {
 		return id;
 	}
 
-	protected void setId(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
 	public String getNom() {
 		return nom;
 	}
-	
-	protected void setNom(String nom) {
+
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
 	
 	public String getPrenom() {
 		return prenom;
 	}
-	
-	protected void setPrenom(String prenom) {
+
+	public void setPrenom(String prenom) {
 		this.prenom = prenom;
-	}
-	
-	public String getPseudo() {
-		return pseudo;
-	}
-	
-	protected void setPseudo(String pseudo) {
-		this.pseudo = pseudo;
 	}
 	
 	public String getMail() {
 		return mail;
 	}
-	
-	protected void setMail(String mail) {
+
+	public void setMail(String mail) {
 		this.mail = mail;
 	}
 	
 	public String getRole() {
 		return role;
 	}
-	
-	protected void setRole(String role) {
+
+	public void setRole(String role) {
 		this.role = role;
 	}
 

@@ -1,14 +1,21 @@
 package org.oc_j2ee.projet3.consumer.impl.DAO;
 
 import org.oc_j2ee.projet3.consumer.contract.DAO.TopoDAO;
+import org.oc_j2ee.projet3.consumer.impl.RowMapper.TopoRM;
 import org.oc_j2ee.projet3.model.Site;
 import org.oc_j2ee.projet3.model.Topo;
 import org.oc_j2ee.projet3.model.Utilisateur;
 
+import javax.inject.Inject;
 import java.util.Date;
 import java.util.List;
 
 public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
+
+    @Inject
+    private TopoRM topoRM;
+
+
     @Override
     public void create(Topo topo) {
 

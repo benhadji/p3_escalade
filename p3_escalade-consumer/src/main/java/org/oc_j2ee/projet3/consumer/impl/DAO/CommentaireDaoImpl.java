@@ -1,49 +1,115 @@
 package org.oc_j2ee.projet3.consumer.impl.DAO;
 
 import org.oc_j2ee.projet3.consumer.contract.DAO.CommentaireDAO;
+import org.oc_j2ee.projet3.consumer.impl.RowMapper.CommentaireRM;
 import org.oc_j2ee.projet3.model.Article;
 import org.oc_j2ee.projet3.model.Commentaire;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import javax.inject.Inject;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
 import java.util.List;
 
 public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDAO {
 
+    @Inject
+    private CommentaireRM commentaireRM;
+
 
     @Override
-    public void create(Commentaire comment) {
+    public void create(Commentaire commentaire) {
 
 
+        String vSQL = "INSERT INTO COMMENTAIRE(content, utilisateur_id, article_id) " +
+                "VALUES(:content, :utilisateur_id, :article_id)";
 
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("content", commentaire.getContent(), Types.VARCHAR);
+        vParams.addValue("utilisateur_id", commentaire.getUtilisateur().getId(), Types.INTEGER);
+        vParams.addValue("article_id", commentaire.getArticle().getNumero(), Types.INTEGER);
+
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        vJdbcTemplate.update(vSQL, vParams);
 
     }
 
+
     @Override
-    public void update(Commentaire comment) {
+    public void update(Commentaire commentaire) {
+
+
+        String vSQL = "UPDATE COMMENTAIRE SET content=:content, utilisateur_id=:utilisateur_id, " +
+                "article_id=:article_id WHERE comment_id=:id";
+
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("content", commentaire.getContent(), Types.VARCHAR);
+        vParams.addValue("utilisateur_id", commentaire.getUtilisateur().getId(), Types.INTEGER);
+        vParams.addValue("article_id", commentaire.getArticle().getNumero(), Types.INTEGER);
+
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        vJdbcTemplate.update(vSQL, vParams);
+
 
     }
 
     @Override
     public void delete(Commentaire comment) {
 
-    }
+        String vSQL = "DELETE FROM COMMENTAIRE WHERE comment_id=:id";
 
-    @Override
-    public void createCommentSite(int site_id, Commentaire comment) {
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("id", comment.getId(), Types.INTEGER);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        vJdbcTemplate.update(vSQL, vParams);
 
-    }
-
-    @Override
-    public void deleteCommentSite(Commentaire comment) {
 
     }
+
 
     @Override
     public Commentaire getById(int id) {
-        return null;
+
+        String vSQL = "SELECT * FROM COMMENTAIRE WHERE article_id = :id";
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        MapSqlParameterSource vParams = new MapSqlParameterSource("id", id);
+        try {
+            Commentaire commentaire = vJdbcTemplate.queryForObject(vSQL, vParams, commentaireRM);
+            return commentaire;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+
     }
 
     @Override
     public List<Commentaire> getAllByArticle(Article article) {
-        return null;
+
+        String vSQL = "SELECT * FROM public.COMMENTAIRE WHERE article_id=:id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(article);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        RowMapper<Commentaire> vRowMapper = new CommentaireRM();
+        List<Commentaire> vList = vJdbcTemplate.query(vSQL,vParams,vRowMapper);
+        return vList;
+
+
     }
+
+
+
+
 }
+
+

@@ -11,8 +11,6 @@ public interface CommentaireDAO {
     void create(Commentaire comment);
     void update(Commentaire comment);
     void delete(Commentaire comment);
-    void createCommentSite(int site_id, Commentaire comment) ;
-    void deleteCommentSite(Commentaire comment);
     Commentaire getById(int id);
     List<Commentaire> getAllByArticle(Article article);
 

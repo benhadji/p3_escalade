@@ -9,8 +9,8 @@ import java.util.List;
 public interface BorrowDAO {
 
     void deleteBorrow(Topo topo, Utilisateur utilisateur);
-    Borrow get(Utilisateur utilisateur, Topo topo);
-    List<Borrow> getTopoBorrowed(Utilisateur utilisateur);
+    Borrow getTopoBorrowed(Utilisateur utilisateur, Topo topo);
+    List<Borrow> listTopoBorrowed(Utilisateur utilisateur);
     List<Borrow> getAllTopoBorrowed();
 
 }
