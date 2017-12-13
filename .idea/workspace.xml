@@ -7,134 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790097a-3bd7-41b0-9f1f-b6b959ce15f2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/AbstractRM.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/AbstractRM.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-consumer/utilitaires/jdbc/BaseDeDonnees.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-consumer/utilitaires/jdbc/JeuResultat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/index.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/resource/org/oc_j2ee/projet3/consumer/consumerContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/ArticleManagerImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/ArticleManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/CommentaireManagerImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/CommentaireManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-business/target/classes/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/p3_escalade-business-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-business/target/p3_escalade-business-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/ArticleDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/LongueurDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/LongueurDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/SiteDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/SiteDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/TopoDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/TopoDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/UtilisateurDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/UtilisateurDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/VoieDAO.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DAO/VoieDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/BorrowDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/BorrowDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/SecteurDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/SecteurDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/SiteDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/SiteDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/TopoDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/TopoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/UtilisateurDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/UtilisateurDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/VoieDaoImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DAO/VoieDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/ArticleRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/ArticleRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/BorrowRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/BorrowRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/LongueurRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/LongueurRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/SecteurRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/SecteurRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/SiteRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/SiteRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/TopoRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/TopoRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/UtilisateurRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/UtilisateurRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/VoieRM.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/RowMapper/VoieRM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/p3_escalade-consumer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/p3_escalade-consumer-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Article.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Article.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Borrow.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Borrow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Commentaire.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Commentaire.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Longueur.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Longueur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Secteur.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Secteur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Site.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Site.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Topo.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Topo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Utilisateur.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Utilisateur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Voie.class" afterPath="$PROJECT_DIR$/p3_escalade-model/target/classes/org/oc_j2ee/projet3/model/Voie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/p3_escalade-model-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-model/target/p3_escalade-model-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp.war" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-business-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-business-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-consumer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-consumer-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-model-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-model-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/p3_escalade_webapp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/p3_escalade_webapp_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ArticleManager.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ArticleManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ManagerFactory.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ManagerFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ArticleManagerImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ArticleManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/CommentaireManagerImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/CommentaireManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-business/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/p3_escalade-consumer.iml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/p3_escalade-consumer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/pom.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/ArticleDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/CommentaireDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/CommentaireDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/LongueurDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/LongueurDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/SiteDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/SiteDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/TopoDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/TopoDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/UtilisateurDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/UtilisateurDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/VoieDAO.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/VoieDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/BorrowDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/BorrowDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SecteurDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SecteurDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SiteDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SiteDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/TopoDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/TopoDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/UtilisateurDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/UtilisateurDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/VoieDaoImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/VoieDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/ArticleRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/ArticleRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/BorrowRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/BorrowRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/LongueurRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/LongueurRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/SecteurRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/SecteurRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/SiteRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/SiteRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/TopoRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/TopoRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/UtilisateurRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/UtilisateurRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/VoieRM.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/VoieRM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/TEST-org.oc_j2ee.projet3.consumer.AppTest.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/TEST-org.oc_j2ee.projet3.consumer.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Article.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Borrow.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Borrow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Commentaire.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Commentaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Longueur.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Longueur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Secteur.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Secteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Site.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Site.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Topo.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Topo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Utilisateur.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Utilisateur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Voie.java" afterPath="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Voie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-model/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/p3_escalade-webapp.iml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/p3_escalade-webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade.iml" afterPath="$PROJECT_DIR$/p3_escalade.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/p3_escalade-business/target/" />
     <ignored path="$PROJECT_DIR$/p3_escalade-consumer/target/" />
@@ -173,96 +47,7 @@
     <favorites_list name="p3_escalade" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="webappContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractResource.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManagerFactoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="businessContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/resources/org/oc_j2ee/projet3/business/businessContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consumerContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <marker date="1513164168941" expanded="true" signature="1056:1175" ph="INSERT INTO ARTICLE... " />
-                <marker date="1513164168941" expanded="true" signature="1712:1853" ph="UPDATE ARTIC... " />
-                <marker date="1513164168941" expanded="true" signature="2454:2495" ph="DELETE FROM " />
-                <marker date="1513164168941" expanded="true" signature="2861:2903" ph="SELECT * FRO... ARTICLE" />
-                <marker date="1513164168941" expanded="true" signature="3413:3466" ph="SELECT * FRO... ARTICLE" />
-                <marker date="1513164168941" expanded="true" signature="3917:3931" ph="SELECT * FRO... CUSTOMER" />
-                <marker date="1513164168941" expanded="true" signature="3917:3945" ph="SELECT * FRO... ARTICLE" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/AbstractDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -296,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Borrow.java" />
         <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Commentaire.java" />
         <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Longueur.java" />
         <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Secteur.java" />
@@ -339,7 +123,6 @@
         <option value="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/AbstractDaoImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
@@ -347,6 +130,8 @@
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ManagerFactory.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" />
       </list>
     </option>
   </component>
@@ -976,16 +761,15 @@
       <workItem from="1512124479171" duration="13421000" />
       <workItem from="1512225785806" duration="69488000" />
       <workItem from="1512813869690" duration="40572000" />
-      <workItem from="1513175661956" duration="218000" />
+      <workItem from="1513175661956" duration="846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138320000" />
+    <option name="totallyTimeSpent" value="138948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -1004,11 +788,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4814815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4814815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28486487" sideWeight="0.4958184" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28486487" sideWeight="0.4958184" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5041816" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5041816" order="6" side_tool="true" content_ui="tabs" />
@@ -1450,14 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/resources/org/oc_j2ee/projet3/business/businessContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1474,18 +1250,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml">
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        <state relative-caret-position="225">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java">
+    <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/resources/org/oc_j2ee/projet3/business/businessContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
