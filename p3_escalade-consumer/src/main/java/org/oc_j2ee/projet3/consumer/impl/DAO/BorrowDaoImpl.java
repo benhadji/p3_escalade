@@ -16,14 +16,6 @@ public class BorrowDaoImpl extends AbstractDaoImpl implements BorrowDAO {
     @Override
     public void deleteBorrow(Topo topo, Utilisateur utilisateur) {
 
-        String vSQL = "DELETE FROM  WHERE ";
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-
-        vParams.addValue("topo_id", topo.getId(), Types.INTEGER);
-        vParams.addValue("user_id", utilisateur.getId(), Types.INTEGER);
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
     }
 
     @Override

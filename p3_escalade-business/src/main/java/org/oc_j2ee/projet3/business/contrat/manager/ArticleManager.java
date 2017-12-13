@@ -9,4 +9,5 @@ public interface ArticleManager {
 
     Article getById(Integer id) throws SQLException;
     List<Article> getListArticle();
+
 }

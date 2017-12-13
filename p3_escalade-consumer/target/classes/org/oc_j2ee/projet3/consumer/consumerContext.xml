@@ -22,15 +22,15 @@
 
     <!-- ===== DaoFactory ===== -->
     <bean id="daoFactory" class="org.oc_j2ee.projet3.consumer.impl.DaoFactoryImpl">
-        <property name="articleDao" ref="articleDao"/>
-        <property name="borrowDao" ref="borrowDao"/>
-        <property name="commentaireDao" ref="commentaireDao"/>
-        <property name="longueurDao" ref="longueurDao"/>
-        <property name="secteurDao" ref="secteurDao"/>
-        <property name="siteDao" ref="siteDao"/>
-        <property name="topoDao" ref="topoDao"/>
-        <property name="utilisateurDao" ref="utilisateurDao"/>
-        <property name="voieDao" ref="voieDao"/>
+        <property ref="articleDao" name="articleDao" />
+        <property ref="borrowDao" name="borrowDao" />
+        <property ref="commentaireDao" name="commentaireDao" />
+        <property ref="longueurDao" name="longueurDao" />
+        <property ref="secteurDao" name="secteurDao"/>
+        <property ref="siteDao" name="siteDao"/>
+        <property ref="topoDao" name="topoDao" />
+        <property ref="utilisateurDao" name="utilisateurDao"/>
+        <property ref="voieDao" name="voieDao"/>
     </bean>
 
     <!-- ===== Déclaration RowMappers ===== -->
@@ -39,7 +39,7 @@
     </bean>
 
     <bean id="articleRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.ArticleRM"/>
-    <bean id="commentRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.CommentaireRM"/>
+    <bean id="commentaireRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.CommentaireRM"/>
     <bean id="longueurRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.LongueurRM"/>
     <bean id="secteurRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.SecteurRM"/>
     <bean id="siteRM" parent="abstractRM" class="org.oc_j2ee.projet3.consumer.impl.RowMapper.SiteRM"/>

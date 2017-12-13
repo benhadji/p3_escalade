@@ -11,8 +11,7 @@ public interface UtilisateurDAO {
     void delete(Utilisateur utilisateur);
     Utilisateur getById(int id);
     List<Utilisateur> getAllUsers();
-    boolean emailIActive(String email);
-    boolean loginActive(String login);
+
 
 
 

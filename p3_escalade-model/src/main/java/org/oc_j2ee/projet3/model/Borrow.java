@@ -4,10 +4,11 @@ import java.util.Date;
 
 public class Borrow {
 
+    private Integer id;
     private Date startDate;
     private Date endDate;
-    private Topo topo;
-    private int borrowerId;
+    private Integer topoId;
+    private Integer utilisateurId;
 
     public Date getStartDate() {
 
@@ -26,21 +27,30 @@ public class Borrow {
         this.endDate = endDate;
     }
 
-    public Topo getTopo() {
-        return topo;
+    public Integer getId() {
+        return id;
     }
 
-    public void setTopo(Topo topo) {
-        this.topo = topo;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getBorrowerId() {
-        return borrowerId;
+    public Integer getTopoId() {
+        return topoId;
     }
 
-    public void setBorrowerId(int borrowerId) {
-        this.borrowerId = borrowerId;
+    public void setTopoId(Integer topoId) {
+        this.topoId = topoId;
     }
+
+    public Integer getUtilisateurId() {
+        return utilisateurId;
+    }
+
+    public void setUtilisateurId(Integer utilisateurId) {
+        this.utilisateurId = utilisateurId;
+    }
+
 
 
 }

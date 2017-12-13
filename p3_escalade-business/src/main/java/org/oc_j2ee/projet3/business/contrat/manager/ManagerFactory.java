@@ -3,16 +3,16 @@ package org.oc_j2ee.projet3.business.contrat.manager;
 public interface ManagerFactory {
 
     ArticleManager getArticleManager();
-    void setArticleManager(ArticleManager vArticleManager);
+    void setArticleManager(ArticleManager articleManager);
 
     CommentaireManager getCommentaireManager();
-    void setCommentaireManager(CommentaireManager vCommentaireManager);
+    void setCommentaireManager(CommentaireManager commentaireManager);
 
     SiteManager getSiteManager();
-    void setSiteManager(SiteManager vSiteManager);
+    void setSiteManager(SiteManager siteManager);
 
     UtilisateurManager getUtilisateurManager();
-    void setUtilisateurManager(UtilisateurManager vUserManager);
+    void setUtilisateurManager(UtilisateurManager utilisateurManager);
 
     TopoManager getTopoManager();
     void setTopoManager(TopoManager topoManager);

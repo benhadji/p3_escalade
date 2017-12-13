@@ -12,7 +12,7 @@ public interface LongueurDAO {
     void delete(Longueur length);
     void deleteAllByWay(Voie voie);
     Longueur getById(int id);
-    List<Longueur> listLongueur(Voie voie);
+    List<Longueur> getByWay(Voie voie);
 
 
 }

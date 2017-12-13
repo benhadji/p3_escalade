@@ -8,11 +8,10 @@ import java.util.List;
 
 public interface CommentaireDAO {
 
-    void create(Commentaire comment);
-    void update(Commentaire comment);
-    void delete(Commentaire comment);
+    void create(Commentaire commentaire);
+    void update(Commentaire commentaire);
+    void delete(Commentaire commentaire);
     Commentaire getById(int id);
     List<Commentaire> getAllByArticle(Article article);
-
 
 }

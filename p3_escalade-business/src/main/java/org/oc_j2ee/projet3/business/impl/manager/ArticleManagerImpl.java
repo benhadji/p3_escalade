@@ -14,13 +14,7 @@ public class ArticleManagerImpl extends AbstractManagerImpl implements ArticleMa
     @Override
     public Article getById(Integer id) throws SQLException {
 
-        if (id < 1) {
-            throw new SQLException("Article " + id + " non trouvé !");
-        }
-
-        Article article = new Article();
-        article.setNumero(id);
-        return article;
+        return getDaoFactory().getArticleDAO().getById(id);
 
     }
 
@@ -28,15 +22,8 @@ public class ArticleManagerImpl extends AbstractManagerImpl implements ArticleMa
     @Override
     public List<Article> getListArticle() {
 
-        List<Article> vList = new ArrayList<>();
-        for (int i = 0; i < 10 ; i++)
-        {
-            Article article = new Article();
-            article.setNumero(i);
-            vList.add(article);
-        }
+        return getDaoFactory().getArticleDAO().getAllArticle();
 
-        return vList;
     }
 
 }

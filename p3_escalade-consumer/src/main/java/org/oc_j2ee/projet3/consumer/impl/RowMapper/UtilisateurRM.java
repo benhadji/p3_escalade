@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UtilisateurRM extends AbstractRM implements RowMapper<Utilisateur> {
+public class UtilisateurRM implements RowMapper<Utilisateur> {
 
     @Override
     public Utilisateur mapRow(ResultSet rs, int i) throws SQLException {
@@ -15,7 +15,7 @@ public class UtilisateurRM extends AbstractRM implements RowMapper<Utilisateur> 
         utilisateur.setId(rs.getInt("id"));
         utilisateur.setNom(rs.getString("nom"));
         utilisateur.setPrenom(rs.getString("prenom"));
-        utilisateur.setMail(rs.getString("email"));
+        utilisateur.setEmail(rs.getString("email"));
         utilisateur.setRole(rs.getString("role"));
 
         return utilisateur;

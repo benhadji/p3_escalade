@@ -12,18 +12,23 @@ import java.util.List;
 public class ArticleResource extends AbstractResource {
 
 
-    public Article get(Integer pId) throws NotFoundException, SQLException {
+    public Article get(Integer pId) throws SQLException {
 
-        ArticleManager vArticleManager = getManagerFactory().getArticleManager();
-        Article article = vArticleManager.getById(pId);
+
+        ArticleManager articleManager = getManagerFactory().getArticleManager();
+        Article article = articleManager.getById(pId);
         return article;
+
+
     }
 
+    public List<Article> getList(){
 
-    public List<Article> get() {
-        ArticleManager vArticleManager = getManagerFactory().getArticleManager();
-        List<Article> vListArticle = vArticleManager.getListArticle();
-        return vListArticle;
+        ArticleManager articleManager = getManagerFactory().getArticleManager();
+        List<Article> vList = articleManager.getListArticle();
+
+        return vList;
+
     }
 
 

@@ -6,11 +6,14 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SiteRM extends AbstractRM implements RowMapper<Site>{
+public class SiteRM implements RowMapper<Site>{
+
     @Override
     public Site mapRow(ResultSet rs, int i) throws SQLException {
+
         Site site = new Site();
-        site.setId(rs.getInt("topo_id"));
+
+        site.setSite_id(rs.getInt("site_id"));
         site.setNom(rs.getString("nom"));
         site.setLocalisation(rs.getString("localisation"));
 

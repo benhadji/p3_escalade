@@ -7,19 +7,18 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CommentaireRM extends AbstractRM implements RowMapper<Commentaire> {
+public class CommentaireRM implements RowMapper<Commentaire> {
+
     @Override
     public Commentaire mapRow(ResultSet rs, int i) throws SQLException {
 
         Commentaire commentaire = new Commentaire();
-        commentaire.setId(rs.getInt("article_id"));
-        commentaire.setContent(rs.getString("content"));
 
-        ArticleRM articleRM = new ArticleRM();
-        commentaire.setArticle(articleRM.mapRow(rs,i));
-
-        UtilisateurRM utilisateurRM = new UtilisateurRM();
-        commentaire.setUtilisateur(utilisateurRM.mapRow(rs,i));
+        commentaire.setId(rs.getInt("id"));
+        commentaire.setArticleId(rs.getInt("article_id"));
+        commentaire.setUtilisateurId(rs.getInt("utilisateur_id"));
+        commentaire.setContent(rs.getString("contenu"));
+        commentaire.setAuteur(rs.getString("auteur"));
 
         return commentaire;
     }

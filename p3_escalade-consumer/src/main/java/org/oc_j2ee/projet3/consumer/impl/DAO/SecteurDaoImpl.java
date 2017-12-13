@@ -26,11 +26,11 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public void create(Secteur secteur) {
 
-        String vSQL = "INSERT INTO SECTEUR (nom, site_id) VALUES(:nom, :site_id)";
+        String vSQL = "INSERT INTO public.SECTEUR (site_id, nom) VALUES(:site_id, :nom)";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("site_id", secteur.getSite_id(), Types.INTEGER);
         vParams.addValue("nom", secteur.getNom(), Types.VARCHAR);
-        vParams.addValue("site_id", secteur.getSite_id());
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -40,12 +40,12 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public void update(Secteur secteur) {
 
-        String vSQL = "UPDATE SECTEUR SET nom=:nom, site_id=:site_id WHERE secteur_id=:id";
+        String vSQL = "UPDATE public.SECTEUR SET site_id=:site_id, nom=:nom WHERE secteur_id=:secteur_id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("secteur_id", secteur.getSecteur_id(), Types.INTEGER);
+        vParams.addValue("site_id", secteur.getSite_id(), Types.INTEGER);
         vParams.addValue("nom", secteur.getNom(), Types.VARCHAR);
-        vParams.addValue("site_id", secteur.getSite_id());
-        vParams.addValue("id", secteur.getSecteur_id(), Types.INTEGER);
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -56,10 +56,10 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public void delete(Secteur secteur) {
 
-        String vSQL = "DELETE FROM SECTEUR WHERE secteur_id=:id";
+        String vSQL = "DELETE FROM public.SECTEUR WHERE secteur_id=:secteur_id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("id", secteur.getSecteur_id(), Types.INTEGER);
+        vParams.addValue("secteur_id", secteur.getSecteur_id(), Types.INTEGER);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
 
@@ -68,7 +68,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public void deleteAllBySite(Site site) {
 
-        String vSQL = "DELETE FROM SECTEUR WHERE site_id=:site_id";
+        String vSQL = "DELETE FROM public.SECTEUR WHERE site_id=:site_id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("site_id", site.getSite_id(), Types.INTEGER);
@@ -78,11 +78,11 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     }
 
     @Override
-    public Secteur getById(int id) {
+    public Secteur getById(int secteur_id) {
 
-        String vSQL = "SELECT * FROM SECTEUR WHERE id = :id";
+        String vSQL = "SELECT * FROM public.SECTEUR WHERE secteur_id = :id";
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        MapSqlParameterSource vParams = new MapSqlParameterSource("id", id);
+        MapSqlParameterSource vParams = new MapSqlParameterSource("secteur_id", secteur_id);
         try {
             Secteur secteur = vJdbcTemplate.queryForObject(vSQL, vParams, secteurRM);
             return secteur;
@@ -94,16 +94,14 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public List<Secteur> getAllBySite(Site site) {
 
-
-        String vSQL = "SELECT * FROM public.SECTEUR WHERE secteur_id=:id";
+        String vSQL = "SELECT * FROM public.SECTEUR WHERE site_id=:site_id";
 
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
-        RowMapper<Secteur> vRowMapper = new SecteurRM();
-        List<Secteur> vList = vJdbcTemplate.query(vSQL,vParams,vRowMapper);
+        List<Secteur> vList = vJdbcTemplate.query(vSQL,vParams,secteurRM);
         return vList;
 
-
     }
+
 }

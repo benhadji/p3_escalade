@@ -13,6 +13,7 @@ public interface VoieDAO {
     void deleteAllBySector(Secteur secteur);
     Voie getById(int id);
     List<Voie> getAllBySector(Secteur secteur);
+    List<Voie> getListVoie();
 
 
 

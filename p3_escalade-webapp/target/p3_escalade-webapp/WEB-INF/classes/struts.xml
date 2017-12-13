@@ -10,7 +10,7 @@
     
     <package name="basicstruts2" extends="struts-default">
         <action name="index">
-            <result>/index.jsp</result>
+            <result>/WEB-INF/index.jsp</result>
         </action>
     </package>
 

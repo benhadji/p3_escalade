@@ -1,6 +1,6 @@
 package org.oc_j2ee.projet3.model;
 
-public class Voie extends Secteur {
+public class Voie extends Longueur {
 
 
 	private Integer voie_id;
@@ -16,8 +16,6 @@ public class Voie extends Secteur {
 		this.voie_id = voie_id;
 	}
 
-
-
 	public Integer getSecteur_id() {
 		return secteur_id;
 	}
@@ -25,10 +23,6 @@ public class Voie extends Secteur {
 	public void setSecteur_id(Integer secteur_id) {
 		this.secteur_id = secteur_id;
 	}
-
-
-
-
 
 	public String getNom() {
 		return nom;

@@ -24,8 +24,6 @@ public class Secteur extends Site {
         this.secteur_id = secteur_id;
     }
 
-
-
 	public String getNom() {
 		return nom;
 	}

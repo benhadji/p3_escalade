@@ -10,12 +10,12 @@ import java.util.List;
 public interface TopoDAO {
 
     void create(Topo topo);
-    void createBorrowing(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur);
     void update (Topo topo);
     void delete (Topo topo);
+    void createNewBorrow(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur);
     void deleteSiteTopo (Topo topo, Site site);
     Topo getById(int id);
-    List<Topo> listTopo();
+    List<Topo> getAllTopos();
     List<Topo> getToposByUser(Utilisateur utilisateur);
     List<Topo> getToposBorrowedByUser (Utilisateur user);
 

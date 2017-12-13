@@ -2,28 +2,14 @@ package org.oc_j2ee.projet3.business.impl.manager;
 
 import org.oc_j2ee.projet3.business.contrat.manager.*;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 
-@Named("managerFactory")
 public class ManagerFactoryImpl implements ManagerFactory {
 
-    @Inject
     private ArticleManager articleManager;
-
-    @Inject
     private CommentaireManager commentaireManager;
-
-    @Inject
     private SiteManager siteManager;
-
-    @Inject
     private UtilisateurManager utilisateurManager;
-
-    @Inject
     private TopoManager topoManager;
-
-    @Inject
     private BorrowManager borrowManager;
 
     @Override

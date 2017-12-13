@@ -1,17 +1,29 @@
 package org.oc_j2ee.projet3.model;
 
 public class Article {
-	
-	private Integer numero;			// Primary Key
+
+
+	private Integer id;					// Primary Key
+	private Integer utilisateur_id;		// Foreign key
 	private String titre;
 	private String auteur;
-	
-	public Article()
-	{
 
-		
+
+	public Integer getId() {
+		return id;
 	}
-	
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getUtilisateur_id() {
+		return utilisateur_id;
+	}
+
+	public void setUtilisateur_id(Integer utilisateur_id) {
+		this.utilisateur_id = utilisateur_id;
+	}
 
 	public String getTitre() {
 		return titre;
@@ -29,15 +41,6 @@ public class Article {
 		this.auteur = auteur;
 	}
 	
-	public Integer getNumero()
-	{
-		return numero;
-	}
-
-	public void setNumero(Integer numero)
-	{
-		this.numero = numero;
-	}
 
 	
 		

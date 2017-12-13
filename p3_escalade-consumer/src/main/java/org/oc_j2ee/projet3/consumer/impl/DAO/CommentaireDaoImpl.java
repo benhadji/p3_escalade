@@ -27,17 +27,24 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDA
     private CommentaireRM commentaireRM;
 
 
+    public void setCommentaireRM(CommentaireRM commentaireRM) {
+        this.commentaireRM = commentaireRM;
+    }
+
+
     @Override
     public void create(Commentaire commentaire) {
 
 
-        String vSQL = "INSERT INTO COMMENTAIRE(content, utilisateur_id, article_id) " +
-                "VALUES(:content, :utilisateur_id, :article_id)";
+        String vSQL = "INSERT INTO public.COMMENTAIRE(article_id, utilisateur_id, auteur, contenu) " +
+                "VALUES(:article_id, :utilisateur_id, :auteur, :contenu)";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("content", commentaire.getContent(), Types.VARCHAR);
-        vParams.addValue("utilisateur_id", commentaire.getUtilisateur().getId(), Types.INTEGER);
-        vParams.addValue("article_id", commentaire.getArticle().getNumero(), Types.INTEGER);
+        vParams.addValue("article_id", commentaire.getArticleId(), Types.INTEGER);
+        vParams.addValue("utilisateur_id", commentaire.getUtilisateurId(), Types.INTEGER);
+        vParams.addValue("auteur", commentaire.getAuteur(), Types.VARCHAR);
+        vParams.addValue("contenu", commentaire.getContent(), Types.LONGVARCHAR);
+
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -49,13 +56,17 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDA
     public void update(Commentaire commentaire) {
 
 
-        String vSQL = "UPDATE COMMENTAIRE SET content=:content, utilisateur_id=:utilisateur_id, " +
-                "article_id=:article_id WHERE comment_id=:id";
+        String vSQL = "UPDATE public.COMMENTAIRE " +
+                "SET article_id=:article_id, utilisateur_id=:utilisateur_id, auteur=:auteur, contenu=:contenu " +
+                "WHERE id=:id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("content", commentaire.getContent(), Types.VARCHAR);
-        vParams.addValue("utilisateur_id", commentaire.getUtilisateur().getId(), Types.INTEGER);
-        vParams.addValue("article_id", commentaire.getArticle().getNumero(), Types.INTEGER);
+
+        vParams.addValue("id", commentaire.getId(), Types.INTEGER);
+        vParams.addValue("article_id", commentaire.getArticleId(), Types.INTEGER);
+        vParams.addValue("utilisateur_id", commentaire.getUtilisateurId(), Types.INTEGER);
+        vParams.addValue("auteur", commentaire.getAuteur(), Types.VARCHAR);
+        vParams.addValue("contenu", commentaire.getContent(), Types.LONGVARCHAR);
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -64,15 +75,14 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDA
     }
 
     @Override
-    public void delete(Commentaire comment) {
+    public void delete(Commentaire commentaire) {
 
-        String vSQL = "DELETE FROM COMMENTAIRE WHERE comment_id=:id";
+        String vSQL = "DELETE FROM public.COMMENTAIRE WHERE id=:id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("id", comment.getId(), Types.INTEGER);
+        vParams.addValue("id", commentaire.getId(), Types.INTEGER);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
-
 
     }
 
@@ -80,7 +90,7 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDA
     @Override
     public Commentaire getById(int id) {
 
-        String vSQL = "SELECT * FROM COMMENTAIRE WHERE article_id = :id";
+        String vSQL = "SELECT * FROM public.COMMENTAIRE WHERE id = :id";
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         MapSqlParameterSource vParams = new MapSqlParameterSource("id", id);
         try {
@@ -100,8 +110,7 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDA
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(article);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
-        RowMapper<Commentaire> vRowMapper = new CommentaireRM();
-        List<Commentaire> vList = vJdbcTemplate.query(vSQL,vParams,vRowMapper);
+        List<Commentaire> vList = vJdbcTemplate.query(vSQL,vParams,commentaireRM);
         return vList;
 
 

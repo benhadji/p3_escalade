@@ -6,12 +6,13 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ArticleRM extends AbstractRM implements RowMapper<Article>{
+public class ArticleRM implements RowMapper<Article>{
     @Override
     public Article mapRow(ResultSet rs, int i) throws SQLException {
 
         Article article = new Article();
-        article.setNumero(rs.getInt("id"));
+        article.setId(rs.getInt("id"));
+        article.setUtilisateur_id(rs.getInt("utilisateur_id"));
         article.setTitre(rs.getString("titre"));
         article.setAuteur(rs.getString("auteur"));
 

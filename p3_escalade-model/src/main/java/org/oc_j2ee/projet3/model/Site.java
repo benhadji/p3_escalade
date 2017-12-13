@@ -4,7 +4,6 @@ public class Site extends Topo {
 
 
 	private Integer site_id;
-	private Integer topo_id;
 	private String nom;
 	private String localisation;
 
@@ -15,15 +14,6 @@ public class Site extends Topo {
 	public void setSite_id(Integer site_id) {
 		this.site_id = site_id;
 	}
-
-	public Integer getTopo_id() {
-		return topo_id;
-	}
-
-	public void setTopo_id(Integer topo_id) {
-		this.topo_id = topo_id;
-	}
-
 
 	public String getNom() {
 		return nom;

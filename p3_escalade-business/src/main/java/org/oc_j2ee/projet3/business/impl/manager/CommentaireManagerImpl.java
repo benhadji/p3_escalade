@@ -15,7 +15,7 @@ public class CommentaireManagerImpl extends AbstractManagerImpl implements Comme
 
     @Override
     public Commentaire getComment(int id) {
-        return null;
+        return getDaoFactory().getCommentaireDAO().getById(id);
     }
 
     @Override

@@ -19,14 +19,16 @@ public class DaoFactoryImpl implements DaoFactory{
 
 
 
-    public void setArticleDAO(ArticleDAO articleDAO) {
 
-        this.articleDAO = articleDAO;
-    }
 
     @Override
     public ArticleDAO getArticleDAO() {
         return articleDAO;
+    }
+
+    @Override
+    public void setArticleDAO(ArticleDAO vArticleDAO) {
+
     }
 
 

@@ -5,9 +5,9 @@
               auth="Container"
               type="javax.sql.DataSource"
 
-              url="jdbc:postgresql://localhost:5432/projet3"
+              url="jdbc:postgresql://localhost:5432/db_projet3"
               driverClassName="org.postgresql.Driver"
-              username="adm_P3"
+              username="adm_projet3"
               password="momo12345#"
               defaultAutoCommit="false"
               defaultTransactionIsolation="READ_COMMITTED"

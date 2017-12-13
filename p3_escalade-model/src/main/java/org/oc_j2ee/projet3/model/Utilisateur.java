@@ -6,7 +6,7 @@ public class Utilisateur {
 	private Integer id;
 	private String nom;
 	private String prenom;
-	private String mail;
+	private String email;
 	private String role;
 
 	public Integer getId() {
@@ -32,15 +32,15 @@ public class Utilisateur {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	
-	public String getMail() {
-		return mail;
+
+	public String getEmail() {
+		return email;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	
+
 	public String getRole() {
 		return role;
 	}

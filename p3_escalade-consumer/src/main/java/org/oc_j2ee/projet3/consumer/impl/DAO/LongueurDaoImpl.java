@@ -17,19 +17,24 @@ import java.util.List;
 
 public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
 
-    @Inject
+
     private LongueurRM longueurRM;
+
+    public void setLongueurRM(LongueurRM longueurRM) {
+        this.longueurRM = longueurRM;
+    }
 
 
     @Override
     public void create(Longueur longueur) {
 
-        String vSQL = "INSERT INTO LONGUEUR (nom, cotation, voie_id) VALUES(:nom, :cotation, :voie_id)";
+        String vSQL = "INSERT INTO public.LONGUEUR (voie_id, nom, cotation) " +
+                "VALUES(:voie_id, :nom, :cotation)";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("voie_id", longueur.getVoie_id(), Types.INTEGER);
         vParams.addValue("nom", longueur.getNom(), Types.VARCHAR);
         vParams.addValue("cotation", longueur.getCotation(), Types.VARCHAR);
-        vParams.addValue("voie_id", longueur.getVoie_id());
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -39,13 +44,17 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
     @Override
     public void update(Longueur longueur) {
 
-        String vSQL = "UPDATE LONGUEUR SET nom=:nom, cotation=:cotation, voie_id=:voie_id WHERE longueur_id=:id";
+        String vSQL = "UPDATE public.LONGUEUR " +
+                "SET voie_id=:voie_id, nom=:nom, cotation=:cotation " +
+                "WHERE longueur_id=:longueur_id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
+
+        vParams.addValue("longueur_id", longueur.getLongueur_id(), Types.INTEGER);
+        vParams.addValue("voie_id", longueur.getVoie_id());
         vParams.addValue("nom", longueur.getNom(), Types.VARCHAR);
         vParams.addValue("cotation", longueur.getCotation(), Types.VARCHAR);
-        vParams.addValue("voie_id", longueur.getVoie_id());
-        vParams.addValue("id", longueur.getId(), Types.INTEGER);
+
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -55,11 +64,14 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
     }
 
     @Override
-    public void delete(Longueur length) {
+    public void delete(Longueur longueur) {
 
-        String vSQL = "DELETE FROM LONGUEUR WHERE longueur_id=:id";
+        String vSQL = "DELETE FROM public.LONGUEUR WHERE longueur_id=:longeur_id";
+
         MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("id", length.getId(), Types.INTEGER);
+
+        vParams.addValue("longueur_id", longueur.getLongueur_id(), Types.INTEGER);
+
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
 
@@ -68,7 +80,7 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
     @Override
     public void deleteAllByWay(Voie voie) {
 
-        String vSQL = "DELETE FROM LONGUEUR WHERE voie_id=:voie_id";
+        String vSQL = "DELETE FROM public.LONGUEUR WHERE voie_id=:voie_id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("voie_id", voie.getVoie_id(), Types.INTEGER);
@@ -78,11 +90,11 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
     }
 
     @Override
-    public Longueur getById(int id) {
+    public Longueur getById(int longueur_id) {
 
-        String vSQL = "SELECT * FROM LONGUEUR WHERE longueur_id = :id";
+        String vSQL = "SELECT * FROM public.LONGUEUR WHERE longueur_id = :longueur_id";
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        MapSqlParameterSource vParams = new MapSqlParameterSource("id", id);
+        MapSqlParameterSource vParams = new MapSqlParameterSource("longueur_id", longueur_id);
         try {
             Longueur longueur = vJdbcTemplate.queryForObject(vSQL, vParams, longueurRM);
             return longueur;
@@ -92,18 +104,15 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
     }
 
     @Override
-    public List<Longueur> listLongueur(Voie voie) {
-
-        String vSQL = "SELECT * FROM public.LONGUEUR WHERE longueur_id=:id";
+    public List<Longueur> getByWay(Voie voie) {
+        String vSQL = "SELECT * FROM public.LONGUEUR WHERE voie_id=:voie_id";
 
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(voie);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
-        RowMapper<Longueur> vRowMapper = new LongueurRM();
-        List<Longueur> vList = vJdbcTemplate.query(vSQL,vParams,vRowMapper);
+        List<Longueur> vList = vJdbcTemplate.query(vSQL,vParams,longueurRM);
         return vList;
-
-
-
     }
+
+
 }

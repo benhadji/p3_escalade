@@ -13,5 +13,6 @@ public interface ArticleDAO {
     void delete(Article article);
     Article getById(int id);
     List<Article> getAllByUser(Utilisateur utilisateur);
+    List<Article> getAllArticle();
 
 }

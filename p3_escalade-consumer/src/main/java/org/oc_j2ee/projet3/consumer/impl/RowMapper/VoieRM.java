@@ -6,13 +6,14 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class VoieRM extends AbstractRM implements RowMapper<Voie> {
+public class VoieRM implements RowMapper<Voie> {
     @Override
     public Voie mapRow(ResultSet rs, int i) throws SQLException {
 
         Voie voie = new Voie();
 
-        voie.setId(rs.getInt("secteur_id"));
+        voie.setVoie_id(rs.getInt("voie_id"));
+        voie.setSecteur_id(rs.getInt("secteur_id"));
         voie.setNom(rs.getString("nom"));
         voie.setEtat(rs.getBoolean("etat"));
 

@@ -6,13 +6,18 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TopoRM extends AbstractRM implements RowMapper<Topo> {
+public class TopoRM implements RowMapper<Topo> {
+
     @Override
     public Topo mapRow(ResultSet rs, int i) throws SQLException {
 
         Topo topo = new Topo();
+
         topo.setId(rs.getInt("id"));
+        topo.setUtilisateurId(rs.getInt("utilisateur_id"));
+        topo.setSiteId(rs.getInt("site_id"));
         topo.setNom(rs.getString("nom"));
+        topo.setEmprunt(rs.getBoolean("emprunt"));
 
         return topo;
 
