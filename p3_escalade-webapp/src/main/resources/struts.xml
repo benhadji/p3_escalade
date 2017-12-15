@@ -6,11 +6,10 @@
 <struts>
 
     <constant name="struts.devMode" value="true" />
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    
-    <package name="basicstruts2" extends="struts-default">
-        <action name="index">
-            <result>/WEB-INF/index.jsp</result>
+    <package name="default" namespace="/" extends="struts-default">
+
+        <action name="home" method="execute" class="org.oc_j2ee.projet3.webapp.action.HomeAction">
+            <result name="success">/home.jsp</result>
         </action>
     </package>
 

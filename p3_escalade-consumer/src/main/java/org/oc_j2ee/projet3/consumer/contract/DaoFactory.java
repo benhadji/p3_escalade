@@ -8,7 +8,7 @@ public interface DaoFactory {
     void setArticleDAO(ArticleDAO vArticleDAO);
 
     CommentaireDAO getCommentaireDAO();
-    void setCommentDao(CommentaireDAO pCommentDao);
+    void setCommentaireDAO(CommentaireDAO pCommentaireDao);
 
     BorrowDAO getBorrowDAO();
     void setBorrowDAO(BorrowDAO vBorrowDAO);

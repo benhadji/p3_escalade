@@ -18,9 +18,6 @@ public class DaoFactoryImpl implements DaoFactory{
 
 
 
-
-
-
     @Override
     public ArticleDAO getArticleDAO() {
         return articleDAO;
@@ -28,7 +25,7 @@ public class DaoFactoryImpl implements DaoFactory{
 
     @Override
     public void setArticleDAO(ArticleDAO vArticleDAO) {
-
+        articleDAO = vArticleDAO;
     }
 
 
@@ -38,7 +35,7 @@ public class DaoFactoryImpl implements DaoFactory{
     }
 
     @Override
-    public void setCommentDao(CommentaireDAO pCommentDao) {
+    public void setCommentaireDAO(CommentaireDAO pCommentDao) {
         commentaireDAO = pCommentDao;
     }
 

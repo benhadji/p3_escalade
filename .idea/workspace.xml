@@ -7,8 +7,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790097a-3bd7-41b0-9f1f-b6b959ce15f2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_8_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts2_core_2_5_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-bean-validation-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-cdi-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-config-browser-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-convention-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-core-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-dwr-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-embeddedjsp-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-gxp-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-jasperreports-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-javatemplates-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-jfreechart-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-json-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-junit-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-osgi-admin-bundle-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-osgi-demo-bundle-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-osgi-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-oval-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-pell-multipart-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-plexus-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-portlet-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-rest-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-sitegraph-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-sitemesh-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-spring-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-testng-plugin-2.5.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/struts2-tiles-plugin-2.5.13.jar" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/p3_escalade-business-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-business/target/p3_escalade-business-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DaoFactory.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/contract/DaoFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.class" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/p3_escalade-consumer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/p3_escalade-consumer-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/p3_escalade-model-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-model/target/p3_escalade-model-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/AbstractResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/AbstractResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp.war" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/AbstractResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/AbstractResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-business-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-business-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-consumer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-consumer-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-model-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/lib/p3_escalade-model-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/p3_escalade_webapp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/p3_escalade_webapp_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-business/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-business/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DaoFactory.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DaoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/consumerContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/classes/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/TEST-org.oc_j2ee.projet3.consumer.AppTest.xml" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/TEST-org.oc_j2ee.projet3.consumer.AppTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/org.oc_j2ee.projet3.consumer.AppTest.txt" afterPath="$PROJECT_DIR$/p3_escalade-consumer/target/surefire-reports/org.oc_j2ee.projet3.consumer.AppTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-model/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p3_escalade-model/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/p3_escalade-webapp.iml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/p3_escalade-webapp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/classes/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/org/oc_j2ee/projet3/webapp/webappContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/classes/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/p3_escalade-webapp/target/p3_escalade-webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/p3_escalade-business/target/" />
     <ignored path="$PROJECT_DIR$/p3_escalade-consumer/target/" />
@@ -47,7 +123,61 @@
     <favorites_list name="p3_escalade" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml">
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/webapp/action/HomeAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-186">
+              <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,6 +185,8 @@
         <option value="Singleton" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="jsf" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -81,16 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Commentaire.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Longueur.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Secteur.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Site.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Topo.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Voie.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-model/src/main/java/org/oc_j2ee/projet3/model/Utilisateur.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/ArticleDAO.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/CommentaireDAO.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/LongueurDAO.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/TopoDAO.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/VoieDAO.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/UtilisateurRM.java" />
@@ -114,24 +236,34 @@
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ArticleManager.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/CommentaireManagerImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ArticleManagerImpl.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" />
         <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/META-INF/context.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4dfcdce7-d553-4859-b0df-2b12d91c5ba5/console.sql" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/LongueurDaoImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/CommentaireDaoImpl.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/AbstractDaoImpl.java" />
-        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
         <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/ArticleDaoImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/contrat/manager/ManagerFactory.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java" />
         <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java" />
         <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml" />
+        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DaoFactory.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/pom.xml" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.2.3/xwork-core-2.2.3.jar!/com/opensymphony/xwork2/config/ConfigurationManager.class" />
+        <option value="$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/action/ArticleAction.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/webapp/action/HomeAction.java" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/layout.jsp" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/home.jsp" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/test.xhtml" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/test.jsp" />
+        <option value="$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml" />
       </list>
     </option>
   </component>
@@ -144,8 +276,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -185,8 +317,9 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,173 +330,6 @@
             <path>
               <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
               <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-business" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="RowMapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
               <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -394,7 +360,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="projet3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
@@ -403,8 +369,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="projet3" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
@@ -412,32 +378,34 @@
               <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
-              <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
+              <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p3_escalade" type="462c0819:PsiDirectoryNode" />
+              <item name="p3_escalade-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p3_escalade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,6 +431,7 @@
       <recent name="org.oc_j2ee.projet3.business.contrat.manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-webapp\src\main\webapp" />
       <recent name="C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-webapp\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\hadji\Documents\OpenClassRooms\Projet3\p3_escalade\p3_escalade-webapp\src\main\resources\org\oc_j2ee\projet3\webapp" />
     </key>
@@ -761,12 +730,14 @@
       <workItem from="1512124479171" duration="13421000" />
       <workItem from="1512225785806" duration="69488000" />
       <workItem from="1512813869690" duration="40572000" />
-      <workItem from="1513175661956" duration="846000" />
+      <workItem from="1513175661956" duration="11112000" />
+      <workItem from="1513250712761" duration="238000" />
+      <workItem from="1513251067473" duration="6234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138948000" />
+    <option name="totallyTimeSpent" value="155686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -788,11 +759,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4814815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4050179" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28486487" sideWeight="0.4958184" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25925925" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34270272" sideWeight="0.4958184" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5041816" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5041816" order="6" side_tool="true" content_ui="tabs" />
@@ -820,111 +791,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/SiteDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Cliffhangout-master/Cliffhangout-master/cliffhangout-consumer/src/main/java/com/cliffhangout/consumer/impl/dao/TopoDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/TopoDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="94" column="74" lean-forward="false" selection-start-line="94" selection-start-column="74" selection-end-line="94" selection-end-column="74" />
-          <folding>
-            <element signature="e#3445#3446#0" expanded="true" />
-            <element signature="e#3472#3473#0" expanded="true" />
-            <element signature="e#3551#3552#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#3658#3659#0" expanded="true" />
-            <element signature="e#3685#3686#0" expanded="true" />
-            <marker date="1512835492693" expanded="true" signature="825:959" ph="INSERT INTO public.TOPO... " />
-            <marker date="1512835492693" expanded="true" signature="1547:1711" ph="UPDATE publi... " />
-            <marker date="1512835492693" expanded="true" signature="2361:2399" ph="DELETE * FRO... " />
-            <marker date="1512835492693" expanded="true" signature="2962:3001" ph="SELECT * FRO... TOPO" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/UtilisateurDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1512835786654" expanded="true" signature="838:953" ph="INSERT INTO UTILISATEUR... " />
-            <marker date="1512835786654" expanded="true" signature="1560:1696" ph="UPDATE UTILI... " />
-            <marker date="1512835786654" expanded="true" signature="2371:2414" ph="DELETE FROM " />
-            <marker date="1512835786654" expanded="true" signature="2788:2833" ph="SELECT * FRO... ARTICLE" />
-            <marker date="1512835786654" expanded="true" signature="3338:3370" ph="SELECT * FRO... UTILISATEUR" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/SecteurRM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SecteurDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="102" column="21" lean-forward="true" selection-start-line="96" selection-start-column="7" selection-end-line="102" selection-end-column="21" />
-          <folding>
-            <marker date="1512834698311" expanded="true" signature="1044:1108" ph="INSERT INTO SECTEUR... " />
-            <marker date="1512834698311" expanded="true" signature="1555:1636" ph="UPDATE SECTE... " />
-            <marker date="1512834698311" expanded="true" signature="2164:2219" ph="DELETE FROM " />
-            <marker date="1512834698311" expanded="true" signature="2608:2657" ph="DELETE FROM " />
-            <marker date="1512834698311" expanded="true" signature="3037:3088" ph="SELECT * FRO... SECTEUR" />
-            <marker date="1512834698311" expanded="true" signature="3598:3649" ph="SELECT * FRO... SECTEUR" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/SiteDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <marker date="1512834843792" expanded="true" signature="974:1045" ph="INSERT INTO SITE... " />
-            <marker date="1512834843792" expanded="true" signature="1492:1616" ph="UPDATE SITE " />
-            <marker date="1512834843792" expanded="true" signature="2135:2181" ph="DELETE FROM " />
-            <marker date="1512834843792" expanded="true" signature="2547:2597" ph="SELECT * FRO... SITE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Cliffhangout-master/Cliffhangout-master/cliffhangout-business/src/main/java/com/cliffhangout/business/contract/manager/CommentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/correction_activite_p2/ticket/ticket-business/src/main/java/org/example/demo/ticket/business/contract/manager/ProjetManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/correction_activite_p2/ticket/ticket-business/src/main/java/org/example/demo/ticket/business/impl/manager/ProjetManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/Cliffhangout-master/Cliffhangout-master/cliffhangout-business/src/main/java/com/cliffhangout/business/contract/manager/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -943,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,10 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-          <folding>
-            <element signature="e#453#454#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,28 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1500">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/VoieDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2025">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1512836567863" expanded="true" signature="977:1078" ph="INSERT INTO public.VOIE... " />
-            <marker date="1512836567863" expanded="true" signature="1584:1716" ph="UPDATE publi... " />
-            <marker date="1512836567863" expanded="true" signature="2293:2339" ph="DELETE FROM " />
-            <marker date="1512836567863" expanded="true" signature="2727:2779" ph="DELETE FROM " />
-            <marker date="1512836567863" expanded="true" signature="3162:3210" ph="SELECT * FRO... VOIE" />
-            <marker date="1512836567863" expanded="true" signature="3709:3763" ph="SELECT * FRO... VOIE" />
-            <marker date="1512836567863" expanded="true" signature="4195:4220" ph="SELECT * FRO... VOIE" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,76 +875,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml" />
     <entry file="file://$PROJECT_DIR$/web/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/bootstrapContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/servlets/SimpleServlet.java" />
     <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DAO/BorrowDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,10 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-          <folding>
-            <element signature="e#788#789#0" expanded="false" />
-            <element signature="e#815#816#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,16 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <marker date="1513090980419" expanded="true" signature="1036:1143" ph="INSERT INTO LONGUEUR... " />
-            <marker date="1513090980419" expanded="true" signature="1671:1817" ph="UPDATE LONGU... " />
-            <marker date="1513090980419" expanded="true" signature="2417:2474" ph="DELETE FROM " />
-            <marker date="1513090980419" expanded="true" signature="2867:2917" ph="DELETE FROM " />
-            <marker date="1513090980419" expanded="true" signature="3299:3361" ph="SELECT * FRO... ARTICLE" />
-            <marker date="1513090980419" expanded="true" signature="3873:3925" ph="SELECT * FRO... LONGUEUR" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,17 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1157,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,23 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <marker date="1513164168941" expanded="true" signature="1056:1175" ph="INSERT INTO ARTICLE... " />
-            <marker date="1513164168941" expanded="true" signature="1712:1853" ph="UPDATE ARTIC... " />
-            <marker date="1513164168941" expanded="true" signature="2454:2495" ph="DELETE FROM " />
-            <marker date="1513164168941" expanded="true" signature="2861:2903" ph="SELECT * FRO... ARTICLE" />
-            <marker date="1513164168941" expanded="true" signature="3413:3466" ph="SELECT * FRO... ARTICLE" />
-            <marker date="1513164168941" expanded="true" signature="3917:3931" ph="SELECT * FRO... CUSTOMER" />
-            <marker date="1513164168941" expanded="true" signature="3917:3945" ph="SELECT * FRO... ARTICLE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,32 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-            <marker date="1513094125302" expanded="true" signature="1384:1536" ph="INSERT INTO COMMENTAIRE... " />
-            <marker date="1513094125302" expanded="true" signature="2186:2292" ph="UPDATE publi... " />
-            <marker date="1513094125302" expanded="true" signature="2186:2359" ph="UPDATE COMME... " />
-            <marker date="1513094125302" expanded="true" signature="3076:3119" ph="DELETE FROM " />
-            <marker date="1513094125302" expanded="true" signature="3493:3540" ph="SELECT * FRO... COMMENTAIRE" />
-            <marker date="1513094125302" expanded="true" signature="4064:4117" ph="SELECT * FRO... COMMENTAIRE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/AbstractDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,54 +939,221 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.11.RELEASE/spring-beans-4.3.11.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/bootstrapContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/AbstractManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="125">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml">
+    <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/java/org/oc_j2ee/projet3/business/impl/manager/ManagerFactoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="125">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/AbstractResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="325">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-business/src/main/resources/org/oc_j2ee/projet3/business/businessContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="600">
+          <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-business/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/org/oc_j2ee/projet3/webapp/webappContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/RowMapper/CommentaireRM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/xwork/xwork-core/2.2.3/xwork-core-2.2.3.jar!/com/opensymphony/xwork2/config/ConfigurationManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/contract/DaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/resources/org/oc_j2ee/projet3/consumer/consumerContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DAO/AbstractDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-consumer/src/main/java/org/oc_j2ee/projet3/consumer/impl/DaoFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/webapp/action/ArticleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/rest/resource/article/ArticleResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/test.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/webapp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/java/org/oc_j2ee/projet3/webapp/action/HomeAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p3_escalade-webapp/src/main/resources/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding />
         </state>
       </provider>

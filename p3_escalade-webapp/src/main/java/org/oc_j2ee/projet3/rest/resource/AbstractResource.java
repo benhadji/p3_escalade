@@ -6,7 +6,7 @@ public abstract class AbstractResource {
 
     private static ManagerFactory managerFactory;
 
-    public static ManagerFactory getManagerFactory() {
+    protected static ManagerFactory getManagerFactory() {
         return managerFactory;
     }
     public static void setManagerFactory(ManagerFactory pManagerFactory) {
