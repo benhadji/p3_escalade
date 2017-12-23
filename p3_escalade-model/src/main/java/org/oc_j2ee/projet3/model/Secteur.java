@@ -1,11 +1,25 @@
 package org.oc_j2ee.projet3.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Secteur extends Site {
 
 
     private Integer secteur_id;
     private Integer site_id;
 	private String nom;
+    private List<Voie> voies = new ArrayList<Voie>();
+
+    public List<Voie> getVoies() {
+        return voies;
+    }
+
+    public void setVoies(List<Voie> voies) {
+        this.voies = voies;
+    }
+
+
 
 
     public Integer getSite_id() {

@@ -13,6 +13,7 @@ public interface SecteurDAO {
     void deleteAllBySite(Site site);
     Secteur getById(int id);
     List<Secteur> getAllBySite(Site site);
+    List<Secteur> getAllSecteurs();
 
 
 }

@@ -11,6 +11,9 @@ public class ManagerFactoryImpl implements ManagerFactory {
     private UtilisateurManager utilisateurManager;
     private TopoManager topoManager;
     private BorrowManager borrowManager;
+    private SecteurManager secteurManager;
+    private VoieManager voieManager;
+    private LongueurManager longueurManager;
 
     @Override
     public ArticleManager getArticleManager() {
@@ -73,7 +76,35 @@ public class ManagerFactoryImpl implements ManagerFactory {
         this.borrowManager = vBorrowManager;
     }
 
+    @Override
+    public SecteurManager getSecteurManager() {
+        return secteurManager;
+    }
 
+    @Override
+    public void setSecteurManager(SecteurManager secteurManager) {
+        this.secteurManager = secteurManager;
+    }
+
+    @Override
+    public VoieManager getVoieManager() {
+        return voieManager;
+    }
+
+    @Override
+    public void setVoieManager(VoieManager voieManager) {
+        this.voieManager = voieManager;
+    }
+
+    @Override
+    public LongueurManager getLongueurManager() {
+        return longueurManager;
+    }
+
+    @Override
+    public void setLongueurManager(LongueurManager longueurManager) {
+        this.longueurManager = longueurManager;
+    }
 
 }
 

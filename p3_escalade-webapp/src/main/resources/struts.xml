@@ -4,13 +4,19 @@
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
     <package name="default" namespace="/" extends="struts-default">
-
-        <action name="home" method="execute" class="org.oc_j2ee.projet3.webapp.action.HomeAction">
+        <action name="home" class="org.oc_j2ee.projet3.webapp.action.HomeAction" method="execute">
             <result name="success">/home.jsp</result>
         </action>
+        <action name="site" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction" method="execute">
+            <result name="success">/siteDetails.jsp</result>
+        </action>
+        <!--action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction">
+            <result name="success">/addSite.jsp</result>
+        </action-->
+
     </package>
 
 </struts>

@@ -3,6 +3,7 @@ package org.oc_j2ee.projet3.consumer.impl.DAO;
 import org.oc_j2ee.projet3.consumer.contract.DAO.VoieDAO;
 import org.oc_j2ee.projet3.consumer.impl.RowMapper.VoieRM;
 import org.oc_j2ee.projet3.model.Secteur;
+import org.oc_j2ee.projet3.model.Site;
 import org.oc_j2ee.projet3.model.Voie;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -20,6 +21,16 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
 
     @Inject
     private VoieRM voieRM;
+
+
+
+    public void setVoieRM(VoieRM voieRM) {
+        this.voieRM = voieRM;
+    }
+
+    public VoieRM getVoieRM() {
+        return voieRM;
+    }
 
 
     @Override
@@ -101,25 +112,44 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
     @Override
     public List<Voie> getAllBySector(Secteur secteur) {
 
-        String vSQL = "SELECT * FROM public.VOIE WHERE secteur_id=:secteur_id";
+        String vSQL = "SELECT * FROM public.voie WHERE secteur_id=:secteur_id";
 
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(secteur);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
         List<Voie> vList = vJdbcTemplate.query(vSQL,vParams,voieRM);
         return vList;
+
     }
 
     @Override
     public List<Voie> getListVoie() {
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
-        String sql = "SELECT * FROM public.VOIE";
+        String sql = "SELECT * FROM public.voie";
 
-        List<Voie> vList  = vJdbcTemplate.query(sql,
-                new BeanPropertyRowMapper(Voie.class));
+        List<Voie> vList  = vJdbcTemplate.query(sql, new BeanPropertyRowMapper(Voie.class));
 
         return vList;
 
     }
+
+    @Override
+    public List<Voie> getAllBySite(Site site) {
+
+        String vSQL = "SELECT DISTINCT * FROM voie, secteur, site " +
+                "WHERE voie.secteur_id=secteur.secteur_id " +
+                "AND secteur.site_id=site.site_id " +
+                "AND site.site_id=:site_id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        List<Voie> vList = vJdbcTemplate.query(vSQL,vParams,voieRM);
+        return vList;
+
+
+
+    }
+
 }

@@ -22,6 +22,15 @@
     <bean id="siteManager" class="org.oc_j2ee.projet3.business.impl.manager.SiteManagerImpl"
           parent="abstractManager"/>
 
+    <bean id="secteurManager" class="org.oc_j2ee.projet3.business.impl.manager.SecteurManagerImpl"
+          parent="abstractManager"/>
+
+    <bean id="voieManager" class="org.oc_j2ee.projet3.business.impl.manager.VoieManagerImpl"
+          parent="abstractManager"/>
+
+    <bean id="longueurManager" class="org.oc_j2ee.projet3.business.impl.manager.LongueurManagerImpl"
+          parent="abstractManager"/>
+
     <bean id="topoManager" class="org.oc_j2ee.projet3.business.impl.manager.TopoManagerImpl"
           parent="abstractManager"/>
 
@@ -37,5 +46,8 @@
         <property name="siteManager" ref="siteManager"/>
         <property name="topoManager" ref="topoManager"/>
         <property name="utilisateurManager" ref="utilisateurManager"/>
+        <property name="secteurManager" ref="secteurManager"/>
+        <property name="voieManager" ref="voieManager"/>
+        <property name="longueurManager" ref="longueurManager"/>
     </bean>
 </beans>

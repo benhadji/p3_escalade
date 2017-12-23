@@ -20,5 +20,15 @@ public interface ManagerFactory {
     BorrowManager getBorrowManager();
     void setBorrowManager(BorrowManager borrowManager);
 
+    SecteurManager getSecteurManager();
+    void setSecteurManager(SecteurManager secteurManager);
+
+    VoieManager getVoieManager();
+    void setVoieManager(VoieManager voieManager);
+
+    LongueurManager getLongueurManager();
+    void setLongueurManager(LongueurManager longueurManager);
+
+
 
 }

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="
-            http://www.springframework.org/schema/beans
-            http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean abstract="true" id="abstractDao">
         <property ref="dataSourceProjet3" name="dataSource"/>
@@ -13,13 +12,22 @@
     <bean id="articleDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.ArticleDaoImpl" parent = "abstractDao"/>
     <bean id="borrowDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.BorrowDaoImpl" parent = "abstractDao"/>
     <bean id="commentaireDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.CommentaireDaoImpl" parent = "abstractDao"/>
-    <bean id="longueurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.LongueurDaoImpl" parent = "abstractDao"/>
-    <bean id="secteurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SecteurDaoImpl" parent = "abstractDao"/>
-    <bean id="siteDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SiteDaoImpl" parent = "abstractDao"/>
+    <bean id="longueurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.LongueurDaoImpl" parent = "abstractDao">
+        <property name="longueurRM" ref="longueurRM"/>
+    </bean>
+
+    <bean id="secteurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SecteurDaoImpl" parent = "abstractDao">
+        <property name="secteurRM" ref="secteurRM"/>
+    </bean>
+    <bean id="siteDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.SiteDaoImpl" parent = "abstractDao">
+        <property name="siteRM" ref="siteRM"/>
+    </bean>
+
     <bean id="topoDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.TopoDaoImpl" parent = "abstractDao"/>
     <bean id="utilisateurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.UtilisateurDaoImpl" parent = "abstractDao"/>
-    <bean id="voieDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.VoieDaoImpl" parent = "abstractDao"/>
-
+    <bean id="voieDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.VoieDaoImpl" parent = "abstractDao">
+        <property name="voieRM" ref="voieRM"/>
+    </bean>
     <!-- ===== DaoFactory ===== -->
     <bean id="daoFactory" class="org.oc_j2ee.projet3.consumer.impl.DaoFactoryImpl">
         <property name="articleDAO" ref="articleDao"/>

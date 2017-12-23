@@ -51,7 +51,6 @@
 				<version>${project.version}</version>
 			</dependency>
 
-
 		<!-- Drivers JDBC PostgreSQL -->
 			<dependency>
 				<groupId>org.postgresql</groupId>

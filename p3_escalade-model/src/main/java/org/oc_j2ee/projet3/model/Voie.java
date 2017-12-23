@@ -1,5 +1,8 @@
 package org.oc_j2ee.projet3.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Voie extends Longueur {
 
 
@@ -7,6 +10,19 @@ public class Voie extends Longueur {
 	private Integer secteur_id;
 	private String nom;
 	private boolean etat;
+    private List<Longueur> longueurs = new ArrayList<Longueur>();
+
+    public List<Longueur> getLongueurs() {
+        return longueurs;
+    }
+
+    public void setLongueurs(List<Longueur> longueurs) {
+        this.longueurs = longueurs;
+    }
+
+
+
+
 
 	public Integer getVoie_id() {
 		return voie_id;

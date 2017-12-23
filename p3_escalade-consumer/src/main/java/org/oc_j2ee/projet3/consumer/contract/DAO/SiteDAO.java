@@ -11,6 +11,8 @@ public interface SiteDAO {
     void update(Site site);
     void delete(int id);
     Site getById(int id);
+    List<Site> getAllSites();
+
 
 
 }

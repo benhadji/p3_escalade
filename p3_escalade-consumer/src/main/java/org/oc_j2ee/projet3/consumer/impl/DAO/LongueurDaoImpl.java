@@ -3,8 +3,11 @@ package org.oc_j2ee.projet3.consumer.impl.DAO;
 import org.oc_j2ee.projet3.consumer.contract.DAO.LongueurDAO;
 import org.oc_j2ee.projet3.consumer.impl.RowMapper.LongueurRM;
 import org.oc_j2ee.projet3.model.Longueur;
+import org.oc_j2ee.projet3.model.Site;
 import org.oc_j2ee.projet3.model.Voie;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -111,6 +114,30 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
         List<Longueur> vList = vJdbcTemplate.query(vSQL,vParams,longueurRM);
+        return vList;
+    }
+
+    @Override
+    public List<Longueur> getBySite(Site site) {
+        String vSQL = "SELECT DISTINCT * FROM longueur, voie, secteur, site " +
+                "WHERE longueur.voie_id = voie.voie_id " +
+                "AND voie.secteur_id=secteur.secteur_id " +
+                "AND secteur.site_id=site.site_id and site.site_id=:site_id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        List<Longueur> vList = vJdbcTemplate.query(vSQL,vParams,longueurRM);
+        return vList;
+    }
+
+    @Override
+    public List<Longueur> getAllLongueur() {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+        String sql = "SELECT * FROM public.longueur";
+        List<Longueur> vList  = vJdbcTemplate.query(sql, new BeanPropertyRowMapper(Voie.class));
+
         return vList;
     }
 

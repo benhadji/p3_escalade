@@ -1,3 +1,16 @@
-**/*.classpath
-**/*.project
-**/*.settings
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+log/
+target/
+
+# Meta-inf
+META-INF/

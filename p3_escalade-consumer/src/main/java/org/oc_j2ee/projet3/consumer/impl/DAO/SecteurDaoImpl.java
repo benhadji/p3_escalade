@@ -7,6 +7,7 @@ import org.oc_j2ee.projet3.model.Longueur;
 import org.oc_j2ee.projet3.model.Secteur;
 import org.oc_j2ee.projet3.model.Site;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -80,7 +81,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public Secteur getById(int secteur_id) {
 
-        String vSQL = "SELECT * FROM public.SECTEUR WHERE secteur_id = :id";
+        String vSQL = "SELECT * FROM public.secteur WHERE secteur_id = :id";
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         MapSqlParameterSource vParams = new MapSqlParameterSource("secteur_id", secteur_id);
         try {
@@ -94,7 +95,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public List<Secteur> getAllBySite(Site site) {
 
-        String vSQL = "SELECT * FROM public.SECTEUR WHERE site_id=:site_id";
+        String vSQL = "SELECT * FROM public.secteur WHERE site_id=:site_id";
 
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
@@ -104,4 +105,22 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
 
     }
 
+    @Override
+    public List<Secteur> getAllSecteurs() {
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String sql = "SELECT * FROM secteur";
+
+        List<Secteur> vList = vJdbcTemplate.query(sql,secteurRM);
+        return vList;
+
+    }
+
+    public void setSecteurRM(SecteurRM secteurRM) {
+        this.secteurRM = secteurRM;
+    }
+
+    public SecteurRM getSecteurRM() {
+        return secteurRM;
+    }
 }

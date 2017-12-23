@@ -6,6 +6,8 @@ import org.oc_j2ee.projet3.consumer.impl.RowMapper.SiteRM;
 import org.oc_j2ee.projet3.model.Site;
 import org.oc_j2ee.projet3.model.Topo;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -13,13 +15,22 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import java.sql.Types;
 import java.util.List;
 
 public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
 
-    @Inject
+    public SiteRM getSiteRM() {
+        return siteRM;
+    }
+
+    public void setSiteRM(SiteRM siteRM) {
+        this.siteRM = siteRM;
+    }
+
     private SiteRM siteRM;
+
 
 
     @Override
@@ -82,6 +93,18 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
         } catch (EmptyResultDataAccessException vEx) {
             return null;
         }
+
+
+    }
+
+    @Override
+    public List<Site> getAllSites() {
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String sql = "SELECT * FROM site";
+
+        List<Site> vList = vJdbcTemplate.query(sql,siteRM);
+        return vList;
 
 
     }
