@@ -29,11 +29,7 @@
     <bean id="homeAction" class="org.oc_j2ee.projet3.webapp.action.HomeAction">
         <property name="siteManager" ref="siteManager" />
     </bean>
-    <bean id="siteDetailsAction" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction">
-        <property name="secteurManager" ref="secteurManager"/>
-        <property name="voieManager" ref="voieManager"/>
-        <property name="longueurManager" ref="longueurManager"/>
-    </bean>
+    <bean id="siteDetailsAction" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction"/>
     <bean id="addSiteAction" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction">
 
     </bean>
