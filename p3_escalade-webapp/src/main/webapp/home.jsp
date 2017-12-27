@@ -17,15 +17,16 @@
     <p>Le premier site communautaire dédié à l'escalade</p>
 
     <div class="area">
-        <div class="area-header">
-            <h2>Listes des sites:</h2>
-        </div>
         <div class="area-content">
             <div class="list">
-                <s:iterator value="sites">
-                    </li><a href="<s:url namespace="/" action="site"><s:param name="site_id"><s:property value="site_id"/> </s:param> </s:url>">
-                        <s:property value = "site_id"/>. <s:property value = "nom"/></a><br></li>
-                </s:iterator>
+                <h2>Liste des sites </h2>
+                <a href="listeSite.action">Liste site</a>
+            </div>
+
+            <div class="form-select-button">
+                <h2>Ajouter un nouveau site : </h2><br>
+                <a href="addSite.action">Nouveau site</a>
+
             </div>
         </div>
     </div>

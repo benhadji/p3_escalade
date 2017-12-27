@@ -15,13 +15,14 @@
     <div class="area">
         <div class="area-header">
             <h2>Creation d'un nouveau site, avec ses secteurs, ses voies et longueurs ... !</h2>
-            <p>
-                <h2><s:property value="site.nom"/> </h2>
-            </p>
         </div>
         <div class="area-content">
-            <p>Nom: <s:property value="site.localisation"/></p>
-
+            <s:form action="addSite">
+                <s:textfield label="Nom du nouveau site " name="site.nom"/>
+                <s:textfield label="Localisation su site (ville) " name="site.localisation"/>
+                <s:submit value="Valider" action="addSite"/>
+                <s:submit value="Annuler" action="home"/>
+            </s:form>
 
         </div>
     </div>
