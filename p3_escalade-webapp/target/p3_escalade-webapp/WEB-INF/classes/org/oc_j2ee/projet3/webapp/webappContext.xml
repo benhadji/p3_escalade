@@ -28,6 +28,14 @@
     <bean id="listeSite" class="org.oc_j2ee.projet3.webapp.action.ListeSiteAction">
         <property name="siteManager" ref="siteManager"/>
     </bean>
+    <bean id="addSecteurAction" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction">
+        <property name="siteManager" ref="siteManager"/>
+        <property name="secteurManager" ref="secteurManager"/>
+    </bean>
+    <bean id="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction">
+        <property name="secteurManager" ref="secteurManager"/>
+    </bean>
+
 
 
 

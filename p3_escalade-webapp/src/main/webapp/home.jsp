@@ -23,9 +23,16 @@
                 <a href="listeSite.action">Liste site</a>
             </div>
 
-            <div class="form-select-button">
-                <h2>Ajouter un nouveau site : </h2><br>
-                <a href="addSite.action">Nouveau site</a>
+            <div class="form-group">
+                <p>
+                    <h3>Ajouter un nouveau site : </h3>
+                    <a href="addSite.action">Nouveau site</a>
+                </p>
+                <p>
+                    <h3>Ajouter nouveau secteur : </h3>
+                    <a href="addSecteur.action">Nouveau secteur</a>
+                </p>
+
 
             </div>
         </div>
