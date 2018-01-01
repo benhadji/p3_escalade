@@ -9,7 +9,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Liste des sites repertoriés</title>
+    <title>Liste des secteurs repertoriés</title>
 </head>
 <body>
 <h2>Liste des secteurs repertoriés </h2>

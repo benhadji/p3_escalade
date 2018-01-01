@@ -21,6 +21,12 @@
             <div class="list">
                 <h2>Liste des sites </h2>
                 <a href="listeSite.action">Liste site</a>
+                <h2>Liste des secteurs </h2>
+                <a href="listeSecteur.action">Liste secteurs</a>
+                <h2>Liste des voies </h2>
+                <a href="listeVoie.action">Liste voies</a>
+                <h2>Liste des longueurs </h2>
+                <a href="listeLongueur.action">Liste longueurs</a>
             </div>
 
             <div class="form-group">
@@ -31,6 +37,14 @@
                 <p>
                     <h3>Ajouter nouveau secteur : </h3>
                     <a href="addSecteur.action">Nouveau secteur</a>
+                </p>
+                <p>
+                <h3>Ajouter nouvelle voie : </h3>
+                <a href="addVoie.action">Nouvelle voie</a>
+                </p>
+                <p>
+                <h3>Ajouter nouvelle longueur : </h3>
+                <a href="addLongueur.action">Nouvelle longueur</a>
                 </p>
 
 

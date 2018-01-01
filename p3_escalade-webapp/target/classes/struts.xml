@@ -17,6 +17,15 @@
         <action name="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction" method="execute">
                 <result name="success">/listeSecteur.jsp</result>
         </action>
+        <action name="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction" method="execute">
+            <result name="success">/listeVoie.jsp</result>
+        </action>
+        <action name="listeLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction" method="execute">
+            <result name="success">/listeLongueur.jsp</result>
+        </action>
+
+
+
         <action name="site" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction" method="execute">
             <result name="success">/siteDetails.jsp</result>
         </action>
@@ -27,6 +36,14 @@
         <action name="addSecteur" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction" method="execute">
             <result name="input">/addSecteur.jsp</result>
             <result name="success" type="redirectAction">listeSecteur</result>
+        </action>
+        <action name="addVoie" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction" method="execute">
+            <result name="input">/addVoie.jsp</result>
+            <result name="success" type="redirectAction">listeVoie</result>
+        </action>
+        <action name="addLongueur" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction" method="execute">
+            <result name="input">/addLongueur.jsp</result>
+            <result name="success" type="redirectAction">listeLongueur</result>
         </action>
 
     </package>
