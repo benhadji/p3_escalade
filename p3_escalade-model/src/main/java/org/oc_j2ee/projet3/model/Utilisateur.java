@@ -7,6 +7,16 @@ public class Utilisateur {
 	private String nom;
 	private String prenom;
 	private String email;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	private String password;
 	private String role;
 
 	public Integer getId() {
