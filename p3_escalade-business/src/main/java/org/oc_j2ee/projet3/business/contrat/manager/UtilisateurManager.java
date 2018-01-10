@@ -8,9 +8,10 @@ public interface UtilisateurManager {
 
     Utilisateur displayUser(int id);
     String hashPassword(String password);
-    Utilisateur getLoginUser(String username);
+    Utilisateur getLoginUser(String email);
     boolean validateLogin (Utilisateur utilisateur, String password);
-    String signIn(Utilisateur utilisateur);
     List<Utilisateur> displayAllUsers();
+    void addUser(Utilisateur utilisateur);
+    String signupNewSubscriber(Utilisateur utilisateur);
 
 }

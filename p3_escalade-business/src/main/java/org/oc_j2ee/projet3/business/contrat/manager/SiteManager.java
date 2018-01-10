@@ -13,5 +13,6 @@ public interface SiteManager {
     void addSite(Site site);
     Site updateSite(Site site);
     void deleteSite(int id);
+    List<String> getAllSiteName();
 
 }

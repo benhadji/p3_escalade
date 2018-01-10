@@ -30,6 +30,7 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
         }
         return vList;
 
+
     }
 
 
@@ -49,6 +50,8 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
 
     @Override
     public void addSecteur(Secteur secteur) {
+
+        getDaoFactory().getSecteurDAO().create(secteur);
 
     }
 }

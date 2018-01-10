@@ -11,7 +11,7 @@ import java.util.List;
 public class LongueurManagerImpl extends AbstractManagerImpl implements LongueurManager {
     @Override
     public void create(Longueur longueur) {
-
+        getDaoFactory().getLongueurDAO().create(longueur);
 
     }
 
