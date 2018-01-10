@@ -136,7 +136,7 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
 
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         String sql = "SELECT * FROM public.longueur";
-        List<Longueur> vList  = vJdbcTemplate.query(sql, new BeanPropertyRowMapper(Voie.class));
+        List<Longueur> vList  = vJdbcTemplate.query(sql, longueurRM);
 
         return vList;
     }

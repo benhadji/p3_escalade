@@ -15,21 +15,30 @@ import java.util.List;
 
 public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDAO {
 
-    @Inject
+
+    public UtilisateurRM getUtilisateurRM() {
+        return utilisateurRM;
+    }
+
+    public void setUtilisateurRM(UtilisateurRM utilisateurRM) {
+        this.utilisateurRM = utilisateurRM;
+    }
+
     private UtilisateurRM utilisateurRM;
 
 
     @Override
     public void create(Utilisateur utilisateur) {
 
-        String vSQL = "INSERT INTO public.UTILISATEUR (nom, prenom, email, role) " +
-                "VALUES(:nom, :prenom, :email, :role)";
+        String vSQL = "INSERT INTO public.UTILISATEUR (nom, prenom, email, role, password) " +
+                "VALUES(:nom, :prenom, :email, :role, :password)";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("nom", utilisateur.getNom(), Types.VARCHAR);
         vParams.addValue("prenom", utilisateur.getPrenom(), Types.VARCHAR);
         vParams.addValue("email", utilisateur.getEmail(), Types.VARCHAR);
         vParams.addValue("role", utilisateur.getRole(), Types.VARCHAR);
+        vParams.addValue("password", utilisateur.getPassword(), Types.VARCHAR);
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
@@ -40,8 +49,7 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDA
     public void update(Utilisateur utilisateur) {
 
         String vSQL = "UPDATE public.UTILISATEUR " +
-                "SET nom=:nom, prenom=:prenom, email=:email, role=:role, " +
-                "WHERE id=:id";
+                "SET nom=:nom, prenom=:prenom, email=:email, role=:role, password=:password WHERE id=:id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("id", utilisateur.getId(), Types.INTEGER);
@@ -98,6 +106,21 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDA
         }
 
 
+
+    }
+
+    @Override
+    public Utilisateur findByLogin(String email) {
+
+        String vSQL = "select * from utilisateur where email =:email";
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        MapSqlParameterSource vParams = new MapSqlParameterSource("email", email);
+        try {
+            Utilisateur utilisateur = vJdbcTemplate.queryForObject(vSQL, vParams, utilisateurRM);
+            return utilisateur;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
 
     }
 

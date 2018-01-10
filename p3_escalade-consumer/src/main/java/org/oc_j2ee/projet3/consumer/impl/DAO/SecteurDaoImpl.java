@@ -36,6 +36,8 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
 
+
+
     }
 
     @Override

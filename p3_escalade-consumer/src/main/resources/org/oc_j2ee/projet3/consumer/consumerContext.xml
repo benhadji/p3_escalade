@@ -4,9 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean abstract="true" id="abstractDao">
-        <property ref="dataSourceProjet3" name="dataSource"/>
+    <bean id="abstractDao" abstract="true" >
+        <property name="dataSource" ref="dataSourceProjet3" />
     </bean>
+
+
 
     <!-- ===== Déclaration des DAO ===== -->
     <bean id="articleDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.ArticleDaoImpl" parent = "abstractDao"/>
@@ -24,7 +26,9 @@
     </bean>
 
     <bean id="topoDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.TopoDaoImpl" parent = "abstractDao"/>
-    <bean id="utilisateurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.UtilisateurDaoImpl" parent = "abstractDao"/>
+    <bean id="utilisateurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.UtilisateurDaoImpl" parent = "abstractDao">
+        <property name="utilisateurRM" ref="utilisateurRM"/>
+    </bean>
     <bean id="voieDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.VoieDaoImpl" parent = "abstractDao">
         <property name="voieRM" ref="voieRM"/>
     </bean>

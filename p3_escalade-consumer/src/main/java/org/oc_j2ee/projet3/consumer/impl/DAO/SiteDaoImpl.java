@@ -1,35 +1,39 @@
 package org.oc_j2ee.projet3.consumer.impl.DAO;
 
 import org.oc_j2ee.projet3.consumer.contract.DAO.SiteDAO;
-import org.oc_j2ee.projet3.consumer.impl.RowMapper.LongueurRM;
 import org.oc_j2ee.projet3.consumer.impl.RowMapper.SiteRM;
 import org.oc_j2ee.projet3.model.Site;
-import org.oc_j2ee.projet3.model.Topo;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 import java.sql.Types;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
+
+    private SiteRM siteRM;
+
+    public NamedParameterJdbcTemplate getNamedJdbcTemplate() {
+        return namedJdbcTemplate;
+    }
+
+    public void setNamedJdbcTemplate(NamedParameterJdbcTemplate namedJdbcTemplate) {
+        this.namedJdbcTemplate = namedJdbcTemplate;
+    }
+
+    private NamedParameterJdbcTemplate namedJdbcTemplate;
+
 
     public SiteRM getSiteRM() {
         return siteRM;
     }
-
     public void setSiteRM(SiteRM siteRM) {
         this.siteRM = siteRM;
     }
-
-    private SiteRM siteRM;
 
 
 
@@ -44,6 +48,7 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
+
 
     }
 
@@ -107,6 +112,16 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
         return vList;
 
 
+    }
+
+    @Override
+    public List<String> getAllSitesNames() {
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String sql = "SELECT nom FROM site";
+
+        List<String> vList = vJdbcTemplate.queryForList(sql, String.class);
+        return vList;
     }
 
 

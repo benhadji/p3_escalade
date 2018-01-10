@@ -13,6 +13,5 @@ public interface UtilisateurDAO {
     List<Utilisateur> getAllUsers();
 
 
-
-
+    Utilisateur findByLogin(String username);
 }
