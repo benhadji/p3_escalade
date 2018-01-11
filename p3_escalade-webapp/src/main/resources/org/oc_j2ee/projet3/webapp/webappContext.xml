@@ -20,7 +20,6 @@
 
     <bean id="homeAction" class="org.oc_j2ee.projet3.webapp.action.HomeAction">
         <property name="successmessage" value="You are successfully logged in!"/>
-
     </bean>
     <bean id="siteDetailsAction" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction">
         <property name="siteManager" ref="siteManager"/>
@@ -52,7 +51,6 @@
     <bean id="listLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction">
         <property name="longueurManager" ref="longueurManager"/>
     </bean>
-
     <bean id="loginAction" class="org.oc_j2ee.projet3.webapp.action.LogInAction">
         <property name="utilisateurManager" ref="utilisateurManager"/>
         <property name="errormessage" value="Sorry, username or password error!"/>

@@ -8,58 +8,81 @@
     <constant name="struts.devMode" value="true" />
 
     <package name="default" namespace="/" extends="struts-default">
+
+        <interceptors>
+            <interceptor name="authentication" class="org.oc_j2ee.projet3.webapp.interceptor.AuthenticationInterceptor">
+            </interceptor>
+            <interceptor-stack name="authStack">
+                <interceptor-ref name="authentication"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="authStack"/>
+
+
         <action name="home" class="org.oc_j2ee.projet3.webapp.action.HomeAction" method="execute">
-            <result name="success">/WEB-INF/Content/home.jsp</result>
-        </action>
-        <action name="listeSite" class="org.oc_j2ee.projet3.webapp.action.ListeSiteAction" method="execute">
-            <result name="success">/WEB-INF/Content/membres/listeSites.jsp</result>
-        </action>
-        <action name="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction" method="execute">
-                <result name="success">/WEB-INF/Content/useless/listeSecteur.jsp</result>
-        </action>
-        <action name="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction" method="execute">
-            <result name="success">/WEB-INF/Content/useless/listeVoie.jsp</result>
-        </action>
-        <action name="listeLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction" method="execute">
-            <result name="success">/WEB-INF/Content/useless/listeLongueur.jsp</result>
+            <result name="success">/WEB-INF/home.jsp</result>
         </action>
 
+        <action name="login" class="org.oc_j2ee.projet3.webapp.action.LogInAction" method="execute">
+            <result name="success" type="redirect">login.action</result>
+            <result name="input">/WEB-INF/login.jsp</result>
+            <result name="error">/WEB-INF/403.jsp</result>
+            <result name="home" type="redirect">home.action</result>
+        </action>
 
+        <action name="signUp" class="org.oc_j2ee.projet3.webapp.action.SignUpAction" method="execute">
+            <result name="success" type="redirect">home.action</result>
+            <result name="input">/WEB-INF/signUp.jsp</result>
+        </action>
+
+        <action name="logout" class="org.oc_j2ee.projet3.webapp.action.LogoutAction" method="execute">
+            <result name="success" type="redirect">home.action</result>
+        </action>
 
         <action name="site" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction" method="execute">
-            <result name="success">/WEB-INF/Content/useless/siteDetails.jsp</result>
+            <result name="success">/WEB-INF/siteDetails.jsp</result>
         </action>
+
         <action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction" method="execute">
-            <result name="input">/WEB-INF/Content/membres/addSite.jsp</result>
+            <interceptor-ref name="authentication"/>
+            <result name="input">/WEB-INF/addSite.jsp</result>
             <result name="success" type="redirectAction">listeSite</result>
         </action>
         <action name="addSecteur" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction" method="execute">
-            <result name="input">/WEB-INF/Content/membres/addSecteur.jsp</result>
+            <result name="input">/WEB-INF/addSecteur.jsp</result>
             <result name="success" type="redirectAction">listeSecteur</result>
         </action>
         <action name="addVoie" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction" method="execute">
-            <result name="input">/WEB-INF/Content/membres/addVoie.jsp</result>
+            <result name="input">/WEB-INF/addVoie.jsp</result>
             <result name="success" type="redirectAction">listeVoie</result>
         </action>
         <action name="addLongueur" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction" method="execute">
-            <result name="input">/WEB-INF/Content/membres/addLongueur.jsp</result>
+            <result name="input">/WEB-INF/addLongueur.jsp</result>
             <result name="success" type="redirectAction">listeLongueur</result>
         </action>
+
+        <action name="listeSite" class="org.oc_j2ee.projet3.webapp.action.ListeSiteAction" method="execute">
+            <result name="success">/WEB-INF/listeSites.jsp</result>
+        </action>
+
+        <action name="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction" method="execute">
+            <result name="success">/WEB-INF/listeSecteur.jsp</result>
+        </action>
+        <action name="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction" method="execute">
+            <result name="success">/WEB-INF/listeVoie.jsp</result>
+        </action>
+        <action name="listeLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction" method="execute">
+            <result name="success">/WEB-INF/listeLongueur.jsp</result>
+        </action>
+
+
 
 
         <!--action name="admin" class="org.oc_j2ee.projet3.webapp.action.AdminAction" method="execute">
             <result name="success">/WEB-INF/Content/admin.jsp</result>
         </action-->
-        <action name="login" class="org.oc_j2ee.projet3.webapp.action.LogInAction" method="execute">
-            <result name="success" type="redirect">login.action</result>
-            <result name="input">/WEB-INF/Content/membres/login.jsp</result>
-            <result name="error">/WEB-INF/Content/membres/403.jsp</result>
-            <result name="home" type="redirect">home.action</result>
-        </action>
-        <action name="signUp" class="org.oc_j2ee.projet3.webapp.action.SignUpAction" method="execute">
-            <result name="success" type="redirect">home.action</result>
-            <result name="input">/WEB-INF/Content/membres/signUp.jsp</result>
-        </action>
+
 
 
     </package>
