@@ -32,7 +32,12 @@ public class LongueurManagerImpl extends AbstractManagerImpl implements Longueur
 
     @Override
     public Longueur getById(int id) {
-        return getDaoFactory().getLongueurDAO().getById(id);
+        Longueur longueur = getDaoFactory().getLongueurDAO().getById(id);
+        Voie voie = getDaoFactory().getVoieDAO().getById(longueur.getVoie_id());
+
+        longueur.setVoie(voie);
+
+        return longueur;
     }
 
     @Override
@@ -54,5 +59,19 @@ public class LongueurManagerImpl extends AbstractManagerImpl implements Longueur
 
 
 
+    }
+
+    @Override
+    public List<Longueur> getLongueurByName(String nom) {
+        List<Longueur> longueurs = getDaoFactory().getLongueurDAO().getByName(nom);
+
+        Iterator<Longueur> iterator = longueurs.iterator();
+        while (iterator.hasNext()){
+            Longueur longueur = iterator.next();
+            Voie voie = getDaoFactory().getVoieDAO().getById(longueur.getVoie_id());
+            longueur.setVoie(voie);
+        }
+
+        return longueurs;
     }
 }

@@ -14,5 +14,7 @@ public interface SiteManager {
     Site updateSite(Site site);
     void deleteSite(int id);
     List<String> getAllSiteName();
+    List<Site> getSiteByName(String nom);
 
+    String getNameFromId(Integer siteId);
 }

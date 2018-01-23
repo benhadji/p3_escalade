@@ -14,12 +14,17 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
 
     @Override
     public Secteur getSecteur(int id) {
-        return getDaoFactory().getSecteurDAO().getById(id);
+
+        Secteur secteur = getDaoFactory().getSecteurDAO().getById(id);
+        Site site = getDaoFactory().getSiteDAO().getById(secteur.getSite_id());
+
+        secteur.setSite(site);
+
+        return secteur;
     }
 
     @Override
     public List<Secteur> getAllSecteurs() {
-        //return getDaoFactory().getSecteurDAO().getAllSecteurs();
 
         List<Secteur> vList = getDaoFactory().getSecteurDAO().getAllSecteurs();
         Iterator<Secteur> iterator = vList.iterator();
@@ -30,6 +35,24 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
         }
         return vList;
 
+
+    }
+
+    @Override
+    public List<Secteur> getSectorByName(String nom) {
+
+        List<Secteur> secteurs = getDaoFactory().getSecteurDAO().getByName(nom);
+
+        Iterator<Secteur> iterator = secteurs.iterator();
+        while (iterator.hasNext()){
+            Secteur secteur = iterator.next();
+            Site site = getDaoFactory().getSiteDAO().getById(secteur.getSite_id());
+            secteur.setSite(site);
+            List<Voie> voies = getDaoFactory().getVoieDAO().getAllBySector(secteur);
+            secteur.setVoies(voies);
+        }
+
+        return secteurs;
 
     }
 
@@ -53,5 +76,19 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
 
         getDaoFactory().getSecteurDAO().create(secteur);
 
+    }
+
+    @Override
+    public String getNameFromId(Integer secteurId) {
+        String name = getDaoFactory().getSecteurDAO().getNameFromId(secteurId);
+
+        return name;
+    }
+
+    @Override
+    public String getNameFromVoie(Voie voie) {
+        String name = getDaoFactory().getSecteurDAO().getNameFromVoie(voie);
+
+        return name;
     }
 }

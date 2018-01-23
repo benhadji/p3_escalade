@@ -18,4 +18,5 @@ public interface LongueurManager {
     List<Longueur> getAllLongueur();
 
 
+    List<Longueur> getLongueurByName(String nom);
 }

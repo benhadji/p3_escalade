@@ -15,7 +15,6 @@ public interface VoieManager {
     List<Voie> getVoieBySecteur(Secteur secteur);
     List<Voie> getAllBySite(Site site);
     List<Voie> getAllVoie();
-
-
-
+    List<Voie> getVoieByName(String nom);
+    String getNameFromId(Integer voieId);
 }

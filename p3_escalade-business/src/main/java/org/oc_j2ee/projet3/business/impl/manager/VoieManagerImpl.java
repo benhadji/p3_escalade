@@ -29,7 +29,12 @@ public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager 
 
     @Override
     public Voie getVoie(int id) {
-        return getDaoFactory().getVoieDAO().getById(id);
+        Voie voie = getDaoFactory().getVoieDAO().getById(id);
+        Secteur secteur = getDaoFactory().getSecteurDAO().getById(voie.getSecteur_id());
+
+        voie.setSecteur(secteur);
+
+        return voie;
     }
 
     @Override
@@ -44,7 +49,6 @@ public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager 
 
     @Override
     public List<Voie> getAllVoie() {
-        //return getDaoFactory().getVoieDAO().getListVoie();
 
         List<Voie> vList = getDaoFactory().getVoieDAO().getListVoie();
         Iterator<Voie> iterator = vList.iterator();
@@ -57,4 +61,29 @@ public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager 
 
 
     }
+
+    @Override
+    public List<Voie> getVoieByName(String nom) {
+
+        List<Voie> voies = getDaoFactory().getVoieDAO().getByName(nom);
+
+        Iterator<Voie> iterator = voies.iterator();
+        while (iterator.hasNext()){
+            Voie voie = iterator.next();
+            Secteur secteur = getDaoFactory().getSecteurDAO().getById(voie.getSecteur_id());
+            voie.setSecteur(secteur);
+            List<Longueur> longueurs = getDaoFactory().getLongueurDAO().getByWay(voie);
+            voie.setLongueurs(longueurs);
+        }
+
+        return voies;
+    }
+
+    @Override
+    public String getNameFromId(Integer voieId) {
+        String name = getDaoFactory().getVoieDAO().getNameFromId(voieId);
+        return name;
+    }
+
+
 }
