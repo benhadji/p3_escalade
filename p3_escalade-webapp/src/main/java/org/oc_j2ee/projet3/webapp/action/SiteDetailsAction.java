@@ -4,6 +4,12 @@ import com.opensymphony.xwork2.ActionSupport;
 import org.oc_j2ee.projet3.business.contrat.manager.SiteManager;
 import org.oc_j2ee.projet3.model.Site;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
+
 
 public class SiteDetailsAction extends ActionSupport {
 
@@ -13,7 +19,8 @@ public class SiteDetailsAction extends ActionSupport {
 
 
 
-// ******************************************* Manager ************************************** //
+
+    // ******************************************* Manager ************************************** //
     public SiteManager getSiteManager() {
     return siteManager;
 }
@@ -45,13 +52,10 @@ public class SiteDetailsAction extends ActionSupport {
 // ******************************************* List ************************************** //
 
 
-    public String execute(){
+    public String execute() {
 
         this.site = siteManager.getSite(this.site_id);
 
         return "success";
-
     }
-
-
 }

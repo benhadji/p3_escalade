@@ -19,10 +19,13 @@
     </bean>
 
     <bean id="homeAction" class="org.oc_j2ee.projet3.webapp.action.HomeAction">
-        <property name="successmessage" value="You are successfully logged in!"/>
+        <property name="siteManager" ref="siteManager"/>
     </bean>
+
     <bean id="siteDetailsAction" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction">
         <property name="siteManager" ref="siteManager"/>
+
+
     </bean>
     <bean id="addSiteAction" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction">
         <property name="siteManager" ref="siteManager"/>
@@ -55,6 +58,12 @@
         <property name="utilisateurManager" ref="utilisateurManager"/>
         <property name="errormessage" value="Sorry, username or password error!"/>
     </bean>
+
+
+    <bean id="homeMembre" class="org.oc_j2ee.projet3.webapp.action.HomeMembreAction">
+        <property name="successmessage" value="You are successfully logged in!"/>
+    </bean>
+
 
 
 

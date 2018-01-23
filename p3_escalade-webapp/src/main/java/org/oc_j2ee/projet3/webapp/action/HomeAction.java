@@ -1,30 +1,47 @@
 package org.oc_j2ee.projet3.webapp.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.oc_j2ee.projet3.business.contrat.manager.*;
+import org.oc_j2ee.projet3.model.Voie;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeAction extends ActionSupport {
 
-    private String successmessage, errormessage;
 
-    public String getSuccessmessage() {
-        return successmessage;
+    private SiteManager siteManager;
+
+
+
+    public SiteManager getSiteManager() {
+        return siteManager;
     }
 
-    public void setSuccessmessage(String succesmessage) {
-        this.successmessage = succesmessage;
+    public void setSiteManager(SiteManager siteManager) {
+        this.siteManager = siteManager;
     }
 
-    public String getErrormessage() {
-        return errormessage;
-    }
-
-    public void setErrormessage(String errormessage) {
-        this.errormessage = errormessage;
-    }
 
     public String execute(){
 
+        /*else if (yourSearchItem.equalsIgnoreCase("Secteur")){
+
+
+        }else if (yourSearchItem.equalsIgnoreCase("Voie")){
+
+
+        }else if (yourSearchItem.equalsIgnoreCase("Longueur")){
+
+
+        }else if (yourSearchItem.equalsIgnoreCase("Topo")){
+
+
+        }*/
+
         return "success";
+
+
 
     }
 

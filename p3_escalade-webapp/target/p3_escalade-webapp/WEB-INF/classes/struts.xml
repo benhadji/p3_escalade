@@ -9,25 +9,16 @@
 
     <package name="default" namespace="/" extends="struts-default">
 
-        <interceptors>
-            <interceptor name="authentication" class="org.oc_j2ee.projet3.webapp.interceptor.AuthenticationInterceptor">
-            </interceptor>
-            <interceptor-stack name="authStack">
-                <interceptor-ref name="authentication"/>
-                <interceptor-ref name="defaultStack"/>
-            </interceptor-stack>
-        </interceptors>
-        <default-interceptor-ref name="authStack"/>
-
-
         <action name="home" class="org.oc_j2ee.projet3.webapp.action.HomeAction" method="execute">
             <result name="success">/WEB-INF/home.jsp</result>
         </action>
 
         <action name="login" class="org.oc_j2ee.projet3.webapp.action.LogInAction" method="execute">
-            <result name="success" type="redirect">login.action</result>
+            <result name="success" type="redirect">
+                /membre/home.action
+            </result>
             <result name="input">/WEB-INF/login.jsp</result>
-            <result name="error">/WEB-INF/403.jsp</result>
+            <result name="error">/membre/403.jsp</result>
             <result name="home" type="redirect">home.action</result>
         </action>
 
@@ -36,30 +27,9 @@
             <result name="input">/WEB-INF/signUp.jsp</result>
         </action>
 
-        <action name="logout" class="org.oc_j2ee.projet3.webapp.action.LogoutAction" method="execute">
-            <result name="success" type="redirect">home.action</result>
-        </action>
-
         <action name="site" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction" method="execute">
+            <result name="input">/WEB-INF/home.jsp</result>
             <result name="success">/WEB-INF/siteDetails.jsp</result>
-        </action>
-
-        <action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction" method="execute">
-            <interceptor-ref name="authentication"/>
-            <result name="input">/WEB-INF/addSite.jsp</result>
-            <result name="success" type="redirectAction">listeSite</result>
-        </action>
-        <action name="addSecteur" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction" method="execute">
-            <result name="input">/WEB-INF/addSecteur.jsp</result>
-            <result name="success" type="redirectAction">listeSecteur</result>
-        </action>
-        <action name="addVoie" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction" method="execute">
-            <result name="input">/WEB-INF/addVoie.jsp</result>
-            <result name="success" type="redirectAction">listeVoie</result>
-        </action>
-        <action name="addLongueur" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction" method="execute">
-            <result name="input">/WEB-INF/addLongueur.jsp</result>
-            <result name="success" type="redirectAction">listeLongueur</result>
         </action>
 
         <action name="listeSite" class="org.oc_j2ee.projet3.webapp.action.ListeSiteAction" method="execute">
@@ -76,15 +46,71 @@
             <result name="success">/WEB-INF/listeLongueur.jsp</result>
         </action>
 
-
-
-
-        <!--action name="admin" class="org.oc_j2ee.projet3.webapp.action.AdminAction" method="execute">
-            <result name="success">/WEB-INF/Content/admin.jsp</result>
-        </action-->
+        <action name="search" class="org.oc_j2ee.projet3.webapp.action.SearchAction" method="execute">
+            <result name="success">/WEB-INF/resultSearch.jsp</result>
+            <result name="input">/WEB-INF/resultSearch.jsp</result>
+            <result name="error">WEB-INF/resultSearch.jsp</result>
+            <result name="home">/WEB-INF/home.jsp</result>
+        </action>
 
 
 
     </package>
+
+    <package name="membre" namespace="/membre" extends="struts-default">
+
+        <interceptors>
+           <interceptor name="authentication" class="org.oc_j2ee.projet3.webapp.interceptor.AuthenticationInterceptor">
+           </interceptor>
+           <interceptor-stack name="authStack">
+               <interceptor-ref name="authentication"/>
+               <interceptor-ref name="defaultStack"/>
+           </interceptor-stack>
+       </interceptors>
+       <default-interceptor-ref name="authStack"/>
+
+        <action name="home" class="org.oc_j2ee.projet3.webapp.action.HomeMembreAction" method="execute">
+            <result name="success">/membre/home.jsp</result>
+        </action>
+
+        <action name="logout" class="org.oc_j2ee.projet3.webapp.action.LogoutAction" method="execute">
+            <result name="success" type="redirect">/home.action</result>
+        </action>
+
+        <action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction" method="execute">
+            <interceptor-ref name="authentication"/>
+            <result name="input">/membre/addSite.jsp</result>
+            <result name="login" type="redirect">/login.action</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">listeSite</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+        <action name="addSecteur" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction" method="execute">
+            <interceptor-ref name="authentication"/>
+            <result name="input">/membre/addSecteur.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">listeSecteur</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+        <action name="addVoie" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction" method="execute">
+            <interceptor-ref name="authentication"/>
+            <result name="input">/membre/addVoie.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">listeVoie</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+        <action name="addLongueur" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction" method="execute">
+            <interceptor-ref name="authentication"/>
+            <result name="input">/membre/addLongueur.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">listeLongueur</param>
+                <param name="namespace">/</param>
+            </result>
+        </action>
+    </package>
+
 
 </struts>

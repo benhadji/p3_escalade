@@ -16,35 +16,27 @@
     <p>Le premier site communautaire dédié à l'escalade</p>
 
     <div class="area">
-        <s:property value="#session.sessionUtilisateur.prenom"/>
-        <s:if test="%{#session.sessionUtilisateur!=null}">
-            ${successmessage}
-            <br/>
-            Welcome, <s:property value="#session.sessionUtilisateur.prenom"/><br/>
-            <a href="<s:url action='logout' />">Se déconnecter</a>
-        </s:if>
-        <s:else>
-            <div>
-                Deja membre ? <a href="login.action">Login</a><br>
-                Nouvel utilisateur : <a href="signUp.action">Sign in</a>
-            </div>
-        </s:else>
+         <div>
+            Deja membre ? <a href="login.action">Login</a><br>
+            Nouvel utilisateur : <a href="signUp.action">Sign in</a>
+        </div>
 
         <div class="area-content">
             <div class="list">
-                <h2>Liste des elements </h2>
-                <a href="listeSite.action">Liste site</a><br>
+                <h4>Liste des site de la region ! </h4>
+                <a href="listeSite.action">Liste site</a><br><br>
             </div>
+            <div class="search">
+                <s:form action="search" namespace="/">
+                    <s:textfield name="nom" label="Nom "/>
+                    <input type="radio" value="site" name="yourSearchItem" title="Site"/>Site
+                    <input type="radio" value="secteur" name="yourSearchItem" title="Secteur"/>Secteur
+                    <input type="radio" value="voie" name="yourSearchItem" title="Voie"/>Voie
+                    <input type="radio" value="longueur" name="yourSearchItem" title="Longueur"/>Longueur
+                    <input type="radio" value="topo" name="yourSearchItem" title="Topo"/>Topo
 
-            <div class="list-view">
-                <h3>Ajouter un nouveau site : </h3>
-                <a href="addSite.action">Nouveau site</a>
-                <h3>Ajouter nouveau secteur : </h3>
-                <a href="addSecteur.action">Nouveau secteur</a>
-                <h3>Ajouter nouvelle voie : </h3>
-                <a href="addVoie.action">Nouvelle voie</a>
-                <h3>Ajouter nouvelle longueur : </h3>
-                <a href="addLongueur.action">Nouvelle longueur</a>
+                    <s:submit value="Rechercher" name="submit"/>
+                </s:form>
             </div>
         </div>
     </div>

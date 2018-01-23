@@ -15,7 +15,7 @@
 
 <div class="area">
     <div class="area-header">
-        <h2>Details de chaque site, avec ses voies, ses longueurs ...</h2>
+        <h2>Site : <s:property value="%{site.nom}"/>  , avec ses secteurs, ses voies et ses longueurs ...</h2>
     </div>
     <div class="area-content">
 

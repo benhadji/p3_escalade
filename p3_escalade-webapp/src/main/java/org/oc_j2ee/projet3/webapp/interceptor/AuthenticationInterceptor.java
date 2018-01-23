@@ -26,8 +26,7 @@ public class AuthenticationInterceptor implements Interceptor {
         if(session != null && session.containsKey("sessionUtilisateur"))
         {
             Utilisateur utilisateur = (Utilisateur) session.get("sessionUtilisateur");
-            if(utilisateur==null)
-            {
+            if(utilisateur==null){
                 return Action.LOGIN;
             }else{
                 Action action = (Action) actionInvocation.getAction();

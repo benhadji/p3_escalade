@@ -94,7 +94,6 @@ public class LogInAction extends ActionSupport implements SessionAware {
         {
             if(email!=null)
             {
-                System.out.println(email);
                 utilisateur = utilisateurManager.getLoginUser(this.email);
                 if(utilisateur!=null && utilisateurManager.validateLogin(utilisateur,this.password))
                 {
@@ -105,7 +104,6 @@ public class LogInAction extends ActionSupport implements SessionAware {
                     return ERROR;
                 }
             }else{
-                System.out.println(email);
                 return INPUT;
             }
         }else{
