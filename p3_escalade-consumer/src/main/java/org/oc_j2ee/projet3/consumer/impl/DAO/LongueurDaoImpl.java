@@ -141,5 +141,24 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
         return vList;
     }
 
+    @Override
+    public List<Longueur> getByName(String nom) {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String var = "'"+nom+"'";
+        String vSQL = "SELECT * FROM longueur WHERE nom = "+var;
+
+        try {
+            List<Longueur> longueurs = vJdbcTemplate.query(vSQL,longueurRM);
+            return longueurs;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+
+
+
+    }
+
 
 }

@@ -151,4 +151,35 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
 
     }
 
+    @Override
+    public List<Voie> getByName(String nom) {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String var = "'"+nom+"'";
+        String vSQL = "SELECT * FROM voie WHERE nom = "+var;
+
+        try {
+            List<Voie> voies = vJdbcTemplate.query(vSQL,voieRM);
+            return voies;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+
+
+    }
+
+    @Override
+    public String getNameFromId(Integer voieId) {
+
+        String vSQL = "SELECT nom FROM voie WHERE voie_id=" + voieId;
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String name = vJdbcTemplate.queryForObject(vSQL, String.class);
+
+        return name;
+
+    }
+
+
 }

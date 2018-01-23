@@ -16,8 +16,6 @@ public interface VoieDAO {
     List<Voie> getAllBySector(Secteur secteur);
     List<Voie> getListVoie();
     List<Voie> getAllBySite(Site site);
-
-
-
-
+    List<Voie> getByName(String nom);
+    String getNameFromId(Integer voieId);
 }

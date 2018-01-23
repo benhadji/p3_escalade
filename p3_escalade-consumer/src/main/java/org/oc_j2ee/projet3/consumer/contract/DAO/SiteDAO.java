@@ -12,4 +12,8 @@ public interface SiteDAO {
     Site getById(int id);
     List<Site> getAllSites();
     List<String> getAllSitesNames();
+    List<Site> getByName(String nom);
+
+
+    String getSiteNameFromId(Integer siteId);
 }

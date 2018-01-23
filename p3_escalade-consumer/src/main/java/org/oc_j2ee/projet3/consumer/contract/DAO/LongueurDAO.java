@@ -18,4 +18,5 @@ public interface LongueurDAO {
     List<Longueur> getAllLongueur();
 
 
+    List<Longueur> getByName(String nom);
 }

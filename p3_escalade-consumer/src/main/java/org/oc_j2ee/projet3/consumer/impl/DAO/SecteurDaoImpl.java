@@ -6,6 +6,7 @@ import org.oc_j2ee.projet3.consumer.impl.RowMapper.SecteurRM;
 import org.oc_j2ee.projet3.model.Longueur;
 import org.oc_j2ee.projet3.model.Secteur;
 import org.oc_j2ee.projet3.model.Site;
+import org.oc_j2ee.projet3.model.Voie;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -23,6 +24,14 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
 
     @Inject
     private SecteurRM secteurRM;
+
+    public void setSecteurRM(SecteurRM secteurRM) {
+        this.secteurRM = secteurRM;
+    }
+
+    public SecteurRM getSecteurRM() {
+        return secteurRM;
+    }
 
     @Override
     public void create(Secteur secteur) {
@@ -83,7 +92,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
     @Override
     public Secteur getById(int secteur_id) {
 
-        String vSQL = "SELECT * FROM public.secteur WHERE secteur_id = :id";
+        String vSQL = "SELECT * FROM public.secteur WHERE secteur_id = :secteur_id";
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         MapSqlParameterSource vParams = new MapSqlParameterSource("secteur_id", secteur_id);
         try {
@@ -92,6 +101,18 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
         } catch (EmptyResultDataAccessException vEx) {
             return null;
         }
+    }
+
+    @Override
+    public List<Secteur> getAllBySiteName(Site site) {
+
+        String vSQL = "SELECT * FROM public.secteur WHERE nom=:nom and site_id=site_id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        List<Secteur> vList = vJdbcTemplate.query(vSQL,vParams,secteurRM);
+        return vList;
     }
 
     @Override
@@ -118,11 +139,51 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDAO {
 
     }
 
-    public void setSecteurRM(SecteurRM secteurRM) {
-        this.secteurRM = secteurRM;
+    @Override
+    public List<Secteur> getByName(String nom) {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String var = "'"+nom+"'";
+        String vSQL = "SELECT * FROM secteur WHERE nom = "+var;
+
+        try {
+            List<Secteur> secteurs = vJdbcTemplate.query(vSQL,secteurRM);
+            return secteurs;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+
+
     }
 
-    public SecteurRM getSecteurRM() {
-        return secteurRM;
+    @Override
+    public String getNameFromId(Integer secteurId) {
+
+        Integer id = secteurId;
+
+        String vSQL = "SELECT nom FROM secteur WHERE secteur_id=" + id;
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String name = vJdbcTemplate.queryForObject(vSQL, String.class);
+
+        return name;
+
     }
+
+    @Override
+    public String getNameFromVoie(Voie voie) {
+
+        String sql = "Select nom from secteur where secteur_id=:voie_id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(voie);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        String name = vJdbcTemplate.queryForObject(sql, vParams, String.class);
+
+        return name;
+
+    }
+
+
 }

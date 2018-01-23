@@ -17,17 +17,6 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
 
     private SiteRM siteRM;
 
-    public NamedParameterJdbcTemplate getNamedJdbcTemplate() {
-        return namedJdbcTemplate;
-    }
-
-    public void setNamedJdbcTemplate(NamedParameterJdbcTemplate namedJdbcTemplate) {
-        this.namedJdbcTemplate = namedJdbcTemplate;
-    }
-
-    private NamedParameterJdbcTemplate namedJdbcTemplate;
-
-
     public SiteRM getSiteRM() {
         return siteRM;
     }
@@ -103,6 +92,37 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
     }
 
     @Override
+    public List<Site> getByName(String nom) {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String var = "'"+nom+"'";
+        String vSQL = "SELECT * FROM site WHERE nom = "+var;
+
+        try {
+            List<Site> sites = vJdbcTemplate.query(vSQL,siteRM);
+            return sites;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+    }
+
+    @Override
+    public String getSiteNameFromId(Integer siteId) {
+
+        Integer id = siteId;
+
+        String vSQL = "SELECT nom FROM site WHERE site_id=" + id;
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String name = vJdbcTemplate.queryForObject(vSQL, String.class);
+
+        return name;
+
+    }
+
+
+    @Override
     public List<Site> getAllSites() {
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
 
@@ -123,6 +143,7 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
         List<String> vList = vJdbcTemplate.queryForList(sql, String.class);
         return vList;
     }
+
 
 
 }
