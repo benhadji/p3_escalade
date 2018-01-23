@@ -11,18 +11,24 @@ public class Voie extends Longueur {
 	private String nom;
 	private boolean etat;
     private List<Longueur> longueurs = new ArrayList<Longueur>();
+    private Secteur secteur;
 
-    public List<Longueur> getLongueurs() {
+
+	public Secteur getSecteur() {
+		return secteur;
+	}
+
+	public void setSecteur(Secteur secteur) {
+		this.secteur = secteur;
+	}
+
+	public List<Longueur> getLongueurs() {
         return longueurs;
     }
 
     public void setLongueurs(List<Longueur> longueurs) {
         this.longueurs = longueurs;
     }
-
-
-
-
 
 	public Integer getVoie_id() {
 		return voie_id;

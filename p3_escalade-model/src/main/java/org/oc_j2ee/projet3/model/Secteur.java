@@ -10,6 +10,7 @@ public class Secteur extends Site {
     private Integer site_id;
 	private String nom;
     private List<Voie> voies = new ArrayList<Voie>();
+    private Site site;
 
     public List<Voie> getVoies() {
         return voies;
@@ -19,8 +20,13 @@ public class Secteur extends Site {
         this.voies = voies;
     }
 
+    public Site getSite() {
+        return site;
+    }
 
-
+    public void setSite(Site site) {
+        this.site = site;
+    }
 
     public Integer getSite_id() {
         return site_id;

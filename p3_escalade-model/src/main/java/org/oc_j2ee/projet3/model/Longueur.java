@@ -7,6 +7,16 @@ public class Longueur {
 	private Integer voie_id;
 	private String nom;
     private String cotation;
+    private Voie voie;
+
+
+	public Voie getVoie() {
+		return voie;
+	}
+
+	public void setVoie(Voie voie) {
+		this.voie = voie;
+	}
 
 	public Integer getLongueur_id() {
 		return longueur_id;
