@@ -7,8 +7,11 @@ import org.oc_j2ee.projet3.model.Site;
 import org.oc_j2ee.projet3.model.Topo;
 import org.oc_j2ee.projet3.model.Utilisateur;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 import javax.inject.Inject;
 import java.sql.Types;
@@ -20,6 +23,13 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     @Inject
     private TopoRM topoRM;
 
+    public TopoRM getTopoRM() {
+        return topoRM;
+    }
+
+    public void setTopoRM(TopoRM topoRM) {
+        this.topoRM = topoRM;
+    }
 
     @Override
     public void create(Topo topo) {
@@ -37,6 +47,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
         vJdbcTemplate.update(vSQL, vParams);
 
     }
+
 
     @Override
     public void update(Topo topo) {
@@ -61,7 +72,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     @Override
     public void delete(Topo topo) {
 
-        String vSQL = "DELETE * FROM public.TOPO WHERE id=:id";
+        String vSQL = "DELETE FROM public.TOPO WHERE id=:id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("id", topo.getId(), Types.INTEGER);
@@ -102,12 +113,23 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
 
     @Override
     public List<Topo> getAllTopos() {
-        return null;
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+        String sql = "SELECT * FROM public.topo";
+        List<Topo> vList  = vJdbcTemplate.query(sql, topoRM);
+        return vList;
+
     }
 
     @Override
     public List<Topo> getToposByUser(Utilisateur utilisateur) {
-        return null;
+
+        String vSQL = "SELECT * FROM public.topo WHERE utilisateur_id=:utilisateur_id";
+
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(utilisateur);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        List<Topo> vList = vJdbcTemplate.query(vSQL,vParams,topoRM);
+        return vList;
     }
 
     @Override

@@ -25,7 +25,10 @@
         <property name="siteRM" ref="siteRM"/>
     </bean>
 
-    <bean id="topoDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.TopoDaoImpl" parent = "abstractDao"/>
+    <bean id="topoDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.TopoDaoImpl" parent = "abstractDao">
+        <property name="topoRM" ref="topoRM"/>
+    </bean>
+
     <bean id="utilisateurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.UtilisateurDaoImpl" parent = "abstractDao">
         <property name="utilisateurRM" ref="utilisateurRM"/>
     </bean>
