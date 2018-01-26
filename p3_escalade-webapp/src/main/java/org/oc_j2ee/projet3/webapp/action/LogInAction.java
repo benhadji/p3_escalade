@@ -98,6 +98,7 @@ public class LogInAction extends ActionSupport implements SessionAware {
                 if(utilisateur!=null && utilisateurManager.validateLogin(utilisateur,this.password))
                 {
                     session.put("sessionUtilisateur", getUtilisateur());
+
                     return SUCCESS;
                 }else{
                     setErrormessage("Email/Mot de passe incorrect");

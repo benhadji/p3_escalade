@@ -62,10 +62,7 @@ public class AddSecteurAction extends ActionSupport {
 
         if(secteur!=null){
             secteurManager.addSecteur(secteur);
-            System.out.println("Le nouveau secteur est :\n" +
-                    "Secteur Id = " + secteur.getSecteur_id() +
-                    "\nSite ID = " + secteur.getSite_id() +
-                    "\nSecteur nom = " + secteur.getNom());
+
             return "success";
         }
         else{

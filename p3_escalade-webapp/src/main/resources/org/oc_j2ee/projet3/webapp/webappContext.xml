@@ -24,47 +24,60 @@
 
     <bean id="siteDetailsAction" class="org.oc_j2ee.projet3.webapp.action.SiteDetailsAction">
         <property name="siteManager" ref="siteManager"/>
-
-
     </bean>
+
     <bean id="addSiteAction" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction">
         <property name="siteManager" ref="siteManager"/>
     </bean>
+
     <bean id="listeSite" class="org.oc_j2ee.projet3.webapp.action.ListeSiteAction">
         <property name="siteManager" ref="siteManager"/>
     </bean>
+
     <bean id="addSecteurAction" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction">
         <property name="siteManager" ref="siteManager"/>
         <property name="secteurManager" ref="secteurManager"/>
     </bean>
+
     <bean id="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction">
         <property name="secteurManager" ref="secteurManager"/>
     </bean>
+
     <bean id="addVoieAction" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction">
         <property name="voieManager" ref="voieManager"/>
         <property name="secteurManager" ref="secteurManager"/>
     </bean>
+
     <bean id="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction">
         <property name="voieManager" ref="voieManager"/>
     </bean>
+
     <bean id="addLonguerAction" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction">
         <property name="voieManager" ref="voieManager"/>
         <property name="longueurManager" ref="longueurManager"/>
     </bean>
+
     <bean id="listLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction">
         <property name="longueurManager" ref="longueurManager"/>
     </bean>
+
     <bean id="loginAction" class="org.oc_j2ee.projet3.webapp.action.LogInAction">
         <property name="utilisateurManager" ref="utilisateurManager"/>
         <property name="errormessage" value="Sorry, username or password error!"/>
     </bean>
 
-
     <bean id="homeMembre" class="org.oc_j2ee.projet3.webapp.action.HomeMembreAction">
         <property name="successmessage" value="You are successfully logged in!"/>
     </bean>
 
+    <bean id="addTopoAction" class="org.oc_j2ee.projet3.webapp.action.AddTopoAction">
+        <property name="topoManager" ref="topoManager"/>
+        <property name="siteManager" ref="siteManager"/>
+    </bean>
 
+    <bean id="listTopo" class="org.oc_j2ee.projet3.webapp.action.ListeTopoAction">
+        <property name="topoManager" ref="topoManager"/>
+    </bean>
 
 
 

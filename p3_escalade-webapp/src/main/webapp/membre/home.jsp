@@ -12,7 +12,6 @@
     <title>Bienvenue</title>
 </head>
 <body>
-<s:property value="#session.sessionUtilisateur.prenom"/>
 <s:if test="%{#session.sessionUtilisateur!=null}">
     ${successmessage}
     <br/>
@@ -29,6 +28,15 @@
     <a href="<s:url namespace="/membre" action="addVoie"/>">Nouvelle voie</a>
     <h3>Ajouter nouvelle longueur : </h3>
     <a href="<s:url namespace="/membre" action="addLongueur"/>">Nouvelle longueur</a>
+    <h3>Ajouter nouveau topo : </h3>
+    <a href="<s:url namespace="/membre" action="addTopo"/>">Nouveau topo</a>
+    <h3>Mes Topos </h3>
+    <a href="<s:url namespace="/membre" action="mesTopos"/>">Mes Topos</a>
+</div>
+<div>
+
+
+
 </div>
 
 </body>

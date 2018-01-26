@@ -25,19 +25,6 @@ public class HomeAction extends ActionSupport {
 
     public String execute(){
 
-        /*else if (yourSearchItem.equalsIgnoreCase("Secteur")){
-
-
-        }else if (yourSearchItem.equalsIgnoreCase("Voie")){
-
-
-        }else if (yourSearchItem.equalsIgnoreCase("Longueur")){
-
-
-        }else if (yourSearchItem.equalsIgnoreCase("Topo")){
-
-
-        }*/
 
         return "success";
 
