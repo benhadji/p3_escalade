@@ -4,6 +4,7 @@ import org.oc_j2ee.projet3.business.contrat.manager.SiteManager;
 import org.oc_j2ee.projet3.business.contrat.manager.TopoManager;
 import org.oc_j2ee.projet3.model.Topo;
 import org.oc_j2ee.projet3.model.Utilisateur;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 import javax.inject.Named;
 import java.util.Date;
@@ -13,17 +14,27 @@ import java.util.List;
 public class TopoManagerImpl extends AbstractManagerImpl implements TopoManager {
     @Override
     public void addTopo(Topo topo) {
-
+        getDaoFactory().getTopoDAO().create(topo);
     }
+
 
     @Override
     public Topo getTopo(int id) {
-        return null;
+
+        Topo topo = getDaoFactory().getTopoDAO().getById(id);
+        return topo;
     }
 
     @Override
     public List<Topo> getUserTopo(Utilisateur utilisateur) {
-        return null;
+
+        try{
+            List<Topo> topos = getDaoFactory().getTopoDAO().getToposByUser(utilisateur);
+            return topos;
+        }catch (EmptyResultDataAccessException e)
+        {
+            return null;
+        }
     }
 
     @Override
@@ -33,7 +44,8 @@ public class TopoManagerImpl extends AbstractManagerImpl implements TopoManager 
 
     @Override
     public List<Topo> getAllTopo() {
-        return null;
+        List<Topo> topos = getDaoFactory().getTopoDAO().getAllTopos();
+        return topos;
     }
 
     @Override
