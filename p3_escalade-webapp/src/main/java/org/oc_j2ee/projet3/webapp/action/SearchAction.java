@@ -1,14 +1,8 @@
 package org.oc_j2ee.projet3.webapp.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.oc_j2ee.projet3.business.contrat.manager.LongueurManager;
-import org.oc_j2ee.projet3.business.contrat.manager.SecteurManager;
-import org.oc_j2ee.projet3.business.contrat.manager.SiteManager;
-import org.oc_j2ee.projet3.business.contrat.manager.VoieManager;
-import org.oc_j2ee.projet3.model.Longueur;
-import org.oc_j2ee.projet3.model.Secteur;
-import org.oc_j2ee.projet3.model.Site;
-import org.oc_j2ee.projet3.model.Voie;
+import org.oc_j2ee.projet3.business.contrat.manager.*;
+import org.oc_j2ee.projet3.model.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,17 +15,31 @@ public class SearchAction extends ActionSupport {
     private ArrayList<String> searchItem = new ArrayList<>();
     private List<Site> sites = new ArrayList<Site>();
     private List<Secteur> secteurs = new ArrayList<Secteur>();
-    private List<Secteur> nbSecteurs = new ArrayList<Secteur>();
-    private List<String> secteurNames = new ArrayList<String>();
     private List<Voie> voies = new ArrayList<Voie>();
-    private List<Voie> nbVoies = new ArrayList<Voie>();
     private List<Longueur> longueurs = new ArrayList<Longueur>();
-    private List<Longueur> nbLongueurs = new ArrayList<Longueur>();
+    private List<Topo> topos = new ArrayList<>();
+
+    public List<Topo> getTopos() {
+        return topos;
+    }
+
+    public void setTopos(List<Topo> topos) {
+        this.topos = topos;
+    }
+
+    public TopoManager getTopoManager() {
+        return topoManager;
+    }
+
+    public void setTopoManager(TopoManager topoManager) {
+        this.topoManager = topoManager;
+    }
 
     private SiteManager siteManager;
     private SecteurManager secteurManager;
     private VoieManager voieManager;
     private LongueurManager longueurManager;
+    private TopoManager topoManager;
 
     private Site site;
     private Secteur secteur;
@@ -48,13 +56,6 @@ public class SearchAction extends ActionSupport {
 
     private boolean etat;
 
-    public List<String> getSecteurNames() {
-        return secteurNames;
-    }
-
-    public void setSecteurNames(List<String> secteurNames) {
-        this.secteurNames = secteurNames;
-    }
 
     public String getCotation() {
         return cotation;
@@ -88,36 +89,12 @@ public class SearchAction extends ActionSupport {
         this.voieName = voieName;
     }
 
-    public List<Longueur> getNbLongueurs() {
-        return nbLongueurs;
-    }
-
-    public void setNbLongueurs(List<Longueur> nbLongueurs) {
-        this.nbLongueurs = nbLongueurs;
-    }
-
     public String getSiteName() {
         return siteName;
     }
 
     public void setSiteName(String siteName) {
         this.siteName = siteName;
-    }
-
-    public List<Secteur> getNbSecteurs() {
-        return nbSecteurs;
-    }
-
-    public void setNbSecteurs(List<Secteur> nbSecteurs) {
-        this.nbSecteurs = nbSecteurs;
-    }
-
-    public List<Voie> getNbVoies() {
-        return nbVoies;
-    }
-
-    public void setNbVoies(List<Voie> nbVoies) {
-        this.nbVoies = nbVoies;
     }
 
     public List<Voie> getVoies() {
@@ -274,9 +251,7 @@ public class SearchAction extends ActionSupport {
                     return ERROR;
                 } else {
                     this.setResult("Il existe " + sites.size() + " résultat(s) correspondant a votre recherche");
-                    for (Site site : sites) {
-                        System.out.println(site.getNom());
-                    }
+
                     return SUCCESS;
                 }
             }
@@ -330,12 +305,29 @@ public class SearchAction extends ActionSupport {
                         System.out.println(longueur.getNom());
                     }
 
-                    //cotation = longueur.getCotation();
+                    return SUCCESS;
+                }
+
+            }
+
+            if(this.yourSearchItem.equalsIgnoreCase("Topo")){
+
+                topos = topoManager.getTopoByName(nom);
+                if (topos == null) {
+                    this.setResult("Aucun résultat n'a été trouvé pour votre recherche");
+                    return ERROR;
+                }
+                else {
+                    this.setResult("Il existe " + topos.size() + " résultat(s) correspondant a votre recherche");
+                    for (Topo topo : topos) {
+                        System.out.println(topo.getNom());
+                    }
 
                     return SUCCESS;
                 }
 
             }
+
             else
                 return "home";
 

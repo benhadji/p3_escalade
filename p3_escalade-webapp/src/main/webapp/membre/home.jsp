@@ -19,6 +19,7 @@
     <a href="<s:url action='logout' />">Se déconnecter</a>
 </s:if>
 
+
 <div class="list-view">
     <h3>Ajouter un nouveau site : </h3>
     <a href="<s:url namespace="/membre" action="addSite"/>">Nouveau site</a>
@@ -33,10 +34,17 @@
     <h3>Mes Topos </h3>
     <a href="<s:url namespace="/membre" action="mesTopos"/>">Mes Topos</a>
 </div>
-<div>
+<div class="search">
+    <s:form action="search" namespace="/">
+        <s:textfield name="nom" label="Nom "/>
+        <input type="radio" value="site" name="yourSearchItem" title="Site"/>Site
+        <input type="radio" value="secteur" name="yourSearchItem" title="Secteur"/>Secteur
+        <input type="radio" value="voie" name="yourSearchItem" title="Voie"/>Voie
+        <input type="radio" value="longueur" name="yourSearchItem" title="Longueur"/>Longueur
+        <input type="radio" value="topo" name="yourSearchItem" title="Topo"/>Topo
 
-
-
+        <s:submit value="Rechercher" name="submit"/>
+    </s:form>
 </div>
 
 </body>

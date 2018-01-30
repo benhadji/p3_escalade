@@ -106,6 +106,42 @@
         </table>
     </s:if>
 
+    <s:if test="%{topos!=null && topos.size()!=0}">
+        <table>
+            <thead>
+            <tr>
+                <th>Nom du topo</th>
+                <th>Nom du site correpondant</th>
+                <th>Createur du topo</th>
+                <th>Disponibilité</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <s:iterator value="topos">
+                <tr>
+                    <td><s:property value="nom"/></td>
+                    <td><s:property value="site.nom"/></td>
+                    <td><s:property value="utilisateur.prenom"/> <s:property value="utilisateur.nom"/></td>
+                    <s:if test="%{emprunt==true}">
+                        <td>Topo indisponible</td>
+                    </s:if>
+                    <s:else>
+                        <td>Topo disponible pour pret</td>
+                        <s:url var="topoUrl" action="borrowTopo" namespace="/membre">
+                            <s:param name="id"><s:property value="id"/></s:param>
+                        </s:url>
+                        <td><a href="${topoUrl}">Reserver topo</a></td>
+                    </s:else>
+                </tr>
+            </s:iterator>
+            </tbody>
+        </table>
+    </s:if>
+
+
+
+
 </s:if>
 
 

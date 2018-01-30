@@ -8,6 +8,8 @@ import org.oc_j2ee.projet3.model.Topo;
 import org.oc_j2ee.projet3.model.Utilisateur;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class MesToposActions extends ActionSupport implements SessionAware {
@@ -18,6 +20,16 @@ public class MesToposActions extends ActionSupport implements SessionAware {
     private TopoManager topoManager;
     private UtilisateurManager utilisateurManager;
     private Map<String, Object> session;
+    private List<Topo> mesTopos = new ArrayList<>();
+
+
+    public List<Topo> getMesTopos() {
+        return mesTopos;
+    }
+
+    public void setMesTopos(List<Topo> mesTopos) {
+        this.mesTopos = mesTopos;
+    }
 
     public Topo getTopo() {
         return topo;
@@ -62,19 +74,12 @@ public class MesToposActions extends ActionSupport implements SessionAware {
     public String execute(){
 
         if(session.containsKey("sessionUtilisateur")) {
-            if (topo != null) {
+            Utilisateur utilisateur = (Utilisateur) session.get("sessionUtilisateur");
+            mesTopos = topoManager.getUserTopo(utilisateur);
 
-                topoManager.getUserTopo(utilisateur);
-                return "success";
-
-            }
-            else{
-
-                return "input";
-            }
+            return "success";
         }
         else{
-
             return "home";
         }
     }

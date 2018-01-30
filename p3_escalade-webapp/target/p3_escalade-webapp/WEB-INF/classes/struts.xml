@@ -87,9 +87,36 @@
                 <param name="actionName">listeTopo</param>
                 <param name="namespace">/</param>
             </result>
-
-
         </action>
+
+        <action name="mesTopos" class="org.oc_j2ee.projet3.webapp.action.MesToposActions" method="execute">
+            <result name="home" type="redirect">home.action</result>
+            <result name="success">/membre/mesTopos.jsp</result>
+        </action>
+
+
+        <action name="editTopoForm" class="org.oc_j2ee.projet3.webapp.action.EditTopoFormAction" method="execute">
+            <result name="home" type="redirect">home.action</result>
+            <result name="input">/membre/editTopoForm.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">mesTopos</param>
+                <param name="namespace">/membre</param>
+            </result>
+        </action>
+
+        <action name="borrowTopo" class="org.oc_j2ee.projet3.webapp.action.BorrowTopoAction" method="execute">
+            <result name="input">/membre/borrowTopoForm.jsp</result>
+            <result name="login" type="redirect">/login.action</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">listeBorrow</param>
+                <param name="namespace">/membre</param>
+            </result>
+        </action>
+
+        <action name="listeBorrow" class="org.oc_j2ee.projet3.webapp.action.ListeBorrowAction" method="execute">
+            <result name="success">/membre/listeBorrow.jsp</result>
+        </action>
+
 
         <action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction" method="execute">
             <interceptor-ref name="authentication"/>
