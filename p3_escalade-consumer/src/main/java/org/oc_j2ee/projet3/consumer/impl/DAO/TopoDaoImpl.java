@@ -48,12 +48,32 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
 
     }
 
+    @Override
+    public void createNewBorrow(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur) {
+
+        String sql = "insert into borrow (topo_id, utilisateur_id, startdate, enddate) " +
+                "values(:topo_id, :utilisateur_id, :startDate, :endDate)";
+
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("topo_id", topo.getId(), Types.INTEGER);
+        vParams.addValue("utilisateur_id", utilisateur.getId(), Types.INTEGER);
+        vParams.addValue("startdate", startDate, Types.DATE);
+        vParams.addValue("enddate", endDate, Types.DATE);
+
+
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        vJdbcTemplate.update(sql, vParams);
+
+
+
+    }
+
 
     @Override
     public void update(Topo topo) {
 
         String vSQL = "UPDATE public.TOPO " +
-                "SET utilisateur_id=:utilisateur_id, site_id=:site_id, nom=:nom, localisation=:localisation " +
+                "SET utilisateur_id=:utilisateur_id, site_id=:site_id, nom=:nom, emprunt=:emprunt " +
                 "WHERE id=:id";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
@@ -62,6 +82,21 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
         vParams.addValue("utilisateur_id", topo.getUtilisateurId(), Types.INTEGER);
         vParams.addValue("site_id", topo.getSiteId(), Types.INTEGER);
         vParams.addValue("nom", topo.getNom(), Types.VARCHAR);
+        vParams.addValue("emprunt", topo.isEmprunt(), Types.BOOLEAN);
+
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        vJdbcTemplate.update(vSQL, vParams);
+
+    }
+
+    @Override
+    public void updateStatus(Topo topo) {
+
+        String vSQL = "UPDATE topo SET emprunt=:emprunt WHERE id=:id";
+
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+
+        vParams.addValue("id", topo.getId(), Types.INTEGER);
         vParams.addValue("emprunt", topo.isEmprunt(), Types.BOOLEAN);
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
@@ -83,12 +118,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
 
     }
 
-    @Override
-    public void createNewBorrow(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur) {
 
-
-
-    }
 
     @Override
     public void deleteSiteTopo(Topo topo, Site site) {
@@ -123,7 +153,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     @Override
     public List<Topo> getToposByUser(Utilisateur utilisateur) {
 
-        String vSQL = "SELECT * FROM public.topo WHERE utilisateur_id=:utilisateur_id";
+        String vSQL = "SELECT * FROM public.topo WHERE utilisateur_id=:id";
 
         SqlParameterSource vParams = new BeanPropertySqlParameterSource(utilisateur);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
@@ -135,5 +165,24 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     @Override
     public List<Topo> getToposBorrowedByUser(Utilisateur user) {
         return null;
+    }
+
+    @Override
+    public List<Topo> getByName(String nom) {
+
+        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+
+        String var = "'"+nom+"'";
+        String vSQL = "SELECT * FROM topo WHERE nom = "+var;
+
+        try {
+            List<Topo> topos = vJdbcTemplate.query(vSQL,topoRM);
+            return topos;
+        } catch (EmptyResultDataAccessException vEx) {
+            return null;
+        }
+
+
+
     }
 }

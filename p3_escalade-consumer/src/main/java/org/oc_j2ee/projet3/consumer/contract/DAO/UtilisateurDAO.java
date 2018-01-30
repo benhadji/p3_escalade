@@ -8,6 +8,7 @@ public interface UtilisateurDAO {
 
     void create(Utilisateur utilisateur);
     void update(Utilisateur utilisateur);
+
     void delete(Utilisateur utilisateur);
     Utilisateur getById(int id);
     List<Utilisateur> getAllUsers();

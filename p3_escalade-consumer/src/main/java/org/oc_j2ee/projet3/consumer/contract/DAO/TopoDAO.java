@@ -11,6 +11,7 @@ public interface TopoDAO {
 
     void create(Topo topo);
     void update (Topo topo);
+    void updateStatus(Topo topo);
     void delete (Topo topo);
     void createNewBorrow(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur);
     void deleteSiteTopo (Topo topo, Site site);
@@ -19,4 +20,5 @@ public interface TopoDAO {
     List<Topo> getToposByUser(Utilisateur utilisateur);
     List<Topo> getToposBorrowedByUser (Utilisateur user);
 
+    List<Topo> getByName(String nom);
 }
