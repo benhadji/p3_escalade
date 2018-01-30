@@ -7,6 +7,17 @@ public class Utilisateur {
 	private String nom;
 	private String prenom;
 	private String email;
+	private Topo topo;
+	private String password;
+	private String role;
+
+	public Topo getTopo() {
+		return topo;
+	}
+
+	public void setTopo(Topo topo) {
+		this.topo = topo;
+	}
 
 	public String getPassword() {
 		return password;
@@ -15,9 +26,6 @@ public class Utilisateur {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	private String password;
-	private String role;
 
 	public Integer getId() {
 		return id;

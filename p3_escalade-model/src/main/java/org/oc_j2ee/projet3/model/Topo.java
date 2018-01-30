@@ -7,9 +7,24 @@ public class Topo {
 	private Integer utilisateurId;
 	private String nom;
 	private boolean emprunt;
+	private Site site;
+	private Utilisateur utilisateur;
 
+	public Site getSite() {
+		return site;
+	}
 
+	public void setSite(Site site) {
+		this.site = site;
+	}
 
+	public Utilisateur getUtilisateur() {
+		return utilisateur;
+	}
+
+	public void setUtilisateur(Utilisateur utilisateur) {
+		this.utilisateur = utilisateur;
+	}
 
 	public Integer getId() {
 		return id;
