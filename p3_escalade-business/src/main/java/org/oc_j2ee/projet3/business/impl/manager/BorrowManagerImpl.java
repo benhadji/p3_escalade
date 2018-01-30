@@ -16,6 +16,9 @@ public class BorrowManagerImpl extends AbstractManagerImpl implements BorrowMana
 
     @Override
     public List<Borrow> getBorrowList() {
-        return null;
+
+        return getDaoFactory().getBorrowDAO().getAllTopoBorrowed();
+
+
     }
 }

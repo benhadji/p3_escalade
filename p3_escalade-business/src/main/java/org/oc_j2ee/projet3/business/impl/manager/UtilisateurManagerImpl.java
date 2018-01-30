@@ -1,6 +1,7 @@
 package org.oc_j2ee.projet3.business.impl.manager;
 
 import org.oc_j2ee.projet3.business.contrat.manager.UtilisateurManager;
+import org.oc_j2ee.projet3.model.Topo;
 import org.oc_j2ee.projet3.model.Utilisateur;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -16,16 +17,7 @@ public class UtilisateurManagerImpl extends AbstractManagerImpl implements Utili
     @Override
     public Utilisateur displayUser(int id) {
 
-        Utilisateur user = new Utilisateur();
-
-        try
-        {
-            user = getDaoFactory().getUtilisateurDAO().getById(id);
-        }catch (EmptyResultDataAccessException e){
-            e.printStackTrace();
-        }
-
-        return user;
+        return getDaoFactory().getUtilisateurDAO().getById(id);
     }
 
     @Override

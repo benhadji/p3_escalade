@@ -5,6 +5,7 @@ import org.oc_j2ee.projet3.model.Utilisateur;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public interface TopoManager {
 
@@ -15,7 +16,9 @@ public interface TopoManager {
     List<Topo> getAllTopo();
     void deleteTopo(int id);
     void editTopo(Topo topo);
-    String borrowTopo (Topo topo, Date startDate, Date endDate);
+    void editTopoStatus(Topo topo);
+    void borrowTopo (Topo topo, Date startDate, Date endDate, Map<String, Object> session);
 
 
+    List<Topo> getTopoByName(String nom);
 }
