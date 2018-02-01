@@ -105,12 +105,10 @@
         </action>
 
         <action name="borrowTopo" class="org.oc_j2ee.projet3.webapp.action.BorrowTopoAction" method="execute">
+            <result name="home" type="redirect">home.action</result>
             <result name="input">/membre/borrowTopoForm.jsp</result>
             <result name="login" type="redirect">/login.action</result>
-            <result name="success" type="redirectAction">
-                <param name="actionName">listeBorrow</param>
-                <param name="namespace">/membre</param>
-            </result>
+            <result name="success">/membre/borrowTopoForm.jsp</result>
         </action>
 
         <action name="listeBorrow" class="org.oc_j2ee.projet3.webapp.action.ListeBorrowAction" method="execute">

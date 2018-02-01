@@ -40,62 +40,11 @@ public class SearchAction extends ActionSupport {
     private VoieManager voieManager;
     private LongueurManager longueurManager;
     private TopoManager topoManager;
-
-    private Site site;
-    private Secteur secteur;
-    private Voie voie;
-    private Longueur longueur;
-
     private String nom;
     private String result;
     private String yourSearchItem;
-    private String siteName;
-    private String secteurName;
-    private String voieName;
-    private String cotation;
-
-    private boolean etat;
 
 
-    public String getCotation() {
-        return cotation;
-    }
-
-    public void setCotation(String cotation) {
-        this.cotation = cotation;
-    }
-
-    public boolean isEtat() {
-        return etat;
-    }
-
-    public void setEtat(boolean etat) {
-        this.etat = etat;
-    }
-
-    public String getSecteurName() {
-        return secteurName;
-    }
-
-    public void setSecteurName(String secteurName) {
-        this.secteurName = secteurName;
-    }
-
-    public String getVoieName() {
-        return voieName;
-    }
-
-    public void setVoieName(String voieName) {
-        this.voieName = voieName;
-    }
-
-    public String getSiteName() {
-        return siteName;
-    }
-
-    public void setSiteName(String siteName) {
-        this.siteName = siteName;
-    }
 
     public List<Voie> getVoies() {
         return voies;
@@ -127,30 +76,6 @@ public class SearchAction extends ActionSupport {
 
     public void setLongueurManager(LongueurManager longueurManager) {
         this.longueurManager = longueurManager;
-    }
-
-    public Secteur getSecteur() {
-        return secteur;
-    }
-
-    public void setSecteur(Secteur secteur) {
-        this.secteur = secteur;
-    }
-
-    public Voie getVoie() {
-        return voie;
-    }
-
-    public void setVoie(Voie voie) {
-        this.voie = voie;
-    }
-
-    public Longueur getLongueur() {
-        return longueur;
-    }
-
-    public void setLongueur(Longueur longueur) {
-        this.longueur = longueur;
     }
 
     public SecteurManager getSecteurManager() {
@@ -195,15 +120,6 @@ public class SearchAction extends ActionSupport {
 
     public String getDefaultSearchItemValue(){
         return "Site";
-    }
-
-
-    public Site getSite() {
-        return site;
-    }
-
-    public void setSite(Site site) {
-        this.site = site;
     }
 
     public String getNom() {
@@ -332,8 +248,8 @@ public class SearchAction extends ActionSupport {
                 return "home";
 
         } else {
-            setResult("Aucun nom n'a ete entré. Voici la liste des sites :\n");
-            siteManager.getAllSites();
+            setResult("Aucun nom n'a ete entré");
+
             return INPUT;
         }
 

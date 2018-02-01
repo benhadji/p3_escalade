@@ -101,12 +101,17 @@ public class EditTopoFormAction extends ActionSupport implements SessionAware {
 
             if (topo != null) {
 
-                System.out.println(id);
                 topo.setId(Integer.parseInt(id));
-
 
                 Utilisateur utilisateur = (Utilisateur) session.get("sessionUtilisateur");
                 topo.setUtilisateurId(utilisateur.getId());
+
+                if(yourChoice.equalsIgnoreCase("Rendre Indispo")){
+                    topo.setEmprunt(true);
+                }
+                else {
+                    topo.setEmprunt(false);
+                }
 
 
                 topoManager.editTopo(topo);

@@ -129,7 +129,7 @@
                     <s:else>
                         <td>Topo disponible pour pret</td>
                         <s:url var="topoUrl" action="borrowTopo" namespace="/membre">
-                            <s:param name="id"><s:property value="id"/></s:param>
+                            <s:param name="idTopo"><s:property value="id"/></s:param>
                         </s:url>
                         <td><a href="${topoUrl}">Reserver topo</a></td>
                     </s:else>
