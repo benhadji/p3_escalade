@@ -1,6 +1,7 @@
 package org.oc_j2ee.projet3.webapp.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
 import org.oc_j2ee.projet3.business.contrat.manager.SecteurManager;
 import org.oc_j2ee.projet3.business.contrat.manager.SiteManager;
 import org.oc_j2ee.projet3.model.Secteur;
@@ -8,14 +9,17 @@ import org.oc_j2ee.projet3.model.Site;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class AddSecteurAction extends ActionSupport {
+public class AddSecteurAction extends ActionSupport implements SessionAware {
 
     private SecteurManager secteurManager;
     private SiteManager siteManager;
     private Site site;
     private Secteur secteur;
     private List<Site> listeDesSite = new ArrayList<>();
+    private Map<String, Object> session;
+
 
     public List<Site> getListeDesSite() {
         return listeDesSite;
@@ -59,16 +63,16 @@ public class AddSecteurAction extends ActionSupport {
 
 
     public String execute(){
+            if (secteur != null) {
+                listeDesSite = siteManager.getAllSites();
+                secteurManager.addSecteur(secteur);
+                addActionMessage("Le nouveau secteur " + secteur.getNom() + " a ete correctement enregistré !!");
 
-        if(secteur!=null){
-            secteurManager.addSecteur(secteur);
-
-            return "success";
-        }
-        else{
-            listeDesSite = siteManager.getAllSites();
-            return "input";
-        }
+                return "success";
+            } else {
+                listeDesSite = siteManager.getAllSites();
+                return "input";
+            }
 
     }
 
@@ -85,6 +89,12 @@ public class AddSecteurAction extends ActionSupport {
     }
 
 
+    @Override
+    public void setSession(Map<String, Object> session) {
+        this.session = session;
+    }
 
-
+    public Map<String, Object> getSession() {
+        return session;
+    }
 }

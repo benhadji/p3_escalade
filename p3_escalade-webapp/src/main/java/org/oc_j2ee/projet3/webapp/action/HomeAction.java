@@ -13,11 +13,9 @@ public class HomeAction extends ActionSupport {
     private SiteManager siteManager;
 
 
-
     public SiteManager getSiteManager() {
         return siteManager;
     }
-
     public void setSiteManager(SiteManager siteManager) {
         this.siteManager = siteManager;
     }
@@ -25,10 +23,7 @@ public class HomeAction extends ActionSupport {
 
     public String execute(){
 
-
         return "success";
-
-
 
     }
 

@@ -98,7 +98,6 @@ public class EditTopoFormAction extends ActionSupport implements SessionAware {
 
         if(session.containsKey("sessionUtilisateur")) {
 
-
             if (topo != null) {
 
                 topo.setId(Integer.parseInt(id));
@@ -113,8 +112,9 @@ public class EditTopoFormAction extends ActionSupport implements SessionAware {
                     topo.setEmprunt(false);
                 }
 
-
                 topoManager.editTopo(topo);
+                addActionMessage("Le topo " + topo.getNom() + " a ete correctement modifié !!");
+
 
                 System.out.println("Le nouveau topo est : " +
                         "\nTopo id : " + topo.getId() +
@@ -125,17 +125,13 @@ public class EditTopoFormAction extends ActionSupport implements SessionAware {
             } else {
 
                 topo = topoManager.getTopo(Integer.parseInt(id));
-                System.out.println("Le nouveau topo est : " +
-                        "\nTopo id : " + topo.getId() +
-                        "\nTopo old name : " + topo.getNom() +
-                        "\nTopo old site : " + topo.getSiteId() +
-                        "\nTopo old status : " + topo.isEmprunt());
+
                 sitesList = siteManager.getAllSites();
                 return "input";
             }
         }
         else{
-            return "home";
+            return "login";
         }
     }
 

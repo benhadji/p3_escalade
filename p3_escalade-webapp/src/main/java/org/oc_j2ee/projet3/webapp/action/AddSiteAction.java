@@ -1,35 +1,51 @@
 package org.oc_j2ee.projet3.webapp.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
 import org.oc_j2ee.projet3.business.contrat.manager.SiteManager;
 import org.oc_j2ee.projet3.model.Site;
 
-public class AddSiteAction extends ActionSupport {
+import java.util.Map;
+
+public class AddSiteAction extends ActionSupport implements SessionAware{
 
 
     private SiteManager siteManager;
-    private Site site;
+    private Site newSite;
+    private Map<String, Object> session;
 
+    @Override
+    public void setSession(Map<String, Object> session) {
+        this.session = session;
+    }
 
     public SiteManager getSiteManager() {
         return siteManager;
     }
+
+    public Map<String, Object> getSession() {
+        return session;
+    }
+
     public void setSiteManager(SiteManager siteManager) {
         this.siteManager = siteManager;
     }
 
-    public Site getSite() {
-        return site;
-    }
-    public void setSite(Site site) {
-        this.site = site;
+    public Site getNewSite() {
+        return newSite;
     }
 
+    public void setNewSite(Site newSite) {
+        this.newSite = newSite;
+    }
 
     public String execute(){
 
-        if(site!=null){
-            siteManager.addSite(site);
+
+        if(newSite!=null){
+            siteManager.addSite(newSite);
+            addActionMessage("Le nouveau site " + newSite.getNom() + " a ete correctement enregistré !!");
+
             return "success";
         }
         else{
@@ -40,17 +56,17 @@ public class AddSiteAction extends ActionSupport {
 
     @Override
     public void validate() {
-        if (site != null) {
-            if (site.getNom().equals("")) {
+        if (newSite != null) {
+            if (newSite.getNom().equals("")) {
                 addFieldError("site.nom", "Le nom du site ne peut être vide");
             }
-            if (!site.getNom().equals("") && site.getNom().length() < 2) {
+            if (!newSite.getNom().equals("") && newSite.getNom().length() < 2) {
                 addFieldError("site.nom", "Le nom du site doit faire au minimum 2 caractères");
             }
-            if (site.getLocalisation().equals("")) {
+            if (newSite.getLocalisation().equals("")) {
                 addFieldError("site.localisation", "Le nom de la commune entrée n'est pas valide");
             }
-            if (!site.getLocalisation().equals("") && site.getLocalisation().length() < 2) {
+            if (!newSite.getLocalisation().equals("") && newSite.getLocalisation().length() < 2) {
                 addFieldError("site.location", "Le nom de la commune entrée n'est pas valide");
             }
         }

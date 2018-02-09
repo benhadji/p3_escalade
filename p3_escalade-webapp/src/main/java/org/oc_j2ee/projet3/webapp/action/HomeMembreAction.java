@@ -14,7 +14,6 @@ public class HomeMembreAction extends ActionSupport implements SessionAware{
     public String getSuccessmessage() {
         return successmessage;
     }
-
     public void setSuccessmessage(String successmessage) {
         this.successmessage = successmessage;
     }

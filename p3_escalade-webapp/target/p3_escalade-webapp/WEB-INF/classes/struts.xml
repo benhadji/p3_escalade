@@ -6,6 +6,8 @@
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+
 
     <package name="default" namespace="/" extends="struts-default">
 
@@ -14,16 +16,14 @@
         </action>
 
         <action name="login" class="org.oc_j2ee.projet3.webapp.action.LogInAction" method="execute">
-            <result name="success" type="redirect">
-                /membre/home.action
-            </result>
-            <result name="input">/WEB-INF/login.jsp</result>
-            <result name="error">/membre/403.jsp</result>
+            <result name="success" type="redirect">/membre/home.action</result>
+            <result name="input">/WEB-INF/home.jsp</result>
+            <result name="error">/WEB-INF/login.jsp</result>
             <result name="home" type="redirect">home.action</result>
         </action>
 
         <action name="signUp" class="org.oc_j2ee.projet3.webapp.action.SignUpAction" method="execute">
-            <result name="success" type="redirect">home.action</result>
+            <result name="success">/WEB-INF/signUp.jsp</result>
             <result name="input">/WEB-INF/signUp.jsp</result>
         </action>
 
@@ -36,15 +36,6 @@
             <result name="success">/WEB-INF/listeSites.jsp</result>
         </action>
 
-        <action name="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction" method="execute">
-            <result name="success">/WEB-INF/listeSecteur.jsp</result>
-        </action>
-        <action name="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction" method="execute">
-            <result name="success">/WEB-INF/listeVoie.jsp</result>
-        </action>
-        <action name="listeLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction" method="execute">
-            <result name="success">/WEB-INF/listeLongueur.jsp</result>
-        </action>
         <action name="listeTopo" class="org.oc_j2ee.projet3.webapp.action.ListeTopoAction" method="execute">
             <result name="success">/WEB-INF/listeTopo.jsp</result>
         </action>
@@ -74,23 +65,26 @@
 
         <action name="home" class="org.oc_j2ee.projet3.webapp.action.HomeMembreAction" method="execute">
             <result name="success">/membre/home.jsp</result>
+            <result name="login">/WEB-INF/login.jsp</result>
         </action>
 
         <action name="logout" class="org.oc_j2ee.projet3.webapp.action.LogoutAction" method="execute">
-            <result name="success" type="redirect">/home.action</result>
-        </action>
-
-        <action name="addTopo" class="org.oc_j2ee.projet3.webapp.action.AddTopoAction" method="execute">
-            <result name="home" type="redirect">home.action</result>
-            <result name="input">/membre/addTopo.jsp</result>
             <result name="success" type="redirectAction">
-                <param name="actionName">listeTopo</param>
+                <param name="actionName">home</param>
                 <param name="namespace">/</param>
             </result>
         </action>
 
+        <action name="addTopo" class="org.oc_j2ee.projet3.webapp.action.AddTopoAction" method="execute">
+            <result name="home" type="redirect">home.action</result>
+            <result name="login">/WEB-INF/login.jsp</result>
+            <result name="input">/membre/addTopo.jsp</result>
+            <result name="success">/membre/addTopo.jsp</result>
+        </action>
+
         <action name="mesTopos" class="org.oc_j2ee.projet3.webapp.action.MesToposActions" method="execute">
             <result name="home" type="redirect">home.action</result>
+            <result name="login">/WEB-INF/login.jsp</result>
             <result name="success">/membre/mesTopos.jsp</result>
         </action>
 
@@ -98,6 +92,7 @@
         <action name="editTopoForm" class="org.oc_j2ee.projet3.webapp.action.EditTopoFormAction" method="execute">
             <result name="home" type="redirect">home.action</result>
             <result name="input">/membre/editTopoForm.jsp</result>
+            <result name="login">/WEB-INF/login.jsp</result>
             <result name="success" type="redirectAction">
                 <param name="actionName">mesTopos</param>
                 <param name="namespace">/membre</param>
@@ -107,46 +102,31 @@
         <action name="borrowTopo" class="org.oc_j2ee.projet3.webapp.action.BorrowTopoAction" method="execute">
             <result name="home" type="redirect">home.action</result>
             <result name="input">/membre/borrowTopoForm.jsp</result>
-            <result name="login" type="redirect">/login.action</result>
+            <result name="login">/WEB-INF/login.jsp</result>
             <result name="success">/membre/borrowTopoForm.jsp</result>
-        </action>
-
-        <action name="listeBorrow" class="org.oc_j2ee.projet3.webapp.action.ListeBorrowAction" method="execute">
-            <result name="success">/membre/listeBorrow.jsp</result>
         </action>
 
 
         <action name="addSite" class="org.oc_j2ee.projet3.webapp.action.AddSiteAction" method="execute">
-            <interceptor-ref name="authentication"/>
             <result name="input">/membre/addSite.jsp</result>
-            <result name="login" type="redirect">/login.action</result>
-            <result name="success" type="redirectAction">
-                <param name="actionName">listeSite</param>
-                <param name="namespace">/</param>
-            </result>
+            <result name="login">/WEB-INF/login.jsp</result>
+            <result name="success">/membre/addSite.jsp</result>
         </action>
         <action name="addSecteur" class="org.oc_j2ee.projet3.webapp.action.AddSecteurAction" method="execute">
             <result name="input">/membre/addSecteur.jsp</result>
-            <result name="success" type="redirectAction">
-                <param name="actionName">listeSecteur</param>
-                <param name="namespace">/</param>
-            </result>
+            <result name="login">/WEB-INF/login.jsp</result>
+            <result name="success">/membre/addSecteur.jsp</result>
         </action>
+
         <action name="addVoie" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction" method="execute">
-            <interceptor-ref name="authentication"/>
             <result name="input">/membre/addVoie.jsp</result>
-            <result name="success" type="redirectAction">
-                <param name="actionName">listeVoie</param>
-                <param name="namespace">/</param>
-            </result>
+            <result name="login">/WEB-INF/login.jsp</result>
+            <result name="success">/membre/addVoie.jsp</result>
         </action>
         <action name="addLongueur" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction" method="execute">
-            <interceptor-ref name="authentication"/>
             <result name="input">/membre/addLongueur.jsp</result>
-            <result name="success" type="redirectAction">
-                <param name="actionName">listeLongueur</param>
-                <param name="namespace">/</param>
-            </result>
+            <result name="login">/WEB-INF/login.jsp</result>
+            <result name="success">/membre/addLongueur.jsp</result>
         </action>
     </package>
 

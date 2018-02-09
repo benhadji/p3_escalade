@@ -73,7 +73,9 @@ public class SignUpAction extends ActionSupport {
     public String execute(){
 
         if(utilisateur!=null){
-          return utilisateurManager.signupNewSubscriber(utilisateur);
+
+            addActionMessage("L'utilisateur " + utilisateur.getPrenom() + utilisateur.getNom() + " a ete correctement enregistré !!");
+            return utilisateurManager.signupNewSubscriber(utilisateur);
         }
         else{
             return "input";

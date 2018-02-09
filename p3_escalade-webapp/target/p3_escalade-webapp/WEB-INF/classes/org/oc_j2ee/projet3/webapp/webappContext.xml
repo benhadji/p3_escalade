@@ -39,25 +39,13 @@
         <property name="secteurManager" ref="secteurManager"/>
     </bean>
 
-    <bean id="listeSecteur" class="org.oc_j2ee.projet3.webapp.action.ListeSecteurAction">
-        <property name="secteurManager" ref="secteurManager"/>
-    </bean>
-
     <bean id="addVoieAction" class="org.oc_j2ee.projet3.webapp.action.AddVoieAction">
         <property name="voieManager" ref="voieManager"/>
         <property name="secteurManager" ref="secteurManager"/>
     </bean>
 
-    <bean id="listeVoie" class="org.oc_j2ee.projet3.webapp.action.ListeVoieAction">
+    <bean id="addLongueurAction" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction">
         <property name="voieManager" ref="voieManager"/>
-    </bean>
-
-    <bean id="addLonguerAction" class="org.oc_j2ee.projet3.webapp.action.AddLongueurAction">
-        <property name="voieManager" ref="voieManager"/>
-        <property name="longueurManager" ref="longueurManager"/>
-    </bean>
-
-    <bean id="listLongueur" class="org.oc_j2ee.projet3.webapp.action.ListeLongueurAction">
         <property name="longueurManager" ref="longueurManager"/>
     </bean>
 

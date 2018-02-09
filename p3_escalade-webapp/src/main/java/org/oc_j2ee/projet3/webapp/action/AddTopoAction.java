@@ -82,10 +82,12 @@ public class AddTopoAction extends ActionSupport implements SessionAware {
 
         if(session.containsKey("sessionUtilisateur")) {
             if (topo != null) {
+                sitesList = siteManager.getAllSites();
                 Utilisateur utilisateur = (Utilisateur) session.get("sessionUtilisateur");
                 topo.setUtilisateurId(utilisateur.getId());
                 topoManager.addTopo(topo);
 
+                addActionMessage("Le nouveau topo " + topo.getNom() + " a ete correctement enregistré !!");
 
                 return "success";
             } else {
@@ -94,7 +96,7 @@ public class AddTopoAction extends ActionSupport implements SessionAware {
             }
         }
         else{
-            return "home";
+            return "login";
         }
     }
 

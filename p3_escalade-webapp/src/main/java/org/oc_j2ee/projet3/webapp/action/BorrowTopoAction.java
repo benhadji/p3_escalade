@@ -148,17 +148,13 @@ public class BorrowTopoAction extends ActionSupport implements SessionAware{
 
                 topo = topoManager.getTopo(Integer.parseInt(idTopo));
                 sites = siteManager.getSitesByTopo(topo);
-                for (Site site : sites){
-                    System.out.println("Les sites sont :" +
-                            "\nNom du site : " + site.getNom());
-                }
 
                 return "input";
             }
         }
         else
         {
-            return "home";
+            return "login";
         }
 
     }

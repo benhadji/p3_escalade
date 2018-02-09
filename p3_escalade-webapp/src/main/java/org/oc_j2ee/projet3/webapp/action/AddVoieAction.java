@@ -1,6 +1,7 @@
 package org.oc_j2ee.projet3.webapp.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
 import org.oc_j2ee.projet3.business.contrat.manager.SecteurManager;
 import org.oc_j2ee.projet3.business.contrat.manager.VoieManager;
 import org.oc_j2ee.projet3.model.Secteur;
@@ -8,13 +9,20 @@ import org.oc_j2ee.projet3.model.Voie;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class AddVoieAction extends ActionSupport {
+public class AddVoieAction extends ActionSupport implements SessionAware {
 
     private VoieManager voieManager;
     private SecteurManager secteurManager;
     private Voie voie;
     private List<Secteur> listeDesSecteur = new ArrayList<>();
+    private Map<String, Object> session;
+
+
+    public Map<String, Object> getSession() {
+        return session;
+    }
 
     public VoieManager getVoieManager() {
         return voieManager;
@@ -52,18 +60,27 @@ public class AddVoieAction extends ActionSupport {
 
     public String execute() {
 
-        if(voie!=null){
-            voieManager.addWay(voie);
-            System.out.println("La nouvelle voie est :\n" +
-                    "Secteur ID = " + voie.getSecteur_id() +
-                    "\nNom Voie = " + voie.getNom() +
-                    "\nEtat voie = " + voie.isEtat());
-            return "success";
-        }
-        else{
-            listeDesSecteur = secteurManager.getAllSecteurs();
-            return "input";
-        }
+
+        if(session.containsKey("sessionUtilisateur")) {
+            if(voie!=null){
+                listeDesSecteur = secteurManager.getAllSecteurs();
+                voieManager.addWay(voie);
+                System.out.println("La nouvelle voie est :\n" +
+                        "Secteur ID = " + voie.getSecteur_id() +
+                        "\nNom Voie = " + voie.getNom() +
+                        "\nEtat voie = " + voie.isEtat());
+
+                addActionMessage("La nouvelle voie " + voie.getNom() + " a ete correctement enregistrée !!");
+
+
+                return "success";
+            }
+            else{
+                listeDesSecteur = secteurManager.getAllSecteurs();
+                return "input";
+            }
+        }else
+            return "login";
 
     }
 
@@ -80,4 +97,8 @@ public class AddVoieAction extends ActionSupport {
     }
 
 
+    @Override
+    public void setSession(Map<String, Object> session) {
+        this.session = session;
+    }
 }

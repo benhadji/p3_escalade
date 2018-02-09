@@ -19,32 +19,40 @@ public class SearchAction extends ActionSupport {
     private List<Longueur> longueurs = new ArrayList<Longueur>();
     private List<Topo> topos = new ArrayList<>();
 
-    public List<Topo> getTopos() {
-        return topos;
-    }
-
-    public void setTopos(List<Topo> topos) {
-        this.topos = topos;
-    }
-
-    public TopoManager getTopoManager() {
-        return topoManager;
-    }
-
-    public void setTopoManager(TopoManager topoManager) {
-        this.topoManager = topoManager;
-    }
-
     private SiteManager siteManager;
     private SecteurManager secteurManager;
     private VoieManager voieManager;
     private LongueurManager longueurManager;
     private TopoManager topoManager;
+
     private String nom;
     private String result;
     private String yourSearchItem;
 
 
+    public ArrayList<String> getSearchItem() {
+        return searchItem;
+    }
+
+    public void setSearchItem(ArrayList<String> searchItem) {
+        this.searchItem = searchItem;
+    }
+
+    public List<Site> getSites() {
+        return sites;
+    }
+
+    public void setSites(List<Site> sites) {
+        this.sites = sites;
+    }
+
+    public List<Secteur> getSecteurs() {
+        return secteurs;
+    }
+
+    public void setSecteurs(List<Secteur> secteurs) {
+        this.secteurs = secteurs;
+    }
 
     public List<Voie> getVoies() {
         return voies;
@@ -60,6 +68,30 @@ public class SearchAction extends ActionSupport {
 
     public void setLongueurs(List<Longueur> longueurs) {
         this.longueurs = longueurs;
+    }
+
+    public List<Topo> getTopos() {
+        return topos;
+    }
+
+    public void setTopos(List<Topo> topos) {
+        this.topos = topos;
+    }
+
+    public SiteManager getSiteManager() {
+        return siteManager;
+    }
+
+    public void setSiteManager(SiteManager siteManager) {
+        this.siteManager = siteManager;
+    }
+
+    public SecteurManager getSecteurManager() {
+        return secteurManager;
+    }
+
+    public void setSecteurManager(SecteurManager secteurManager) {
+        this.secteurManager = secteurManager;
     }
 
     public VoieManager getVoieManager() {
@@ -78,48 +110,12 @@ public class SearchAction extends ActionSupport {
         this.longueurManager = longueurManager;
     }
 
-    public SecteurManager getSecteurManager() {
-        return secteurManager;
+    public TopoManager getTopoManager() {
+        return topoManager;
     }
 
-    public void setSecteurManager(SecteurManager secteurManager) {
-        this.secteurManager = secteurManager;
-    }
-
-    public List<Secteur> getSecteurs() {
-        return secteurs;
-    }
-
-    public void setSecteurs(List<Secteur> secteurs) {
-        this.secteurs = secteurs;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
-    public List<Site> getSites() {
-        return sites;
-    }
-
-    public void setSites(List<Site> sites) {
-        this.sites = sites;
-    }
-
-    public SiteManager getSiteManager() {
-        return siteManager;
-    }
-
-    public void setSiteManager(SiteManager siteManager) {
-        this.siteManager = siteManager;
-    }
-
-    public String getDefaultSearchItemValue(){
-        return "Site";
+    public void setTopoManager(TopoManager topoManager) {
+        this.topoManager = topoManager;
     }
 
     public String getNom() {
@@ -130,13 +126,12 @@ public class SearchAction extends ActionSupport {
         this.nom = nom;
     }
 
-
-    public ArrayList<String> getSearchItem() {
-        return searchItem;
+    public String getResult() {
+        return result;
     }
 
-    public void setSearchItem(ArrayList<String> searchItem) {
-        this.searchItem = searchItem;
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public String getYourSearchItem() {
@@ -146,8 +141,6 @@ public class SearchAction extends ActionSupport {
     public void setYourSearchItem(String yourSearchItem) {
         this.yourSearchItem = yourSearchItem;
     }
-
-
 
     public String execute() {
 

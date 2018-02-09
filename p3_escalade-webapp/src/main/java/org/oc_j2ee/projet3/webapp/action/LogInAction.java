@@ -108,7 +108,7 @@ public class LogInAction extends ActionSupport implements SessionAware {
                 return INPUT;
             }
         }else{
-            return "home";
+            return SUCCESS;
         }
     }
 

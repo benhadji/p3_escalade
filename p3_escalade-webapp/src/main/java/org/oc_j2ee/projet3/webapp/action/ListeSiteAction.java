@@ -11,7 +11,15 @@ public class ListeSiteAction extends ActionSupport {
 
     private SiteManager siteManager;
     private List<Site> sites = new ArrayList<>();
+    private Site site;
 
+    public Site getSite() {
+        return site;
+    }
+
+    public void setSite(Site site) {
+        this.site = site;
+    }
 
     public SiteManager getSiteManager() {
         return siteManager;

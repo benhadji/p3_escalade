@@ -36,8 +36,5 @@ public class AuthenticationInterceptor implements Interceptor {
             return Action.LOGIN;
         }
 
-
-
-
     }
 }

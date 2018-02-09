@@ -16,12 +16,13 @@ public class MesToposActions extends ActionSupport implements SessionAware {
 
 
     private Topo topo;
-    private Utilisateur utilisateur;
     private TopoManager topoManager;
-    private UtilisateurManager utilisateurManager;
     private Map<String, Object> session;
     private List<Topo> mesTopos = new ArrayList<>();
 
+    public Map<String, Object> getSession() {
+        return session;
+    }
 
     public List<Topo> getMesTopos() {
         return mesTopos;
@@ -39,14 +40,6 @@ public class MesToposActions extends ActionSupport implements SessionAware {
         this.topo = topo;
     }
 
-    public Utilisateur getUtilisateur() {
-        return utilisateur;
-    }
-
-    public void setUtilisateur(Utilisateur utilisateur) {
-        this.utilisateur = utilisateur;
-    }
-
     public TopoManager getTopoManager() {
         return topoManager;
     }
@@ -55,13 +48,6 @@ public class MesToposActions extends ActionSupport implements SessionAware {
         this.topoManager = topoManager;
     }
 
-    public UtilisateurManager getUtilisateurManager() {
-        return utilisateurManager;
-    }
-
-    public void setUtilisateurManager(UtilisateurManager utilisateurManager) {
-        this.utilisateurManager = utilisateurManager;
-    }
 
 
     @Override
@@ -80,7 +66,7 @@ public class MesToposActions extends ActionSupport implements SessionAware {
             return "success";
         }
         else{
-            return "home";
+            return "login";
         }
     }
 }
