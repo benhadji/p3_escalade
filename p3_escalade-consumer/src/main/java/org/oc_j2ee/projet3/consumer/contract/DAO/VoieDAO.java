@@ -9,13 +9,8 @@ import java.util.List;
 public interface VoieDAO {
 
     void create(Voie voie);
-    void update(Voie voie);
-    void delete(Voie voie);
-    void deleteAllBySector(Secteur secteur);
     Voie getById(int id);
     List<Voie> getAllBySector(Secteur secteur);
     List<Voie> getListVoie();
-    List<Voie> getAllBySite(Site site);
     List<Voie> getByName(String nom);
-    String getNameFromId(Integer voieId);
 }

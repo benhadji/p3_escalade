@@ -14,8 +14,8 @@ public class BorrowRM implements RowMapper<Borrow> {
 
         Borrow borrow = new Borrow();
         borrow.setId(rs.getInt("id"));
-        borrow.setStartDate(rs.getDate("start_date"));
-        borrow.setEndDate(rs.getDate("end_date"));
+        borrow.setStartDate(rs.getDate("startdate"));
+        borrow.setEndDate(rs.getDate("enddate"));
         borrow.setUtilisateurId(rs.getInt("utilisateur_Id"));
         borrow.setTopoId(rs.getInt("topo_id"));
 

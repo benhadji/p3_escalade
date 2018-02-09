@@ -22,12 +22,9 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
     @Inject
     private VoieRM voieRM;
 
-
-
     public void setVoieRM(VoieRM voieRM) {
         this.voieRM = voieRM;
     }
-
     public VoieRM getVoieRM() {
         return voieRM;
     }
@@ -50,48 +47,6 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
 
     }
 
-    @Override
-    public void update(Voie voie) {
-
-        String vSQL = "UPDATE public.VOIE " +
-                "SET secteur_id=:secteur_id, nom=:nom, etat=:etat " +
-                "WHERE voie_id=:voie_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("voie_id", voie.getVoie_id(), Types.INTEGER);
-        vParams.addValue("secteur_id", voie.getSecteur_id(), Types.INTEGER);
-        vParams.addValue("nom", voie.getNom(), Types.VARCHAR);
-        vParams.addValue("etat", voie.isEtat(), Types.BOOLEAN);
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void delete(Voie voie) {
-
-
-        String vSQL = "DELETE FROM public.VOIE WHERE voie_id=:voie_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("voie_id", voie.getVoie_id(), Types.INTEGER);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void deleteAllBySector(Secteur secteur) {
-
-        String vSQL = "DELETE FROM public.VOIE WHERE secteur_id=:secteur_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("secteur_id", secteur.getSecteur_id(), Types.INTEGER);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
 
     @Override
     public Voie getById(int voie_id) {
@@ -105,8 +60,6 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
         } catch (EmptyResultDataAccessException vEx) {
             return null;
         }
-
-
     }
 
     @Override
@@ -133,23 +86,6 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
 
     }
 
-    @Override
-    public List<Voie> getAllBySite(Site site) {
-
-        String vSQL = "SELECT DISTINCT * FROM voie, secteur, site " +
-                "WHERE voie.secteur_id=secteur.secteur_id " +
-                "AND secteur.site_id=site.site_id " +
-                "AND site.site_id=:site_id";
-
-        SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-
-        List<Voie> vList = vJdbcTemplate.query(vSQL,vParams,voieRM);
-        return vList;
-
-
-
-    }
 
     @Override
     public List<Voie> getByName(String nom) {
@@ -168,18 +104,5 @@ public class VoieDaoImpl extends AbstractDaoImpl implements VoieDAO {
 
 
     }
-
-    @Override
-    public String getNameFromId(Integer voieId) {
-
-        String vSQL = "SELECT nom FROM voie WHERE voie_id=" + voieId;
-        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
-
-        String name = vJdbcTemplate.queryForObject(vSQL, String.class);
-
-        return name;
-
-    }
-
 
 }

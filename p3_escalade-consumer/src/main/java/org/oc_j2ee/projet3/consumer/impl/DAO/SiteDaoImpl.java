@@ -3,11 +3,15 @@ package org.oc_j2ee.projet3.consumer.impl.DAO;
 import org.oc_j2ee.projet3.consumer.contract.DAO.SiteDAO;
 import org.oc_j2ee.projet3.consumer.impl.RowMapper.SiteRM;
 import org.oc_j2ee.projet3.model.Site;
+import org.oc_j2ee.projet3.model.Topo;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
+import javax.inject.Inject;
 import java.sql.Types;
 import java.util.HashMap;
 import java.util.List;
@@ -15,6 +19,8 @@ import java.util.Map;
 
 public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
 
+
+    @Inject
     private SiteRM siteRM;
 
     public SiteRM getSiteRM() {
@@ -38,41 +44,7 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
 
-
     }
-
-
-
-    @Override
-    public void update(Site site) {
-
-        String vSQL = "UPDATE public.SITE " +
-                "SET nom=:nom, localisation=:localisation " +
-                "WHERE site_id=:site_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-
-        vParams.addValue("site_id", site.getSite_id(), Types.INTEGER);
-        vParams.addValue("nom", site.getNom(), Types.VARCHAR);
-        vParams.addValue("localisation", site.getLocalisation(), Types.VARCHAR);
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void delete(int site_id) {
-
-        String vSQL = "DELETE FROM public.SITE WHERE site_id=:site_id";
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("site_id", site_id, Types.INTEGER);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-
-    }
-
 
 
     @Override
@@ -107,17 +79,19 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
         }
     }
 
+
     @Override
-    public String getSiteNameFromId(Integer siteId) {
+    public List<Site> getByTopo(Topo topo) {
 
-        Integer id = siteId;
+        String vSQL = "SELECT * FROM public.site WHERE site_id=:siteId";
 
-        String vSQL = "SELECT nom FROM site WHERE site_id=" + id;
-        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
+        SqlParameterSource vParams = new BeanPropertySqlParameterSource(topo);
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
 
-        String name = vJdbcTemplate.queryForObject(vSQL, String.class);
+        List<Site> vList = vJdbcTemplate.query(vSQL,vParams,siteRM);
+        return vList;
 
-        return name;
+
 
     }
 
@@ -133,17 +107,6 @@ public class SiteDaoImpl extends AbstractDaoImpl implements SiteDAO {
 
 
     }
-
-    @Override
-    public List<String> getAllSitesNames() {
-        JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
-
-        String sql = "SELECT nom FROM site";
-
-        List<String> vList = vJdbcTemplate.queryForList(sql, String.class);
-        return vList;
-    }
-
 
 
 }

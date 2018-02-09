@@ -12,7 +12,11 @@
 
     <!-- ===== Déclaration des DAO ===== -->
     <bean id="articleDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.ArticleDaoImpl" parent = "abstractDao"/>
-    <bean id="borrowDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.BorrowDaoImpl" parent = "abstractDao"/>
+    <bean id="borrowDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.BorrowDaoImpl" parent = "abstractDao">
+        <property name="borrowRM" ref="borrowRM"/>
+    </bean>
+
+
     <bean id="commentaireDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.CommentaireDaoImpl" parent = "abstractDao"/>
     <bean id="longueurDao" class="org.oc_j2ee.projet3.consumer.impl.DAO.LongueurDaoImpl" parent = "abstractDao">
         <property name="longueurRM" ref="longueurRM"/>

@@ -26,10 +26,10 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     public TopoRM getTopoRM() {
         return topoRM;
     }
-
     public void setTopoRM(TopoRM topoRM) {
         this.topoRM = topoRM;
     }
+
 
     @Override
     public void create(Topo topo) {
@@ -49,16 +49,16 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
     }
 
     @Override
-    public void createNewBorrow(Topo topo, Date startDate, Date endDate, Utilisateur utilisateur) {
+    public void createNewBorrow(Topo topo, Date startdate, Date enddate, Utilisateur utilisateur) {
 
         String sql = "insert into borrow (topo_id, utilisateur_id, startdate, enddate) " +
-                "values(:topo_id, :utilisateur_id, :startDate, :endDate)";
+                "values(:topo_id, :utilisateur_id, :startdate, :enddate)";
 
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("topo_id", topo.getId(), Types.INTEGER);
         vParams.addValue("utilisateur_id", utilisateur.getId(), Types.INTEGER);
-        vParams.addValue("startdate", startDate, Types.DATE);
-        vParams.addValue("enddate", endDate, Types.DATE);
+        vParams.addValue("startdate", startdate, Types.DATE);
+        vParams.addValue("enddate", enddate, Types.DATE);
 
 
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
@@ -89,43 +89,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
 
     }
 
-    @Override
-    public void updateStatus(Topo topo) {
 
-        String vSQL = "UPDATE topo SET emprunt=:emprunt WHERE id=:id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-
-        vParams.addValue("id", topo.getId(), Types.INTEGER);
-        vParams.addValue("emprunt", topo.isEmprunt(), Types.BOOLEAN);
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void delete(Topo topo) {
-
-        String vSQL = "DELETE FROM public.TOPO WHERE id=:id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("id", topo.getId(), Types.INTEGER);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-
-
-    }
-
-
-
-    @Override
-    public void deleteSiteTopo(Topo topo, Site site) {
-
-
-
-    }
 
     @Override
     public Topo getById(int id) {
@@ -162,10 +126,6 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
         return vList;
     }
 
-    @Override
-    public List<Topo> getToposBorrowedByUser(Utilisateur user) {
-        return null;
-    }
 
     @Override
     public List<Topo> getByName(String nom) {
@@ -181,8 +141,6 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDAO{
         } catch (EmptyResultDataAccessException vEx) {
             return null;
         }
-
-
 
     }
 }

@@ -21,25 +21,11 @@ public class BorrowDaoImpl extends AbstractDaoImpl implements BorrowDAO {
     public BorrowRM getBorrowRM() {
         return borrowRM;
     }
-
     public void setBorrowRM(BorrowRM borrowRM) {
         this.borrowRM = borrowRM;
     }
 
-    @Override
-    public void deleteBorrow(Topo topo, Utilisateur utilisateur) {
 
-    }
-
-    @Override
-    public Borrow getTopoBorrowed(Utilisateur utilisateur, Topo topo) {
-        return null;
-    }
-
-    @Override
-    public List<Borrow> listTopoBorrowed(Utilisateur utilisateur) {
-        return null;
-    }
 
     @Override
     public List<Borrow> getAllTopoBorrowed() {

@@ -20,13 +20,15 @@ import java.util.List;
 
 public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
 
-
+    @Inject
     private LongueurRM longueurRM;
 
     public void setLongueurRM(LongueurRM longueurRM) {
         this.longueurRM = longueurRM;
     }
-
+    public LongueurRM getLongueurRM() {
+        return longueurRM;
+    }
 
     @Override
     public void create(Longueur longueur) {
@@ -39,54 +41,6 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
         vParams.addValue("nom", longueur.getNom(), Types.VARCHAR);
         vParams.addValue("cotation", longueur.getCotation(), Types.VARCHAR);
 
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void update(Longueur longueur) {
-
-        String vSQL = "UPDATE public.LONGUEUR " +
-                "SET voie_id=:voie_id, nom=:nom, cotation=:cotation " +
-                "WHERE longueur_id=:longueur_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-
-        vParams.addValue("longueur_id", longueur.getLongueur_id(), Types.INTEGER);
-        vParams.addValue("voie_id", longueur.getVoie_id());
-        vParams.addValue("nom", longueur.getNom(), Types.VARCHAR);
-        vParams.addValue("cotation", longueur.getCotation(), Types.VARCHAR);
-
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-
-
-    }
-
-    @Override
-    public void delete(Longueur longueur) {
-
-        String vSQL = "DELETE FROM public.LONGUEUR WHERE longueur_id=:longeur_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-
-        vParams.addValue("longueur_id", longueur.getLongueur_id(), Types.INTEGER);
-
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-        vJdbcTemplate.update(vSQL, vParams);
-
-    }
-
-    @Override
-    public void deleteAllByWay(Voie voie) {
-
-        String vSQL = "DELETE FROM public.LONGUEUR WHERE voie_id=:voie_id";
-
-        MapSqlParameterSource vParams = new MapSqlParameterSource();
-        vParams.addValue("voie_id", voie.getVoie_id(), Types.INTEGER);
         NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
 
@@ -117,19 +71,6 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
         return vList;
     }
 
-    @Override
-    public List<Longueur> getBySite(Site site) {
-        String vSQL = "SELECT DISTINCT * FROM longueur, voie, secteur, site " +
-                "WHERE longueur.voie_id = voie.voie_id " +
-                "AND voie.secteur_id=secteur.secteur_id " +
-                "AND secteur.site_id=site.site_id and site.site_id=:site_id";
-
-        SqlParameterSource vParams = new BeanPropertySqlParameterSource(site);
-        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
-
-        List<Longueur> vList = vJdbcTemplate.query(vSQL,vParams,longueurRM);
-        return vList;
-    }
 
     @Override
     public List<Longueur> getAllLongueur() {
@@ -155,10 +96,6 @@ public class LongueurDaoImpl extends AbstractDaoImpl implements LongueurDAO {
         } catch (EmptyResultDataAccessException vEx) {
             return null;
         }
-
-
-
     }
-
 
 }
