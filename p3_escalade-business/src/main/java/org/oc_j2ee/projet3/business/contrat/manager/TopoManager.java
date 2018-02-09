@@ -12,13 +12,8 @@ public interface TopoManager {
     void addTopo(Topo topo);
     Topo getTopo(int id);
     List<Topo> getUserTopo(Utilisateur utilisateur);
-    List<Topo> getTopoToBorrow(Utilisateur utilisateur);
     List<Topo> getAllTopo();
-    void deleteTopo(int id);
     void editTopo(Topo topo);
-    void editTopoStatus(Topo topo);
     void borrowTopo (Topo topo, Date startDate, Date endDate, Map<String, Object> session);
-
-
     List<Topo> getTopoByName(String nom);
 }

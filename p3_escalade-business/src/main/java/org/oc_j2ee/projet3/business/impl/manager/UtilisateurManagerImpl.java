@@ -57,7 +57,6 @@ public class UtilisateurManagerImpl extends AbstractManagerImpl implements Utili
         return passwordChecked;
     }
 
-
     @Override
     public String signupNewSubscriber(Utilisateur utilisateur) {
 
@@ -67,12 +66,6 @@ public class UtilisateurManagerImpl extends AbstractManagerImpl implements Utili
                 getDaoFactory().getUtilisateurDAO().create(utilisateur);
 
         return "success";
-    }
-
-
-    @Override
-    public List<Utilisateur> displayAllUsers() {
-        return null;
     }
 
     @Override

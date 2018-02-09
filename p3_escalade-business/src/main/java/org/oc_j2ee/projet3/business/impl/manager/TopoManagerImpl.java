@@ -47,10 +47,6 @@ public class TopoManagerImpl extends AbstractManagerImpl implements TopoManager 
         }
     }
 
-    @Override
-    public List<Topo> getTopoToBorrow(Utilisateur utilisateur) {
-        return null;
-    }
 
     @Override
     public List<Topo> getAllTopo() {
@@ -58,31 +54,20 @@ public class TopoManagerImpl extends AbstractManagerImpl implements TopoManager 
         return topos;
     }
 
-    @Override
-    public void deleteTopo(int id) {
-
-    }
 
     @Override
     public void editTopo(Topo topo) {
-
         getDaoFactory().getTopoDAO().update(topo);
     }
 
-    @Override
-    public void editTopoStatus(Topo topo) {
-        getDaoFactory().getTopoDAO().updateStatus(topo);
-    }
 
     @Override
     public void borrowTopo(Topo topo, Date startDate, Date endDate, Map<String, Object> session) {
-
         getDaoFactory().getTopoDAO().createNewBorrow(topo, startDate, endDate, (Utilisateur) session.get("sessionUtilisateur"));
     }
 
     @Override
     public List<Topo> getTopoByName(String nom) {
-
 
         List<Topo> topos = getDaoFactory().getTopoDAO().getByName(nom);
 

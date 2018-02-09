@@ -16,9 +16,6 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
     public Secteur getSecteur(int id) {
 
         Secteur secteur = getDaoFactory().getSecteurDAO().getById(id);
-        Site site = getDaoFactory().getSiteDAO().getById(secteur.getSite_id());
-
-        secteur.setSite(site);
 
         return secteur;
     }
@@ -61,34 +58,12 @@ public class SecteurManagerImpl extends AbstractManagerImpl implements SecteurMa
         return getDaoFactory().getSecteurDAO().getAllBySite(site);
     }
 
-    @Override
-    public void deleteSecteur(Secteur secteur) {
 
-    }
-
-    @Override
-    public void updateSecteur(Secteur secteur) {
-
-    }
 
     @Override
     public void addSecteur(Secteur secteur) {
-
         getDaoFactory().getSecteurDAO().create(secteur);
-
     }
 
-    @Override
-    public String getNameFromId(Integer secteurId) {
-        String name = getDaoFactory().getSecteurDAO().getNameFromId(secteurId);
-
-        return name;
-    }
-
-    @Override
-    public String getNameFromVoie(Voie voie) {
-        String name = getDaoFactory().getSecteurDAO().getNameFromVoie(voie);
-
-        return name;
-    }
+   
 }

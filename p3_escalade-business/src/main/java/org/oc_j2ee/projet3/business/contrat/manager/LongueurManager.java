@@ -9,14 +9,7 @@ import java.util.List;
 public interface LongueurManager {
 
     void create(Longueur longueur);
-    void update(Longueur longueur);
-    void delete(Longueur longueur);
-    void deleteAllByVoie(Voie voie);
     Longueur getById(int id);
-    List<Longueur> getAllByVoie(Voie voie);
-    List<Longueur> getAllBySite(Site site);
     List<Longueur> getAllLongueur();
-
-
     List<Longueur> getLongueurByName(String nom);
 }

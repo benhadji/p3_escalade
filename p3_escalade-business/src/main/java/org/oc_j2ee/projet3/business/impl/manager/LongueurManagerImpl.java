@@ -15,40 +15,17 @@ public class LongueurManagerImpl extends AbstractManagerImpl implements Longueur
 
     }
 
-    @Override
-    public void update(Longueur longueur) {
 
-    }
 
-    @Override
-    public void delete(Longueur longueur) {
-
-    }
-
-    @Override
-    public void deleteAllByVoie(Voie voie) {
-
-    }
 
     @Override
     public Longueur getById(int id) {
         Longueur longueur = getDaoFactory().getLongueurDAO().getById(id);
-        Voie voie = getDaoFactory().getVoieDAO().getById(longueur.getVoie_id());
-
-        longueur.setVoie(voie);
 
         return longueur;
     }
 
-    @Override
-    public List<Longueur> getAllByVoie(Voie voie) {
-        return getDaoFactory().getLongueurDAO().getByWay(voie);
-    }
 
-    @Override
-    public List<Longueur> getAllBySite(Site site) {
-        return getDaoFactory().getLongueurDAO().getBySite(site);
-    }
 
     @Override
     public List<Longueur> getAllLongueur() {

@@ -8,13 +8,10 @@ import java.util.List;
 
 public interface VoieManager {
 
-    void deleteWay(Voie voie);
-    void updateWay(Voie voie);
+
     void addWay(Voie voie);
     Voie getVoie(int id);
-    List<Voie> getVoieBySecteur(Secteur secteur);
-    List<Voie> getAllBySite(Site site);
     List<Voie> getAllVoie();
     List<Voie> getVoieByName(String nom);
-    String getNameFromId(Integer voieId);
+
 }

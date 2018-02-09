@@ -12,9 +12,6 @@ public interface SecteurManager {
     List<Secteur> getAllSecteursBySite(Site site);
     List<Secteur> getAllSecteurs();
     List<Secteur> getSectorByName(String nom);
-    void deleteSecteur(Secteur secteur);
-    void updateSecteur(Secteur secteur);
     void addSecteur(Secteur secteur);
-    String getNameFromId(Integer secteurId);
-    String getNameFromVoie(Voie voie);
+
 }

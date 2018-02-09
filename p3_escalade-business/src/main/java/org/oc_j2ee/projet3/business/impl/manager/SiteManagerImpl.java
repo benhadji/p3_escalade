@@ -13,11 +13,21 @@ public class SiteManagerImpl extends AbstractManagerImpl implements SiteManager 
 
     @Override
     public Site getSite(int id) {
+
         Site site = getDaoFactory().getSiteDAO().getById(id);
-        List<Secteur> secteurs = getDaoFactory().getSecteurDAO().getAllBySite(site);
-        site.setSecteurs(secteurs);
+        site.setSecteurs(getDaoFactory().getSecteurDAO().getAllBySite(site));
+
+        for(Secteur secteur : site.getSecteurs())
+        {
+            secteur.setVoies(getDaoFactory().getVoieDAO().getAllBySector(secteur));
+            for(Voie voie : secteur.getVoies())
+            {
+                voie.setLongueurs(getDaoFactory().getLongueurDAO().getByWay(voie));
+            }
+        }
 
         return site;
+
 
     }
 
@@ -36,16 +46,15 @@ public class SiteManagerImpl extends AbstractManagerImpl implements SiteManager 
 
     }
 
-    @Override
-    public String getNameFromId(Integer siteId) {
-        String name = getDaoFactory().getSiteDAO().getSiteNameFromId(siteId);
-        return name;
-    }
+
 
     @Override
-    public List<Site> getCreatorSites(Utilisateur utilisateur) {
-        return null;
+    public List<Site> getSitesByTopo(Topo topo) {
+        List<Site> sites = getDaoFactory().getSiteDAO().getByTopo(topo);
+        return  sites;
     }
+
+
 
     @Override
     public List<Site> getAllSites() {
@@ -67,21 +76,6 @@ public class SiteManagerImpl extends AbstractManagerImpl implements SiteManager 
 
     }
 
-    @Override
-    public Site updateSite(Site site) {
-        return null;
-    }
-
-    @Override
-    public void deleteSite(int id) {
-
-    }
-
-    @Override
-    public List<String> getAllSiteName() {
-
-        return getDaoFactory().getSiteDAO().getAllSitesNames();
-    }
 
 
 }

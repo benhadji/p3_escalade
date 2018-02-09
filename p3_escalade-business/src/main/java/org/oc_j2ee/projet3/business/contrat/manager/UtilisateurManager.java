@@ -10,7 +10,6 @@ public interface UtilisateurManager {
     String hashPassword(String password);
     Utilisateur getLoginUser(String email);
     boolean validateLogin (Utilisateur utilisateur, String password);
-    List<Utilisateur> displayAllUsers();
     void addUser(Utilisateur utilisateur);
     String signupNewSubscriber(Utilisateur utilisateur);
 

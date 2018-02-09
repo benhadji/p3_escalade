@@ -10,16 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager {
-    @Override
-    public void deleteWay(Voie voie) {
-        getDaoFactory().getVoieDAO().delete(voie);
-    }
 
-    @Override
-    public void updateWay(Voie voie) {
-        getDaoFactory().getVoieDAO().update(voie);
-
-    }
 
     @Override
     public void addWay(Voie voie) {
@@ -30,22 +21,11 @@ public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager 
     @Override
     public Voie getVoie(int id) {
         Voie voie = getDaoFactory().getVoieDAO().getById(id);
-        Secteur secteur = getDaoFactory().getSecteurDAO().getById(voie.getSecteur_id());
-
-        voie.setSecteur(secteur);
 
         return voie;
     }
 
-    @Override
-    public List<Voie> getVoieBySecteur(Secteur secteur) {
-        return getDaoFactory().getVoieDAO().getAllBySector(secteur);
-    }
 
-    @Override
-    public List<Voie> getAllBySite(Site site) {
-        return getDaoFactory().getVoieDAO().getAllBySite(site);
-    }
 
     @Override
     public List<Voie> getAllVoie() {
@@ -78,12 +58,5 @@ public class VoieManagerImpl extends AbstractManagerImpl implements VoieManager 
 
         return voies;
     }
-
-    @Override
-    public String getNameFromId(Integer voieId) {
-        String name = getDaoFactory().getVoieDAO().getNameFromId(voieId);
-        return name;
-    }
-
 
 }

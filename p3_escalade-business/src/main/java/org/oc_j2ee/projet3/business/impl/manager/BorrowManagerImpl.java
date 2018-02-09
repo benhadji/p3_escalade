@@ -9,10 +9,6 @@ import java.util.List;
 
 @Named
 public class BorrowManagerImpl extends AbstractManagerImpl implements BorrowManager {
-    @Override
-    public List<Borrow> getBorrowListByUser(Utilisateur utilisateur) {
-        return null;
-    }
 
     @Override
     public List<Borrow> getBorrowList() {

@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface BorrowManager {
 
-    List<Borrow> getBorrowListByUser(Utilisateur utilisateur);
     List<Borrow> getBorrowList();
 
 }
