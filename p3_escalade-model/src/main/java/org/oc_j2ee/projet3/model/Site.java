@@ -15,20 +15,15 @@ public class Site extends Topo {
 	public List<Secteur> getSecteurs() {
 		return secteurs;
 	}
-
 	public void setSecteurs(List<Secteur> secteurs) {
 		this.secteurs = secteurs;
 	}
-
-
 	public Integer getSite_id() {
 		return site_id;
 	}
-
 	public void setSite_id(Integer site_id) {
 		this.site_id = site_id;
 	}
-
 	public String getNom() {
 		return nom;
 	}

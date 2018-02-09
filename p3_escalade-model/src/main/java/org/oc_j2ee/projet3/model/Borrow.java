@@ -10,8 +10,8 @@ public class Borrow {
     private Integer topoId;
     private Integer utilisateurId;
 
-    public Date getStartDate() {
 
+    public Date getStartDate() {
         return startDate;
     }
 
