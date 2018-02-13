@@ -47,6 +47,9 @@
             <result name="home">/WEB-INF/home.jsp</result>
         </action>
 
+        <action name="aboutUs" class="org.oc_j2ee.projet3.webapp.action.AboutUsAction" method="execute">
+            <result name="success">/WEB-INF/aboutUs.jsp</result>
+        </action>
 
 
     </package>
